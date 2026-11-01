@@ -6,9 +6,9 @@ export type LogoSize = "sm" | "md" | "lg";
 const heights: Record<LogoSize, number> = { sm: 48, md: 64, lg: 80 };
 
 const logoSrc: Record<LogoVariant, string> = {
-  primary: "/logo-primary.svg",
-  white: "/logo-primary.svg",
-  mark: "/logo-mark.svg",
+  primary: `${import.meta.env.BASE_URL}logo-primary.svg`,
+  white: `${import.meta.env.BASE_URL}logo-primary.svg`,
+  mark: `${import.meta.env.BASE_URL}logo-mark.svg`,
 };
 
 interface LogoProps {
