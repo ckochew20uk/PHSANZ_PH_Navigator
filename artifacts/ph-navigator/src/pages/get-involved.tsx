@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "wouter";
 import {
   ArrowLeft,
@@ -12,18 +11,8 @@ import { SectionHeading } from "@/components/content/SectionHeading";
 import { involvementPages, opportunities } from "@/data/getInvolved";
 
 type OpportunityKey = "feedback" | "focusGroups" | "contribute";
-function usePageTitle(title: string) {
-  useEffect(() => {
-    const previousTitle = document.title;
-    document.title = `${title} | PH Navigator`;
-    return () => {
-      document.title = previousTitle;
-    };
-  }, [title]);
-}
 
 export default function GetInvolved() {
-  usePageTitle(involvementPages.overview.title);
   return (
     <div className="w-full">
       <section className="design-section bg-[var(--brand-lavender)]">
@@ -161,7 +150,6 @@ export default function GetInvolved() {
 
 function OpportunityPage({ kind }: { kind: OpportunityKey }) {
   const page = involvementPages[kind];
-  usePageTitle(page.title);
   return (
     <div className="w-full">
       <section className="design-section bg-accent">

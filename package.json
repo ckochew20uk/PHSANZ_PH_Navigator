@@ -9,12 +9,15 @@
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
     "build:ci": "pnpm run typecheck && pnpm -r --if-present --no-bail run build",
     "build:worker": "pnpm --filter @workspace/ph-navigator run build",
-    "deploy:worker": "pnpm run build:worker && npx wrangler deploy"
+    "deploy:worker": "pnpm run build:worker && npx wrangler deploy",
+    "test:audit": "node --test tests/*.test.cjs",
+    "typecheck:edge": "tsc --noEmit -p tsconfig.edge.json"
   },
   "private": true,
   "devDependencies": {
-    "typescript": "~5.9.2",
-    "prettier": "^3.8.1"
+    "@cloudflare/workers-types": "5.20261102.1",
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.2"
   },
   "packageManager": "pnpm@10.26.1"
 }

@@ -181,3 +181,29 @@ These changes were developed as stacked feature branches. Do not assume a fresh 
 Useful detailed records: [logo kit](docs/brand-kit.md), [Stage 2](docs/stage-2-design-system.md), [community placeholders](docs/stage-3-community.md), [institutional update](docs/phsanz-governance-update.md), [patient journeys](docs/patient-journeys.md), [Get Involved foundation](docs/get-involved-foundation.md). Historical descriptions of removed features do not supersede the current decisions above.
 
 Update this file and the follow-up register when the user makes substantive decisions, clearly separating current facts, future plans and verified completion. Preserve that distinction in public copy, PR descriptions and future AI handovers.
+
+## Technical audit — 3 November 2026
+
+See [the complete four-stage audit](docs/technical-audit.md) and its linked JSON
+finding/advisory/evidence registers. Audit corrections on `audit/technical-review`
+are reviewable source work; check PR/deployment status before assuming they are
+live. Routine frontend work must preserve the shared newsletter contract in
+`artifacts/api-server/src/lib/newsletter.ts`, used by Pages, Workers and Express.
+The audit changes new registrations to **email-confirmation pending**, adds bounded
+validation/timeouts and generic membership responses, and avoids subscriber PII
+in application logs. Do not send real subscriptions when testing.
+
+Run `pnpm run test:audit`, `pnpm run typecheck:edge` and the frontend's
+`typecheck:build` in addition to the full build for relevant changes. Keep the
+one-day dependency release-age safeguard. Production static CSP is generated
+at build time; development needs Vite refresh scripts/websockets. Cloudflare
+response headers are in `public/_headers`; GitHub Pages only gets the portable
+meta-CSP subset. Repository-subpath builds deliberately show newsletter
+unavailability rather than collecting details without a backend.
+
+Open audit priorities: verified durable newsletter abuse controls and provider
+configuration, live hosting/repository security checks, overlapping specialist
+map targets, root-bundle profiling, and jurisdiction-specific urgent-support
+review for the ANZ audience. Local test success does not close those items or
+establish clinical approval. Preserve the intentional public-contact placeholder
+and all participation/governance activation gates.

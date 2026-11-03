@@ -2,14 +2,8 @@ import { ProjectContact } from "@/components/governance/ProjectContact";
 import { SectionHeading } from "@/components/content/SectionHeading";
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FileText,
-  Stethoscope,
-  Link as LinkIcon,
-  Download,
-} from "lucide-react";
+import { FileText, Stethoscope } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 export default function ForProfessionals() {
   return (
@@ -74,13 +68,10 @@ export default function ForProfessionals() {
                     declining DLCO or new breathlessness.
                   </li>
                 </ul>
-                <Button
-                  variant="outline"
-                  className="w-full text-primary border-primary"
-                >
-                  <LinkIcon className="mr-2 h-4 w-4" /> View Full Referral
-                  Pathway
-                </Button>
+                <p className="rounded-lg bg-muted p-3 text-sm text-primary">
+                  Full referral pathway: in development, pending clinical
+                  review.
+                </p>
               </CardContent>
             </Card>
 
@@ -92,11 +83,11 @@ export default function ForProfessionals() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-foreground/80 mb-4">
-                  Access the latest consensus guidelines for the diagnosis and
-                  management of pulmonary hypertension.
+                  Guideline links are being verified for clinical relevance and
+                  currency. They are not yet available here.
                 </p>
                 <div className="space-y-4 mb-6">
-                  <div className="border border-border p-3 rounded hover:bg-muted transition-colors cursor-pointer flex justify-between items-center">
+                  <div className="border border-border p-3 rounded flex justify-between items-center">
                     <div>
                       <p className="font-semibold text-primary">
                         ESC/ERS Guidelines (2022)
@@ -105,9 +96,11 @@ export default function ForProfessionals() {
                         Diagnosis and treatment of pulmonary hypertension
                       </p>
                     </div>
-                    <ExternalLinkIcon className="h-5 w-5 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">
+                      Review pending
+                    </span>
                   </div>
-                  <div className="border border-border p-3 rounded hover:bg-muted transition-colors cursor-pointer flex justify-between items-center">
+                  <div className="border border-border p-3 rounded flex justify-between items-center">
                     <div>
                       <p className="font-semibold text-primary">
                         TSANZ Guidelines
@@ -116,7 +109,9 @@ export default function ForProfessionals() {
                         Australian specific context and PBS prescribing
                       </p>
                     </div>
-                    <ExternalLinkIcon className="h-5 w-5 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">
+                      Review pending
+                    </span>
                   </div>
                 </div>
               </CardContent>
@@ -161,26 +156,5 @@ export default function ForProfessionals() {
         </div>
       </section>
     </div>
-  );
-}
-
-function ExternalLinkIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-      <polyline points="15 3 21 3 21 9" />
-      <line x1="10" x2="21" y1="14" y2="3" />
-    </svg>
   );
 }

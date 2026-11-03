@@ -22,7 +22,19 @@ const MAX_RECENT = 5;
 
 function getRecent(): SearchItem[] {
   try {
-    return JSON.parse(localStorage.getItem(RECENT_KEY) || "[]");
+    const value: unknown = JSON.parse(localStorage.getItem(RECENT_KEY) || "[]");
+    if (!Array.isArray(value)) return [];
+    // Stored data is untrusted: restore only current, known search records.
+    return value
+      .flatMap((entry) => {
+        const known = searchIndex.find((item) => item.path === entry?.path);
+        return known ? [known] : [];
+      })
+      .filter(
+        (item, index, items) =>
+          items.findIndex((other) => other.path === item.path) === index,
+      )
+      .slice(0, MAX_RECENT);
   } catch {
     return [];
   }
@@ -30,10 +42,14 @@ function getRecent(): SearchItem[] {
 
 function addRecent(item: SearchItem) {
   const prev = getRecent().filter((r) => r.path !== item.path);
-  localStorage.setItem(
-    RECENT_KEY,
-    JSON.stringify([item, ...prev].slice(0, MAX_RECENT)),
-  );
+  try {
+    localStorage.setItem(
+      RECENT_KEY,
+      JSON.stringify([item, ...prev].slice(0, MAX_RECENT)),
+    );
+  } catch {
+    /* Search must work even when storage is unavailable or full. */
+  }
 }
 
 const categoryColours: Record<string, string> = {

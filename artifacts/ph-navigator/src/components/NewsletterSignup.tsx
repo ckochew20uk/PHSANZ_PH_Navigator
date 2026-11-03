@@ -45,6 +45,7 @@ export function NewsletterSignup({ variant = "footer" }: Props) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, firstName, lastName, interests }),
+        signal: AbortSignal.timeout(12000),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -64,6 +65,17 @@ export function NewsletterSignup({ variant = "footer" }: Props) {
   };
 
   const isFooter = variant === "footer";
+  // GitHub Pages has no POST backend. Do not collect details on that mirror.
+  const enabled =
+    import.meta.env.VITE_NEWSLETTER_ENABLED !== "false" &&
+    import.meta.env.BASE_URL === "/";
+  if (!enabled)
+    return (
+      <p className="text-sm">
+        Newsletter signup is unavailable on this preview. No details are
+        collected here.
+      </p>
+    );
 
   if (status === "success") {
     return (
@@ -87,7 +99,7 @@ export function NewsletterSignup({ variant = "footer" }: Props) {
             isFooter ? "text-white" : "text-primary",
           )}
         >
-          You're on the list!
+          Check your inbox
         </p>
         <p
           className={cn(
@@ -95,8 +107,8 @@ export function NewsletterSignup({ variant = "footer" }: Props) {
             isFooter ? "text-primary-foreground/80" : "text-foreground/70",
           )}
         >
-          Thank you for subscribing. You'll hear from us when we have news,
-          resources, or events relevant to you.
+          Thank you. If confirmation is needed, please follow the email link to
+          complete your subscription.
         </p>
       </motion.div>
     );
@@ -118,6 +130,7 @@ export function NewsletterSignup({ variant = "footer" }: Props) {
           <Input
             id="nl-firstname"
             type="text"
+            maxLength={100}
             placeholder="Margaret"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
@@ -142,6 +155,7 @@ export function NewsletterSignup({ variant = "footer" }: Props) {
           <Input
             id="nl-lastname"
             type="text"
+            maxLength={100}
             placeholder="Thompson"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
@@ -174,6 +188,7 @@ export function NewsletterSignup({ variant = "footer" }: Props) {
         <Input
           id="nl-email"
           type="email"
+          maxLength={254}
           required
           placeholder="you@example.com"
           value={email}

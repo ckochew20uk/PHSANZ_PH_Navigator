@@ -1,0 +1,259 @@
+{
+  "date": "2026-11-03",
+  "baseline": "3f460a1bef8a72519d43b0df342da3a3f729d47f",
+  "findings": [
+    {
+      "id": "AUD-01",
+      "severity": "Critical\u2013low (advisory ratings)",
+      "status": "Corrected in source",
+      "issue": "Vulnerable dependencies",
+      "evidence": "The baseline registry audit contained 82 advisory records and 83 vulnerability instances (12 critical, 37 high, 27 moderate, 7 low) across 25 package groups.",
+      "correction": "Upgraded Orval, Vite, Zod and compatible form resolvers; applied patched releases within existing major lines for remaining transitive packages. Retained pnpm 10.26.1 and minimumReleaseAge=1440. Regenerated the trusted API client with explicit React Query v5 configuration.",
+      "reason": "Critical Orval findings concern code generation with hostile API specifications; they do not establish remote execution through the static patient site. Express/proxy and build dependencies also require remediation. Newest releases were not accepted when younger than the one-day safeguard.",
+      "validation": "The post-remediation registry audit reports zero known advisories; full build, generator and typechecks pass. Every original advisory and affected dependency path is retained in dependency-advisories.json.",
+      "location": "pnpm-workspace.yaml; pnpm-lock.yaml; lib/api-spec/orval.config.ts"
+    },
+    {
+      "id": "AUD-02",
+      "severity": "Medium",
+      "status": "Corrected in source",
+      "issue": "Malformed newsletter fields crash handlers",
+      "evidence": "JSON null and numeric firstName threw TypeError in Pages/Workers; a numeric name caused Express HTTP 500. An address such as bad@ reached the mock provider.",
+      "correction": "Validate unknown input as a non-null object; normalize and bound email; validate optional names and a deduplicated interest allowlist.",
+      "reason": "TypeScript annotations do not validate incoming JSON. Bad inputs must receive controlled client errors before reaching a paid external service.",
+      "validation": "All three adapters reject invalid types, malformed JSON, unsupported interests and malformed email with HTTP 400 and zero provider calls.",
+      "location": "artifacts/api-server/src/lib/newsletter.ts"
+    },
+    {
+      "id": "AUD-03",
+      "severity": "Medium",
+      "status": "Corrected in source",
+      "issue": "Unbounded edge request bodies and names",
+      "evidence": "Pages/Workers accepted a 20,000-character name; the Express default parser also accepted it. Edge handlers read the entire body without a project limit.",
+      "correction": "Apply a 4 KiB byte limit, including streams without Content-Length; limit names to 100 characters; require uncompressed application/json. Express uses a small raw parser with inflation disabled.",
+      "reason": "Limits reduce memory/provider abuse and avoid relying on attacker-controlled Content-Length.",
+      "validation": "Oversized bodies return 413; oversized names return 400; text/plain/compressed payloads return 415; no provider request is made.",
+      "location": "artifacts/api-server/src/lib/newsletter.ts; artifacts/api-server/src/routes/newsletter.ts"
+    },
+    {
+      "id": "AUD-04",
+      "severity": "Medium",
+      "status": "Corrected in source; bot abuse remains open",
+      "issue": "Cross-origin signup and permissive Express CORS",
+      "evidence": "Both edge handlers accepted foreign-Origin simple text/plain requests, which browsers can send without a JSON preflight. Express advertised Access-Control-Allow-Origin: *.",
+      "correction": "Reject foreign/opaque origins and cross-site Fetch Metadata; remove blanket CORS and unused form decoding. Edge compares origins; Express compares host for HTTPS-proxy compatibility without trusting arbitrary forwarded headers.",
+      "reason": "Prevent opportunistic browser cross-site submission. This does not authenticate clients or stop bots that omit/spoof browser headers.",
+      "validation": "Foreign/opaque Origin and Sec-Fetch-Site cases return 403 across all adapters; responses no longer advertise wildcard CORS.",
+      "location": "artifacts/api-server/src/app.ts; artifacts/api-server/src/lib/newsletter.ts"
+    },
+    {
+      "id": "AUD-05",
+      "severity": "High (consent/abuse)",
+      "status": "Corrected in source; delivery unverified",
+      "issue": "Immediate subscription without ownership confirmation",
+      "evidence": "Every backend sent status=subscribed for a supplied email address.",
+      "correction": "Send status=pending for new subscribers; update success copy and draft privacy explanation to describe email confirmation.",
+      "reason": "Someone should not be automatically subscribed just because another visitor supplies their address. This is a deliberate backend behavior change requiring deployment review.",
+      "validation": "Mock-provider assertions verify pending in all runtimes. No real address was subscribed and no confirmation email was sent; actual audience settings and delivery remain unverified.",
+      "location": "artifacts/api-server/src/lib/newsletter.ts; artifacts/ph-navigator/src/components/NewsletterSignup.tsx"
+    },
+    {
+      "id": "AUD-06",
+      "severity": "Medium",
+      "status": "Corrected in source",
+      "issue": "Subscriber-status disclosure",
+      "evidence": "The API returned Subscribed successfully versus Already subscribed, revealing whether an address was already on the list.",
+      "correction": "Return identical status and message for successful new requests and Member Exists. Do not expose provider error detail.",
+      "reason": "Reduce list-membership disclosure, especially for a health-related audience. This is not a constant-time/non-enumeration guarantee against every provider behavior.",
+      "validation": "Regression cases compare successful/new and existing-member JSON exactly and verify private provider errors do not appear in responses.",
+      "location": "artifacts/api-server/src/lib/newsletter.ts"
+    },
+    {
+      "id": "AUD-07",
+      "severity": "Medium",
+      "status": "Corrected in source",
+      "issue": "Unbounded provider wait",
+      "evidence": "Baseline provider requests had no AbortSignal; the UI also had no deadline.",
+      "correction": "Use an eight-second provider deadline and a twelve-second browser deadline with recoverable error copy.",
+      "reason": "A stalled provider should not hold the visitor or backend indefinitely.",
+      "validation": "Each adapter passes an abort-aware mock-provider timeout case and returns controlled 502.",
+      "location": "artifacts/api-server/src/lib/newsletter.ts; artifacts/ph-navigator/src/components/NewsletterSignup.tsx"
+    },
+    {
+      "id": "AUD-08",
+      "severity": "Medium",
+      "status": "Corrected in source; historical retention unverified",
+      "issue": "Subscriber details in application logs",
+      "evidence": "Express explicitly logged email addresses and provider error payloads for success, existing membership and errors.",
+      "correction": "Remove newsletter PII/provider-payload logging; retain minimal request method/path/status logging.",
+      "reason": "Email addresses and audience preferences should not enter routine operational logs unnecessarily.",
+      "validation": "Source review confirms the shared provider handler does not log subscriber input or provider bodies. Existing provider/host logs and deletion/retention cannot be inspected from this session.",
+      "location": "artifacts/api-server/src/routes/newsletter.ts; artifacts/api-server/src/lib/newsletter.ts"
+    },
+    {
+      "id": "AUD-09",
+      "severity": "Low",
+      "status": "Corrected in source",
+      "issue": "Three diverging newsletter implementations",
+      "evidence": "Pages, Workers and Express independently implemented the same provider flow; only some had particular checks.",
+      "correction": "Use one runtime-neutral contract with small adapters and official Cloudflare edge typechecking.",
+      "reason": "A security correction should apply to every supported deployment path and remain testable.",
+      "validation": "The same regression cases execute through all three adapters; the edge and Express TypeScript gates pass.",
+      "location": "functions/api/newsletter/subscribe.ts; worker.ts; tsconfig.edge.json"
+    },
+    {
+      "id": "AUD-10",
+      "severity": "Medium",
+      "status": "Configured in source; live enforcement unverified",
+      "issue": "Missing project security-header policy",
+      "evidence": "The repository had no _headers/security-response configuration. This is a source finding, not proof that Cloudflare currently lacks account-level headers.",
+      "correction": "Add Cloudflare static CSP, framing protection, nosniff, referrer and permissions policies, and host-only HSTS. Add dynamic JSON headers. Emit a production-only meta CSP subset for static mirrors.",
+      "reason": "Constrain script/object/frame execution and reduce unnecessary disclosure. Inline styles remain allowed for React/motion/Leaflet; inline scripts are not allowed. HSTS intentionally has no preload/includeSubDomains.",
+      "validation": "A real Chromium test blocks an injected inline script; the local simulated header server exercises checked-in policy. GitHub Pages cannot provide all arbitrary response headers from _headers. Production enforcement is not verified.",
+      "location": "artifacts/ph-navigator/public/_headers; artifacts/ph-navigator/build/socialPages.ts"
+    },
+    {
+      "id": "AUD-11",
+      "severity": "High (availability)",
+      "status": "Corrected in source",
+      "issue": "Browser storage failure crashes site/search",
+      "evidence": "Throwing SecurityError from localStorage.getItem removed the main page; saved search history {} caused .filter is not a function when selecting a result.",
+      "correction": "Guard storage reads/writes; validate history as an array of current known search records, deduplicate and cap it; allow nonpersistent banner dismissal.",
+      "reason": "Storage is optional and untrusted. Browsing a patient information site should not depend on it being available or correctly shaped.",
+      "validation": "Browser tests with corrupt history and denied reads/writes successfully navigate to the oxygen article with no runtime errors.",
+      "location": "artifacts/ph-navigator/src/components/search/SearchModal.tsx; artifacts/ph-navigator/src/components/layout/CrisisBanner.tsx"
+    },
+    {
+      "id": "AUD-12",
+      "severity": "Medium",
+      "status": "Corrected in source",
+      "issue": "Static mirror offers nonfunctional signup",
+      "evidence": "GitHub Pages has no newsletter POST service, but its footer offered a form targeting /api/newsletter/subscribe outside the repository base.",
+      "correction": "Do not render or collect newsletter fields on repository-subpath builds; show clear unavailability text. Root builds preserve the integration, with an optional VITE_NEWSLETTER_ENABLED=false switch.",
+      "reason": "Avoid inviting visitors to submit personal information to an unavailable endpoint. A future subpath backend needs explicit configuration rather than assumption.",
+      "validation": "Subpath browser checks show no newsletter email field and no signup request. Cloudflare-compatible root builds retain the form.",
+      "location": "artifacts/ph-navigator/src/components/NewsletterSignup.tsx"
+    },
+    {
+      "id": "AUD-13",
+      "severity": "Low",
+      "status": "Corrected in source",
+      "issue": "Generic titles and incomplete static route heads",
+      "evidence": "Most pages kept the generic document title; only four involvement pages had crawler-readable route files. GitHub direct arrivals otherwise relied on its 404 fallback.",
+      "correction": "Use the shared route index for browser title/description updates and generate all 35 canonical HTML entry pages. Correct resource metadata to describe unavailable drafts. Preserve origin validation and optional canonical/image tags.",
+      "reason": "Titles orient visitors/assistive technology; static route files give crawlers and direct arrivals useful page-specific heads without guessing the permanent origin.",
+      "validation": "35-route artifact tests pass; four representative subpath direct arrivals return 200 locally with correct assets; configured test origin/base tags and rejected unsafe origins are checked.",
+      "location": "artifacts/ph-navigator/build/socialPages.ts; artifacts/ph-navigator/src/components/layout/GlobalLayout.tsx"
+    },
+    {
+      "id": "AUD-14",
+      "severity": "Low",
+      "status": "Corrected in source",
+      "issue": "Inactive clinical controls resemble working links",
+      "evidence": "The professional page showed a referral button without a handler and guideline cards styled as clickable without destinations.",
+      "correction": "Replace these controls with explicit in-development/review-pending text, removing misleading pointer/link decoration.",
+      "reason": "Do not imply that clinical referral guidance has been published or verified when no destination exists.",
+      "validation": "Source and browser review confirm honest pending labels. The user-required For Healthcare Professionals utility button remains.",
+      "location": "artifacts/ph-navigator/src/pages/for-healthcare-professionals.tsx"
+    },
+    {
+      "id": "AUD-15",
+      "severity": "Medium",
+      "status": "Corrected in source; repository settings unverified",
+      "issue": "Workflow privilege and mutable action references",
+      "evidence": "CI omitted explicit token permissions; Pages build inherited deployment write/token privileges. Actions referenced movable major tags.",
+      "correction": "Set CI read-only permissions; give only the Pages deploy job pages/id-token write; disable persisted checkout credentials; pin top-level actions to verified commit hashes; add weekly dependency/action update PRs and audit/type/runtime checks.",
+      "reason": "Reduce exposure if build/dependency code is compromised and keep patches visible. Action pins do not pin every internal dependency of each action.",
+      "validation": "Workflow configuration and immutable hashes cross-checked against GitHub tag refs; matching local commands pass. Required reviews, protection rules and account settings are separate verification gaps.",
+      "location": " .github/workflows/ci.yml; .github/workflows/github-pages.yml; .github/dependabot.yml"
+    },
+    {
+      "id": "AUD-16",
+      "severity": "Low",
+      "status": "Corrected in source",
+      "issue": "Local secret files not ignored",
+      "evidence": "No tracked .env/credential file was found, but .gitignore did not exclude environment files or Cloudflare local secret files.",
+      "correction": "Ignore .env variants, .dev.vars variants and audit scratch files while permitting named example templates.",
+      "reason": "Reduce accidental future credential commits; ignore rules do not remove historical secrets.",
+      "validation": "Tracked-file review and redacted history/artifact scans found no confirmed credential.",
+      "location": " .gitignore"
+    },
+    {
+      "id": "AUD-17",
+      "severity": "Medium (development)",
+      "status": "Corrected in source",
+      "issue": "Development/preview servers allow arbitrary hosts",
+      "evidence": "Both Vite configurations set allowedHosts=true while listening on all interfaces.",
+      "correction": "Restore default hostname protection; permit only an explicitly configured REPLIT_DEV_DOMAIN for development; remove preview allow-all. Add actual Vite-config/build-plugin typechecks.",
+      "reason": "Restrict DNS-rebinding exposure when developers run local or hosted preview servers. This is not evidence that the static production host is vulnerable.",
+      "validation": "Development renders without runtime errors; Host localhost returns 200 and Host untrusted.example returns 403 in the local Vite check.",
+      "location": "artifacts/ph-navigator/vite.config.ts; artifacts/mockup-sandbox/vite.config.ts"
+    },
+    {
+      "id": "AUD-18",
+      "severity": "Low",
+      "status": "Corrected in source",
+      "issue": "Appointment printout includes site controls",
+      "evidence": "Generated worksheet PDF included emergency/navigation bars and newsletter/footer UI, wasting space and interrupting the worksheet.",
+      "correction": "Hide site chrome and dialogs in print media while retaining article/worksheet content and the intended print heading.",
+      "reason": "Printed appointment preparation should remain readable and useful without screen-only controls.",
+      "validation": "Regenerated print PDF and browser print assertions confirm hidden header/footer and one visible heading in each medium.",
+      "location": "artifacts/ph-navigator/src/index.css; artifacts/ph-navigator/src/components/layout/GlobalLayout.tsx"
+    },
+    {
+      "id": "AUD-19",
+      "severity": "Medium",
+      "status": "Corrected in source",
+      "issue": "Failed article chunk leaves blank site",
+      "evidence": "Blocking the travel/oxygen JavaScript chunk removed the entire main page with no recovery control.",
+      "correction": "Wrap article loading in a route-resetting error boundary with an accessible explanation/reload control; retain navigation.",
+      "reason": "A temporary asset/network failure should leave visitors able to recover or choose another section.",
+      "validation": "With a simulated 503 for that chunk, the recovery button appears and the professional navigation successfully opens another page.",
+      "location": "artifacts/ph-navigator/src/components/content/PageErrorBoundary.tsx"
+    },
+    {
+      "id": "AUD-20",
+      "severity": "Medium",
+      "status": "Open",
+      "issue": "Overlapping specialist-map targets",
+      "evidence": "Axe WCAG 2.2 target-size findings reproduce at mobile and desktop widths where nearby centre markers overlap.",
+      "correction": "No marker redesign in this audit. Preserve searchable keyboard-operable centre list; plan clustering/expansion or a list-first map redesign and touch/assistive-technology review.",
+      "reason": "Hiding markers from the audit or removing keyboard operation would not resolve the usability problem. The list mitigates access but does not establish map conformance.",
+      "validation": "Remains the only settled-page automated accessibility rule violation across the 70 views. Full manual accessibility certification is not claimed.",
+      "location": "artifacts/ph-navigator/src/pages/find-specialist.tsx"
+    },
+    {
+      "id": "AUD-21",
+      "severity": "High",
+      "status": "Open \u2014 hosting control required",
+      "issue": "No verified durable signup abuse control",
+      "evidence": "Source has no durable throttling/challenge and account-level WAF/rate rules are not visible. Origin checks can be omitted/spoofed by a bot. Double opt-in can still generate unsolicited confirmation emails.",
+      "correction": "Before promoting signup, configure and verify an edge/durable limit and, if appropriate, an accessible challenge, with provider quotas/alerts and documented owner. Do not add an unreliable in-memory Worker counter.",
+      "reason": "One instance-local counter does not enforce limits across isolates; inventing a binding or claiming an unseen WAF exists would be misleading.",
+      "validation": "Acceptance: repeated synthetic requests receive controlled 429/challenge before reaching a mocked provider; legitimate/shared-network users and recovery behavior pass review. Not executable without hosting configuration.",
+      "location": "Cloudflare account configuration; newsletter endpoint"
+    },
+    {
+      "id": "AUD-22",
+      "severity": "Low",
+      "status": "Open \u2014 optimisation",
+      "issue": "Initial root bundle warning",
+      "evidence": "The root build still emits a JavaScript chunk above Vite\u2019s 500 kB uncompressed warning threshold. The full public output also contains downloadable brand assets.",
+      "correction": "Keep the warning visible; separately profile real devices and split dependencies only where measurement supports it. No warning-threshold suppression.",
+      "reason": "Total public build bytes are not the same as the initial page download; bundle warnings alone do not prove a poor real-user performance score.",
+      "validation": "Root/subpath production builds pass; no public source maps. Real network/Core Web Vitals testing remains outstanding.",
+      "location": "artifacts/ph-navigator/vite.config.ts"
+    },
+    {
+      "id": "AUD-23",
+      "severity": "Medium (patient-safety content)",
+      "status": "Open \u2014 clinical/localisation review",
+      "issue": "Australian urgent-support numbers presented to ANZ audience",
+      "evidence": "The shared emergency banner displays Australian 000/Lifeline/Beyond Blue numbers without a clear Australian territorial label, while the site targets Australia and New Zealand.",
+      "correction": "Flag for a verified country-specific urgent-support review by the content/clinical owner before wider ANZ distribution. Do not silently infer or publish unreviewed replacement service details.",
+      "reason": "Technical success is not clinical approval; emergency signposting must be relevant to the visitor\u2019s jurisdiction.",
+      "validation": "The discrepancy is confirmed from source. Service currency, New Zealand alternatives, clinical articles and specialist-directory accuracy were not clinically validated in this audit.",
+      "location": "artifacts/ph-navigator/src/components/layout/CrisisBanner.tsx"
+    }
+  ]
+}
