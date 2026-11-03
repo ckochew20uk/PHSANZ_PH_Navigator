@@ -8,9 +8,38 @@ export interface SearchItem {
 }
 
 export const searchIndex: SearchItem[] = [
-  ...Object.values(involvementPages).map(page => ({ title: page.title, description: page.description, path: page.path, category: "General" as const, keywords: ["get involved", "growing with you", "survey", "feedback", "focus group", "co-design", "contribute", "volunteer"] })),
-  { title: 'Find your starting point', description: 'Choose newly diagnosed, living with PH, or supporting someone. No account needed.', path: '/start', category: 'General', keywords: ['start', 'QR', 'clinic', 'new diagnosis', 'carer', 'family'] },
-  { title: 'Understanding PH', description: 'A place to explore PH, diagnosis, treatment, tests and appointment preparation.', path: '/understanding-ph', category: 'General', keywords: ['understand', 'diagnosis', 'treatment', 'tests', 'information'] },
+  ...Object.values(involvementPages).map((page) => ({
+    title: page.title,
+    description: page.description,
+    path: page.path,
+    category: "General" as const,
+    keywords: [
+      "get involved",
+      "growing with you",
+      "survey",
+      "feedback",
+      "focus group",
+      "co-design",
+      "contribute",
+      "volunteer",
+    ],
+  })),
+  {
+    title: "Find your starting point",
+    description:
+      "Choose newly diagnosed, living with PH, or supporting someone. No account needed.",
+    path: "/start",
+    category: "General",
+    keywords: ["start", "QR", "clinic", "new diagnosis", "carer", "family"],
+  },
+  {
+    title: "Understanding PH",
+    description:
+      "A place to explore PH, diagnosis, treatment, tests and appointment preparation.",
+    path: "/understanding-ph",
+    category: "General",
+    keywords: ["understand", "diagnosis", "treatment", "tests", "information"],
+  },
   {
     title: "Privacy information — draft",
     description:
@@ -362,7 +391,7 @@ export const searchIndex: SearchItem[] = [
   {
     title: "Resource Library",
     description:
-      "Downloadable fact sheets, guides, and educational materials about pulmonary hypertension.",
+      "Planned fact sheets, guides and educational materials; drafts and downloads are not yet available.",
     path: "/resource-library",
     category: "Resources",
     keywords: [

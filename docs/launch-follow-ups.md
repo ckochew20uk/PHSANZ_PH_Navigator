@@ -26,3 +26,30 @@ The proposal's budgets/grant targets are planning context. Do not treat them as 
 ## Get Involved and social publishing foundation
 
 `/get-involved` and its three opportunity pages are information-only and marked in development. Before activation, confirm receiving/review ownership, provider/storage, minimal fields, consent, retention/deletion, response expectations, and whether activities are service improvement/co-design or research. Newsletter signup is separate. Official Facebook/Instagram URLs and PUBLIC_SITE_ORIGIN remain pending; no social discussion group, feed, SDK or message intake is introduced.
+
+## Technical audit follow-ups — 3 November 2026
+
+See [the full audit](technical-audit.md) and [machine-readable findings](audit/findings.json).
+Source corrections are on the audit branch; verify merge/deployment before
+marking them live.
+
+- [ ] Verify every active Pages/Workers/Express newsletter route uses the hardened
+  shared handler; inventory and retire obsolete endpoints.
+- [ ] Configure and verify durable edge signup throttling/challenge, provider
+  quotas/alerts and ownership. Browser Origin checks and double opt-in do not
+  prevent automated confirmation-email abuse (AUD-21).
+- [ ] Review and test Mailchimp email-confirmation delivery, audience settings,
+  unsubscribe/deletion and data/log retention with the account owner.
+- [ ] Verify live TLS, headers/CSP, domains, bindings, WAF/rate controls and
+  repository protections. Execution-environment egress blocked live HTTP checks;
+  no Cloudflare account configuration was available.
+- [ ] Resolve overlapping map targets with usable clustering/expansion or a
+  list-first redesign, plus manual touch/assistive-technology review (AUD-20).
+- [ ] Review urgent-support jurisdiction labels and verified services for both
+  Australia and New Zealand before wider ANZ distribution (AUD-23). Existing
+  Australian numbers are not evidence of New Zealand coverage.
+- [ ] Profile the root bundle on real devices/networks; retain the current size
+  warning until a measured optimisation is justified (AUD-22).
+
+The intentionally pending contact, privacy/terms approval, clinical review,
+permanent origin and participation-activation decisions remain open.

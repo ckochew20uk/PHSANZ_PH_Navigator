@@ -68,7 +68,8 @@ export function PrivacyInformation() {
           The optional newsletter form asks for an email address, optional first
           and last names, and interest preferences. The newsletter integration
           sends these details to Mailchimp for subscriber-list management and
-          delivery when the service is configured. The final policy must confirm
+          delivery when the service is configured. New signups require email
+          confirmation before subscription. The final policy must confirm
           access, retention, overseas processing and unsubscribe arrangements.
         </p>
       </section>

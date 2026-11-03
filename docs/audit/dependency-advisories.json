@@ -1,0 +1,1431 @@
+{
+  "observed": "2026-11-03",
+  "before": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 7,
+      "moderate": 27,
+      "high": 37,
+      "critical": 12
+    },
+    "dependencies": 503,
+    "devDependencies": 0,
+    "optionalDependencies": 0,
+    "totalDependencies": 503
+  },
+  "after": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0
+    },
+    "dependencies": 485,
+    "devDependencies": 0,
+    "optionalDependencies": 0,
+    "totalDependencies": 485
+  },
+  "advisories": [
+    {
+      "github_advisory_id": "GHSA-f886-m6hf-6m8v",
+      "module_name": "brace-expansion",
+      "title": "brace-expansion: Zero-step sequence causes process hang and memory exhaustion",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-f886-m6hf-6m8v",
+      "vulnerable_versions": ">=2.0.0 <2.0.3",
+      "patched_versions": ">=2.0.3",
+      "findings": [
+        {
+          "version": "2.0.2",
+          "paths": [
+            "lib__api-spec>orval>typedoc>minimatch>brace-expansion"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-3v7f-55p6-f55p",
+      "module_name": "picomatch",
+      "title": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-3v7f-55p6-f55p",
+      "vulnerable_versions": "<2.3.2",
+      "patched_versions": ">=2.3.2",
+      "findings": [
+        {
+          "version": "2.3.1",
+          "paths": [
+            "artifacts__mockup-sandbox>fast-glob>micromatch>picomatch"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-3v7f-55p6-f55p",
+      "module_name": "picomatch",
+      "title": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-3v7f-55p6-f55p",
+      "vulnerable_versions": ">=4.0.0 <4.0.4",
+      "patched_versions": ">=4.0.4",
+      "findings": [
+        {
+          "version": "4.0.3",
+          "paths": [
+            "artifacts__mockup-sandbox>vite>picomatch"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-c2c7-rcm5-vvqj",
+      "module_name": "picomatch",
+      "title": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-c2c7-rcm5-vvqj",
+      "vulnerable_versions": "<2.3.2",
+      "patched_versions": ">=2.3.2",
+      "findings": [
+        {
+          "version": "2.3.1",
+          "paths": [
+            "artifacts__mockup-sandbox>fast-glob>micromatch>picomatch"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-c2c7-rcm5-vvqj",
+      "module_name": "picomatch",
+      "title": "Picomatch has a ReDoS vulnerability via extglob quantifiers",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-c2c7-rcm5-vvqj",
+      "vulnerable_versions": ">=4.0.0 <4.0.4",
+      "patched_versions": ">=4.0.4",
+      "findings": [
+        {
+          "version": "4.0.3",
+          "paths": [
+            "artifacts__mockup-sandbox>vite>picomatch"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-48c2-rrv3-qjmp",
+      "module_name": "yaml",
+      "title": "yaml is vulnerable to Stack Overflow via deeply nested YAML collections",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-48c2-rrv3-qjmp",
+      "vulnerable_versions": ">=2.0.0 <2.8.3",
+      "patched_versions": ">=2.8.3",
+      "findings": [
+        {
+          "version": "2.8.2",
+          "paths": [
+            "artifacts__mockup-sandbox>vite>yaml"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-j3q9-mxjg-w52f",
+      "module_name": "path-to-regexp",
+      "title": "path-to-regexp vulnerable to Denial of Service via sequential optional groups",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-j3q9-mxjg-w52f",
+      "vulnerable_versions": ">=8.0.0 <8.4.0",
+      "patched_versions": ">=8.4.0",
+      "findings": [
+        {
+          "version": "8.3.0",
+          "paths": [
+            "artifacts__api-server>express>router>path-to-regexp"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-27v5-c462-wpq7",
+      "module_name": "path-to-regexp",
+      "title": "path-to-regexp vulnerable to Regular Expression Denial of Service via multiple wildcards",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-27v5-c462-wpq7",
+      "vulnerable_versions": ">=8.0.0 <8.4.0",
+      "patched_versions": ">=8.4.0",
+      "findings": [
+        {
+          "version": "8.3.0",
+          "paths": [
+            "artifacts__api-server>express>router>path-to-regexp"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-r5fr-rjxr-66jc",
+      "module_name": "lodash",
+      "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc",
+      "vulnerable_versions": ">=4.0.0 <=4.17.23",
+      "patched_versions": ">=4.18.0",
+      "findings": [
+        {
+          "version": "4.17.23",
+          "paths": [
+            "artifacts__mockup-sandbox>recharts>lodash"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-f23m-r3pf-42rh",
+      "module_name": "lodash",
+      "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-f23m-r3pf-42rh",
+      "vulnerable_versions": "<=4.17.23",
+      "patched_versions": ">=4.18.0",
+      "findings": [
+        {
+          "version": "4.17.23",
+          "paths": [
+            "artifacts__mockup-sandbox>recharts>lodash"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-qx2v-qp2m-jg93",
+      "module_name": "postcss",
+      "title": "PostCSS has XSS via Unescaped </style> in its CSS Stringify Output",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-qx2v-qp2m-jg93",
+      "vulnerable_versions": "<8.5.10",
+      "patched_versions": ">=8.5.10",
+      "findings": [
+        {
+          "version": "8.5.8",
+          "paths": [
+            "artifacts__mockup-sandbox>vite>postcss"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-q8mj-m7cp-5q26",
+      "module_name": "qs",
+      "title": "qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-q8mj-m7cp-5q26",
+      "vulnerable_versions": ">=6.11.1 <=6.15.1",
+      "patched_versions": ">=6.15.2",
+      "findings": [
+        {
+          "version": "6.15.0",
+          "paths": [
+            "artifacts__api-server>express>qs"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-g7r4-m6w7-qqqr",
+      "module_name": "esbuild",
+      "title": "esbuild allows arbitrary file read when running the development server on Windows",
+      "severity": "low",
+      "url": "https://github.com/advisories/GHSA-g7r4-m6w7-qqqr",
+      "vulnerable_versions": ">=0.27.3 <0.28.1",
+      "patched_versions": ">=0.28.1",
+      "findings": [
+        {
+          "version": "0.27.3",
+          "paths": [
+            "artifacts__api-server>esbuild"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-v6wh-96g9-6wx3",
+      "module_name": "vite",
+      "title": "launch-editor: NTLMv2 hash disclosure via UNC path handling on Windows",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-v6wh-96g9-6wx3",
+      "vulnerable_versions": ">=7.0.0 <=7.3.4",
+      "patched_versions": ">=7.3.5",
+      "findings": [
+        {
+          "version": "7.3.2",
+          "paths": [
+            "artifacts__mockup-sandbox>vite"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-6v5v-wf23-fmfq",
+      "module_name": "markdown-it",
+      "title": "markdown-it: Quadratic complexity DoS in smartquotes rule via replaceAt string operations",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-6v5v-wf23-fmfq",
+      "vulnerable_versions": "<=14.1.1",
+      "patched_versions": ">=14.2.0",
+      "findings": [
+        {
+          "version": "14.1.1",
+          "paths": [
+            "lib__api-spec>orval>typedoc>markdown-it"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-22p9-wv53-3rq4",
+      "module_name": "linkify-it",
+      "title": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-22p9-wv53-3rq4",
+      "vulnerable_versions": "<=5.0.0",
+      "patched_versions": ">=5.0.1",
+      "findings": [
+        {
+          "version": "5.0.0",
+          "paths": [
+            "lib__api-spec>orval>typedoc>markdown-it>linkify-it"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-h67p-54hq-rp68",
+      "module_name": "js-yaml",
+      "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-h67p-54hq-rp68",
+      "vulnerable_versions": ">=4.0.0 <=4.1.1",
+      "patched_versions": ">=4.2.0",
+      "findings": [
+        {
+          "version": "4.1.1",
+          "paths": [
+            "lib__api-spec>orval>js-yaml"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-4x5r-pxfx-6jf8",
+      "module_name": "@babel/core",
+      "title": "@babel/core: Arbitrary File Read via sourceMappingURL Comment",
+      "severity": "low",
+      "url": "https://github.com/advisories/GHSA-4x5r-pxfx-6jf8",
+      "vulnerable_versions": "<=7.29.0",
+      "patched_versions": ">=7.29.6",
+      "findings": [
+        {
+          "version": "7.29.0",
+          "paths": [
+            "artifacts__mockup-sandbox>@vitejs/plugin-react>@babel/core"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-3jxr-9vmj-r5cp",
+      "module_name": "brace-expansion",
+      "title": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-3jxr-9vmj-r5cp",
+      "vulnerable_versions": ">=2.0.0 <2.1.2",
+      "patched_versions": ">=2.1.2",
+      "findings": [
+        {
+          "version": "2.0.2",
+          "paths": [
+            "lib__api-spec>orval>typedoc>minimatch>brace-expansion"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-52cp-r559-cp3m",
+      "module_name": "js-yaml",
+      "title": "js-yaml: YAML merge-key chains can force quadratic CPU consumption",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-52cp-r559-cp3m",
+      "vulnerable_versions": ">=4.0.0 <4.3.0",
+      "patched_versions": ">=4.3.0",
+      "findings": [
+        {
+          "version": "4.1.1",
+          "paths": [
+            "lib__api-spec>orval>js-yaml"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-v422-hmwv-36x6",
+      "module_name": "body-parser",
+      "title": "body-parser vulnerable to denial of service when invalid limit value silently disables size enforcement",
+      "severity": "low",
+      "url": "https://github.com/advisories/GHSA-v422-hmwv-36x6",
+      "vulnerable_versions": ">=2.0.0 <2.3.0",
+      "patched_versions": ">=2.3.0",
+      "findings": [
+        {
+          "version": "2.2.2",
+          "paths": [
+            "artifacts__api-server>express>body-parser"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-v245-v573-v5vm",
+      "module_name": "linkify-it",
+      "title": "linkify-it: Quadratic-complexity DoS via the `mailto:` validator scan-loop on attacker text",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-v245-v573-v5vm",
+      "vulnerable_versions": "<=5.0.1",
+      "patched_versions": ">=5.0.2",
+      "findings": [
+        {
+          "version": "5.0.0",
+          "paths": [
+            "lib__api-spec>orval>typedoc>markdown-it>linkify-it"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-v2hh-gcrm-f6hx",
+      "module_name": "fast-uri",
+      "title": "fast-uri vulnerable to host confusion via literal backslash authority delimiter",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-v2hh-gcrm-f6hx",
+      "vulnerable_versions": ">=3.0.0 <=3.1.3",
+      "patched_versions": ">=3.1.4",
+      "findings": [
+        {
+          "version": "3.1.0",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>ajv>fast-uri"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-6g55-p6wh-862q",
+      "module_name": "postcss",
+      "title": "PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-6g55-p6wh-862q",
+      "vulnerable_versions": "<=8.5.11",
+      "patched_versions": ">=8.5.12",
+      "findings": [
+        {
+          "version": "8.5.8",
+          "paths": [
+            "artifacts__mockup-sandbox>vite>postcss"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-mh99-v99m-4gvg",
+      "module_name": "brace-expansion",
+      "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-mh99-v99m-4gvg",
+      "vulnerable_versions": ">=2.0.0 <2.1.3",
+      "patched_versions": ">=2.1.3",
+      "findings": [
+        {
+          "version": "2.0.2",
+          "paths": [
+            "lib__api-spec>orval>typedoc>minimatch>brace-expansion"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-fxqj-rqcc-2cmp",
+      "module_name": "postcss",
+      "title": "PostCSS: incomplete fix of GHSA-6g55-p6wh-862q \u2014 attacker-controlled sourceMappingURL reads arbitrary .map files when `from` is unset",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-fxqj-rqcc-2cmp",
+      "vulnerable_versions": "<=8.5.22",
+      "patched_versions": ">=8.5.23",
+      "findings": [
+        {
+          "version": "8.5.8",
+          "paths": [
+            "artifacts__mockup-sandbox>vite>postcss"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-7p8r-x3mc-p8w7",
+      "module_name": "fast-uri",
+      "title": "fast-uri vulnerable to host confusion via backslash authority introducer",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-7p8r-x3mc-p8w7",
+      "vulnerable_versions": ">=3.0.0 <3.1.5",
+      "patched_versions": ">=3.1.5",
+      "findings": [
+        {
+          "version": "3.1.0",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>ajv>fast-uri"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-rgw5-rvv9-x895",
+      "module_name": "brace-expansion",
+      "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-rgw5-rvv9-x895",
+      "vulnerable_versions": ">=2.0.0 <2.1.4",
+      "patched_versions": ">=2.1.4",
+      "findings": [
+        {
+          "version": "2.0.2",
+          "paths": [
+            "lib__api-spec>orval>typedoc>minimatch>brace-expansion"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-5p4m-2wfm-xmqj",
+      "module_name": "js-yaml",
+      "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) \u2014 CVE-2026-59870 fix not backported",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-5p4m-2wfm-xmqj",
+      "vulnerable_versions": ">=4.0.0 <4.3.1",
+      "patched_versions": ">=4.3.1",
+      "findings": [
+        {
+          "version": "4.1.1",
+          "paths": [
+            "lib__api-spec>orval>js-yaml"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-28wg-ghj8-5hjv",
+      "module_name": "nanoid",
+      "title": "nanoid: non-secure generators can loop indefinitely with negative size",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-28wg-ghj8-5hjv",
+      "vulnerable_versions": "<3.3.16",
+      "patched_versions": ">=3.3.16",
+      "findings": [
+        {
+          "version": "3.3.11",
+          "paths": [
+            "artifacts__mockup-sandbox>vite>postcss>nanoid"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-2v37-7h3g-55p8",
+      "module_name": "nanoid",
+      "title": "nanoid: custom generators can loop indefinitely when size is zero",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-2v37-7h3g-55p8",
+      "vulnerable_versions": "<3.3.18",
+      "patched_versions": ">=3.3.18",
+      "findings": [
+        {
+          "version": "3.3.11",
+          "paths": [
+            "artifacts__mockup-sandbox>vite>postcss>nanoid"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-r28c-9q8g-f849",
+      "module_name": "postcss",
+      "title": "PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File Disclosure",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-r28c-9q8g-f849",
+      "vulnerable_versions": "<=8.5.17",
+      "patched_versions": ">=8.5.18",
+      "findings": [
+        {
+          "version": "8.5.8",
+          "paths": [
+            "artifacts__mockup-sandbox>vite>postcss"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-q3j6-qgpj-74h6",
+      "module_name": "fast-uri",
+      "title": "fast-uri vulnerable to path traversal via percent-encoded dot segments",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-q3j6-qgpj-74h6",
+      "vulnerable_versions": ">=3.0.0 <=3.1.0",
+      "patched_versions": ">=3.1.1",
+      "findings": [
+        {
+          "version": "3.1.0",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>ajv>fast-uri"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-v39h-62p7-jpjc",
+      "module_name": "fast-uri",
+      "title": "fast-uri vulnerable to host confusion via percent-encoded authority delimiters",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-v39h-62p7-jpjc",
+      "vulnerable_versions": ">=3.0.0 <=3.1.1",
+      "patched_versions": ">=3.1.2",
+      "findings": [
+        {
+          "version": "3.1.0",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>ajv>fast-uri"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-c83g-rgw3-j3cx",
+      "module_name": "browserslist",
+      "title": "Browserslist: Unbounded memory growth (no cache eviction) via distinct query results, leading to eventual OOM",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-c83g-rgw3-j3cx",
+      "vulnerable_versions": "<=4.28.6",
+      "patched_versions": ">=4.28.7",
+      "findings": [
+        {
+          "version": "4.28.1",
+          "paths": [
+            "artifacts__mockup-sandbox>@vitejs/plugin-react>@babel/core>@babel/helper-compilation-targets>browserslist"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-73wf-gq98-2v4g",
+      "module_name": "browserslist",
+      "title": "Browserslist: Uncaught crash / prototype write via untrusted browserslist-stats.json custom stats (normalizeStats)",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-73wf-gq98-2v4g",
+      "vulnerable_versions": "<=4.28.6",
+      "patched_versions": ">=4.28.7",
+      "findings": [
+        {
+          "version": "4.28.1",
+          "paths": [
+            "artifacts__mockup-sandbox>@vitejs/plugin-react>@babel/core>@babel/helper-compilation-targets>browserslist"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-xwg4-73v4-xw9w",
+      "module_name": "nanoid",
+      "title": "nanoid: Integer Overflow or Wraparound",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-xwg4-73v4-xw9w",
+      "vulnerable_versions": "<3.3.12",
+      "patched_versions": ">=3.3.12",
+      "findings": [
+        {
+          "version": "3.3.11",
+          "paths": [
+            "artifacts__mockup-sandbox>vite>postcss>nanoid"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-cxq5-97v7-87j8",
+      "module_name": "orval",
+      "title": "Orval: Generation-time SSRF + remote/local file inclusion via unrestricted $ref",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-cxq5-97v7-87j8",
+      "vulnerable_versions": "<8.22.0",
+      "patched_versions": ">=8.22.0",
+      "findings": [
+        {
+          "version": "8.5.3",
+          "paths": [
+            "lib__api-spec>orval"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-p4cg-3328-rvfg",
+      "module_name": "orval",
+      "title": "Orval: Import-time RCE via query-parameter default -> zod module-level template literal",
+      "severity": "critical",
+      "url": "https://github.com/advisories/GHSA-p4cg-3328-rvfg",
+      "vulnerable_versions": "<8.21.0",
+      "patched_versions": ">=8.21.0",
+      "findings": [
+        {
+          "version": "8.5.3",
+          "paths": [
+            "lib__api-spec>orval"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-6mr6-jvcr-2f25",
+      "module_name": "orval",
+      "title": "Orval: Import-time RCE via schema property name -> computed-property-key injection in the zod client",
+      "severity": "critical",
+      "url": "https://github.com/advisories/GHSA-6mr6-jvcr-2f25",
+      "vulnerable_versions": "<8.21.0",
+      "patched_versions": ">=8.21.0",
+      "findings": [
+        {
+          "version": "8.5.3",
+          "paths": [
+            "lib__api-spec>orval"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-x5fp-wj9c-mxmx",
+      "module_name": "qs",
+      "title": "qs array-limit bypass via bracket-key comma parsing",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-x5fp-wj9c-mxmx",
+      "vulnerable_versions": ">=6.14.2 <=6.15.3",
+      "patched_versions": ">=6.16.0",
+      "findings": [
+        {
+          "version": "6.15.0",
+          "paths": [
+            "artifacts__api-server>express>qs"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-4mjr-xmp4-gh2g",
+      "module_name": "qs",
+      "title": "qs: Denial of Service via Attacker Controlled isBuffer",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-4mjr-xmp4-gh2g",
+      "vulnerable_versions": ">=2.2.5 <6.16.0",
+      "patched_versions": ">=6.16.0",
+      "findings": [
+        {
+          "version": "6.15.0",
+          "paths": [
+            "artifacts__api-server>express>qs"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-f65p-4m7j-42xc",
+      "module_name": "fast-uri",
+      "title": "fast-uri vulnerable to server-side request forgery via malformed IPv6 normalization",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-f65p-4m7j-42xc",
+      "vulnerable_versions": ">=3.0.0 <3.1.6",
+      "patched_versions": ">=3.1.6",
+      "findings": [
+        {
+          "version": "3.1.0",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>ajv>fast-uri"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-jqff-g426-hqxp",
+      "module_name": "fast-uri",
+      "title": "fast-uri vulnerable to host confusion via percent-encoded scheme normalization",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-jqff-g426-hqxp",
+      "vulnerable_versions": ">=3.0.0 <3.1.6",
+      "patched_versions": ">=3.1.6",
+      "findings": [
+        {
+          "version": "3.1.0",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>ajv>fast-uri"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-6437-gxhq-pqv8",
+      "module_name": "orval",
+      "title": "Orval: Import-time RCE via header parameter name -> computed-property-key injection in the zod client",
+      "severity": "critical",
+      "url": "https://github.com/advisories/GHSA-6437-gxhq-pqv8",
+      "vulnerable_versions": "<8.21.0",
+      "patched_versions": ">=8.21.0",
+      "findings": [
+        {
+          "version": "8.5.3",
+          "paths": [
+            "lib__api-spec>orval"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-2w86-xfrc-g85r",
+      "module_name": "orval",
+      "title": "Orval: RCE via schema property name -> computed-property-key injection in the MSW mock generator",
+      "severity": "critical",
+      "url": "https://github.com/advisories/GHSA-2w86-xfrc-g85r",
+      "vulnerable_versions": "<8.21.0",
+      "patched_versions": ">=8.21.0",
+      "findings": [
+        {
+          "version": "8.5.3",
+          "paths": [
+            "lib__api-spec>orval"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-3575-w9fc-c2j6",
+      "module_name": "orval",
+      "title": "Orval: Import-time RCE via enum-typed default -> zod module-level template literal",
+      "severity": "critical",
+      "url": "https://github.com/advisories/GHSA-3575-w9fc-c2j6",
+      "vulnerable_versions": "<8.21.0",
+      "patched_versions": ">=8.21.0",
+      "findings": [
+        {
+          "version": "8.5.3",
+          "paths": [
+            "lib__api-spec>orval"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-653q-5476-x79g",
+      "module_name": "orval",
+      "title": "Orval: Import-time RCE via query parameter name -> computed-property-key injection in the zod cli",
+      "severity": "critical",
+      "url": "https://github.com/advisories/GHSA-653q-5476-x79g",
+      "vulnerable_versions": "<8.21.0",
+      "patched_versions": ">=8.21.0",
+      "findings": [
+        {
+          "version": "8.5.3",
+          "paths": [
+            "lib__api-spec>orval"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-2h9g-j24r-h63g",
+      "module_name": "orval",
+      "title": "Orval: Import-time RCE via array-items default -> zod module-level template literal",
+      "severity": "critical",
+      "url": "https://github.com/advisories/GHSA-2h9g-j24r-h63g",
+      "vulnerable_versions": "<8.21.0",
+      "patched_versions": ">=8.21.0",
+      "findings": [
+        {
+          "version": "8.5.3",
+          "paths": [
+            "lib__api-spec>orval"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-8j6p-r8jg-mxqh",
+      "module_name": "orval",
+      "title": "Orval: Import-time RCE via header-parameter default -> zod module-level template literal",
+      "severity": "critical",
+      "url": "https://github.com/advisories/GHSA-8j6p-r8jg-mxqh",
+      "vulnerable_versions": "<8.21.0",
+      "patched_versions": ">=8.21.0",
+      "findings": [
+        {
+          "version": "8.5.3",
+          "paths": [
+            "lib__api-spec>orval"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-88f2-fpv8-89q2",
+      "module_name": "orval",
+      "title": "Orval: RCE via servers[].url -> unescaped request-URL template literal (with getBaseUrlFromSpecification)",
+      "severity": "critical",
+      "url": "https://github.com/advisories/GHSA-88f2-fpv8-89q2",
+      "vulnerable_versions": "<8.21.0",
+      "patched_versions": ">=8.21.0",
+      "findings": [
+        {
+          "version": "8.5.3",
+          "paths": [
+            "lib__api-spec>orval"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-w727-8j6c-2rj4",
+      "module_name": "orval",
+      "title": "Orval: Import-time RCE via schema default -> zod module-level template literal",
+      "severity": "critical",
+      "url": "https://github.com/advisories/GHSA-w727-8j6c-2rj4",
+      "vulnerable_versions": "<8.21.0",
+      "patched_versions": ">=8.21.0",
+      "findings": [
+        {
+          "version": "8.5.3",
+          "paths": [
+            "lib__api-spec>orval"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-fg9p-mrxr-hvq7",
+      "module_name": "orval",
+      "title": "Orval: RCE via OpenAPI path -> unescaped request-URL template literal (backtick breakout)",
+      "severity": "critical",
+      "url": "https://github.com/advisories/GHSA-fg9p-mrxr-hvq7",
+      "vulnerable_versions": "<8.21.0",
+      "patched_versions": ">=8.21.0",
+      "findings": [
+        {
+          "version": "8.5.3",
+          "paths": [
+            "lib__api-spec>orval"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-w5vr-8v7q-w6rv",
+      "module_name": "baseline-browser-mapping",
+      "title": "baseline-browser-mapping process termination on invalid input causes denial of service",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-w5vr-8v7q-w6rv",
+      "vulnerable_versions": ">=2.0.0 <2.11.0",
+      "patched_versions": ">=2.11.0",
+      "findings": [
+        {
+          "version": "2.10.0",
+          "paths": [
+            "artifacts__mockup-sandbox>@vitejs/plugin-react>@babel/core>@babel/helper-compilation-targets>browserslist>baseline-browser-mapping"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-2883-xcg3-v3hh",
+      "module_name": "js-yaml",
+      "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-2883-xcg3-v3hh",
+      "vulnerable_versions": ">=4.0.0 <4.3.2",
+      "patched_versions": ">=4.3.2",
+      "findings": [
+        {
+          "version": "4.1.1",
+          "paths": [
+            "lib__api-spec>orval>js-yaml"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-4c8g-83qw-93j6",
+      "module_name": "fast-uri",
+      "title": "fast-uri vulnerable to host confusion via failed IDN canonicalization",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-4c8g-83qw-93j6",
+      "vulnerable_versions": ">=3.0.0 <3.1.3",
+      "patched_versions": ">=3.1.3",
+      "findings": [
+        {
+          "version": "3.1.0",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>ajv>fast-uri"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-qw65-cvwx-89v3",
+      "module_name": "fast-uri",
+      "title": "fast-uri vulnerable to authority injection via an unvalidated port in serialize",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-qw65-cvwx-89v3",
+      "vulnerable_versions": ">=3.0.0 <3.1.7",
+      "patched_versions": ">=3.1.7",
+      "findings": [
+        {
+          "version": "3.1.0",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>ajv>fast-uri"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-hrr3-gc8f-f4qj",
+      "module_name": "fast-uri",
+      "title": "fast-uri vulnerable to inconsistent host case normalization via percent-encoded octets",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-hrr3-gc8f-f4qj",
+      "vulnerable_versions": ">=3.0.0 <3.1.8",
+      "patched_versions": ">=3.1.8",
+      "findings": [
+        {
+          "version": "3.1.0",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>ajv>fast-uri"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-q2hr-2g5m-vwhr",
+      "module_name": "brace-expansion",
+      "title": "brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-q2hr-2g5m-vwhr",
+      "vulnerable_versions": ">=2.0.0 <2.1.7",
+      "patched_versions": ">=2.1.7",
+      "findings": [
+        {
+          "version": "2.0.2",
+          "paths": [
+            "lib__api-spec>orval>typedoc>minimatch>brace-expansion"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-qhr7-859c-m2p7",
+      "module_name": "brace-expansion",
+      "title": "brace-expansion: DoS via uncontrolled recursion on nested brace groups causing stack exhaustion",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-qhr7-859c-m2p7",
+      "vulnerable_versions": ">=2.0.0 <2.1.6",
+      "patched_versions": ">=2.1.6",
+      "findings": [
+        {
+          "version": "2.0.2",
+          "paths": [
+            "lib__api-spec>orval>typedoc>minimatch>brace-expansion"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-6j4f-fj2g-mc7p",
+      "module_name": "brace-expansion",
+      "title": "brace-expansion: DoS via uncontrolled recursion in parseCommaParts causing stack exhaustion",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-6j4f-fj2g-mc7p",
+      "vulnerable_versions": ">=2.0.0 <2.1.5",
+      "patched_versions": ">=2.1.5",
+      "findings": [
+        {
+          "version": "2.0.2",
+          "paths": [
+            "lib__api-spec>orval>typedoc>minimatch>brace-expansion"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-68fv-2mgg-jv7q",
+      "module_name": "source-map-js",
+      "title": "source-map-js allows event-loop denial of service through indexed source-map section offsets",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-68fv-2mgg-jv7q",
+      "vulnerable_versions": ">=1.0.0 <1.2.2",
+      "patched_versions": ">=1.2.2",
+      "findings": [
+        {
+          "version": "1.2.1",
+          "paths": [
+            "artifacts__mockup-sandbox>@tailwindcss/vite>@tailwindcss/node>source-map-js"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-jqcg-44mw-7w3h",
+      "module_name": "proxy-addr",
+      "title": "proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet",
+      "severity": "critical",
+      "url": "https://github.com/advisories/GHSA-jqcg-44mw-7w3h",
+      "vulnerable_versions": ">=1.1.0 <2.0.8",
+      "patched_versions": ">=2.0.8",
+      "findings": [
+        {
+          "version": "2.0.7",
+          "paths": [
+            "artifacts__api-server>express>proxy-addr"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-jggr-w7fw-pc2j",
+      "module_name": "fast-copy",
+      "title": "fast-copy: Stack exhaustion in fast-copy when copying deeply-nested values",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-jggr-w7fw-pc2j",
+      "vulnerable_versions": ">=4.0.0 <4.1.0",
+      "patched_versions": ">=4.1.0",
+      "findings": [
+        {
+          "version": "4.0.2",
+          "paths": [
+            "artifacts__api-server>pino-pretty>fast-copy"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-r7fv-28h4-cvq7",
+      "module_name": "markdown-it",
+      "title": "markdown-it: Quadratic complexity in smartquotes with unmatched closing quotes",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-r7fv-28h4-cvq7",
+      "vulnerable_versions": "<14.3.2",
+      "patched_versions": ">=14.3.2",
+      "findings": [
+        {
+          "version": "14.1.1",
+          "paths": [
+            "lib__api-spec>orval>typedoc>markdown-it"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-698v-4r3x-3vcv",
+      "module_name": "vite",
+      "title": "launch-editor: escapeCmdArgs() omits % escaping on Windows",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-698v-4r3x-3vcv",
+      "vulnerable_versions": ">=7.0.0 <=7.3.6",
+      "patched_versions": ">=7.3.7",
+      "findings": [
+        {
+          "version": "7.3.2",
+          "paths": [
+            "artifacts__mockup-sandbox>vite"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-vfgh-jcmw-g37q",
+      "module_name": "markdown-it",
+      "title": "markdown-it: Quadratic-time denial of service in inline HTML parsing with html enabled",
+      "severity": "low",
+      "url": "https://github.com/advisories/GHSA-vfgh-jcmw-g37q",
+      "vulnerable_versions": "<14.3.3",
+      "patched_versions": ">=14.3.3",
+      "findings": [
+        {
+          "version": "14.1.1",
+          "paths": [
+            "lib__api-spec>orval>typedoc>markdown-it"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-r825-w8mm-5pxw",
+      "module_name": "vite",
+      "title": "launch-editor: Editor CLI flag misinterpretation causing arbitrary command execution for some editors",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-r825-w8mm-5pxw",
+      "vulnerable_versions": ">=7.0.0 <=7.3.6",
+      "patched_versions": ">=7.3.7",
+      "findings": [
+        {
+          "version": "7.3.2",
+          "paths": [
+            "artifacts__mockup-sandbox>vite"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-587h-7wmj-h5pm",
+      "module_name": "vite",
+      "title": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-587h-7wmj-h5pm",
+      "vulnerable_versions": ">=7.0.0 <=7.3.6",
+      "patched_versions": ">=7.3.7",
+      "findings": [
+        {
+          "version": "7.3.2",
+          "paths": [
+            "artifacts__mockup-sandbox>vite"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-gfr2-rv44-r23c",
+      "module_name": "markdown-it",
+      "title": "markdown-it: Quadratic-time rendering of a single multi-line link reference definition with default options (regression since 14.0)",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-gfr2-rv44-r23c",
+      "vulnerable_versions": ">=14.1.0 <14.3.3",
+      "patched_versions": ">=14.3.3",
+      "findings": [
+        {
+          "version": "14.1.1",
+          "paths": [
+            "lib__api-spec>orval>typedoc>markdown-it"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-9jrq-w75r-8gcw",
+      "module_name": "vite",
+      "title": "Vite: Cross origin script execution through Vite custom middleware",
+      "severity": "low",
+      "url": "https://github.com/advisories/GHSA-9jrq-w75r-8gcw",
+      "vulnerable_versions": ">=7.0.0 <=7.3.6",
+      "patched_versions": ">=7.3.7",
+      "findings": [
+        {
+          "version": "7.3.2",
+          "paths": [
+            "artifacts__mockup-sandbox>vite"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-rq7h-c2jc-7f22",
+      "module_name": "vite",
+      "title": "Vite: Files outside `server.fs.allow` could be served when project paths match system paths on non-Windows machine",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-rq7h-c2jc-7f22",
+      "vulnerable_versions": ">=7.0.0 <=7.3.6",
+      "patched_versions": ">=7.3.7",
+      "findings": [
+        {
+          "version": "7.3.2",
+          "paths": [
+            "artifacts__mockup-sandbox>vite"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-mrhx-c7xc-m3w5",
+      "module_name": "zod",
+      "title": "Zod can exhaust memory while validating oversized constrained collections",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5",
+      "vulnerable_versions": "<4.6.6",
+      "patched_versions": ">=4.6.6",
+      "findings": [
+        {
+          "version": "3.25.76",
+          "paths": [
+            "artifacts__mockup-sandbox>zod"
+          ]
+        },
+        {
+          "version": "4.3.6",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>@scalar/openapi-types>zod"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-27r3-jxmh-p828",
+      "module_name": "body-parser",
+      "title": "body-parser vulnerable to Denial of Service via trailing bytes after a compressed request body",
+      "severity": "high",
+      "url": "https://github.com/advisories/GHSA-27r3-jxmh-p828",
+      "vulnerable_versions": ">=2.0.0 <2.4.0",
+      "patched_versions": ">=2.4.0",
+      "findings": [
+        {
+          "version": "2.2.2",
+          "paths": [
+            "artifacts__api-server>express>body-parser"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-w74x-v6f9-j3xg",
+      "module_name": "fast-uri",
+      "title": "fast-uri vulnerable to URI scheme spoofing via percent-encoded scheme decoding",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-w74x-v6f9-j3xg",
+      "vulnerable_versions": ">=3.0.0 <3.1.9",
+      "patched_versions": ">=3.1.9",
+      "findings": [
+        {
+          "version": "3.1.0",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>ajv>fast-uri"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-xhq7-xmqj-769h",
+      "module_name": "fast-uri",
+      "title": "fast-uri vulnerable to improper path equivalence in relative reference normalization",
+      "severity": "low",
+      "url": "https://github.com/advisories/GHSA-xhq7-xmqj-769h",
+      "vulnerable_versions": ">=3.0.0 <3.1.9",
+      "patched_versions": ">=3.1.9",
+      "findings": [
+        {
+          "version": "3.1.0",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>ajv>fast-uri"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-333x-w4r6-6crp",
+      "module_name": "fast-uri",
+      "title": "fast-uri vulnerable to scheme injection via an unescaped first-segment colon in suffix references",
+      "severity": "low",
+      "url": "https://github.com/advisories/GHSA-333x-w4r6-6crp",
+      "vulnerable_versions": ">=3.0.0 <3.1.9",
+      "patched_versions": ">=3.1.9",
+      "findings": [
+        {
+          "version": "3.1.0",
+          "paths": [
+            "lib__api-spec>orval>@scalar/openapi-parser>ajv>fast-uri"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-rj75-hqrm-r3gf",
+      "module_name": "postcss-selector-parser",
+      "title": "PostCSS: Quadratic complexity in flat selector parsing allows CPU exhaustion",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-rj75-hqrm-r3gf",
+      "vulnerable_versions": "<6.1.5",
+      "patched_versions": ">=6.1.5",
+      "findings": [
+        {
+          "version": "6.0.10",
+          "paths": [
+            "artifacts__ph-navigator>@tailwindcss/typography>postcss-selector-parser"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-fx2h-pf6j-xcff",
+      "module_name": "vite",
+      "title": "vite: `server.fs.deny` bypass on Windows alternate paths",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff",
+      "vulnerable_versions": ">=7.0.0 <=7.3.4",
+      "patched_versions": ">=7.3.5",
+      "findings": [
+        {
+          "version": "7.3.2",
+          "paths": [
+            "artifacts__mockup-sandbox>vite"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-6pq8-jhm2-2vcw",
+      "module_name": "qs",
+      "title": "qs : qs.stringify with arrayFormat 'comma' throws an uncaught TypeError on array elements carrying a non-callable own toString (DoS)",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-6pq8-jhm2-2vcw",
+      "vulnerable_versions": ">=6.7.0 <=6.16.0",
+      "patched_versions": ">=6.16.1",
+      "findings": [
+        {
+          "version": "6.15.0",
+          "paths": [
+            "artifacts__api-server>express>qs"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-g3hv-75wg-m249",
+      "module_name": "minimatch",
+      "title": "minimatch has potential denial of service via globparts amplification",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249",
+      "vulnerable_versions": "<11.0.1",
+      "patched_versions": ">=11.0.1",
+      "findings": [
+        {
+          "version": "9.0.9",
+          "paths": [
+            "lib__api-spec>orval>typedoc>minimatch"
+          ]
+        }
+      ]
+    },
+    {
+      "github_advisory_id": "GHSA-253c-mchw-3w2r",
+      "module_name": "markdown-it",
+      "title": "markdown-it linkify: true has two quadratic paths, so a few hundred KB of markdown blocks the event loop for tens of seconds",
+      "severity": "moderate",
+      "url": "https://github.com/advisories/GHSA-253c-mchw-3w2r",
+      "vulnerable_versions": "<14.3.1",
+      "patched_versions": ">=14.3.1",
+      "findings": [
+        {
+          "version": "14.1.1",
+          "paths": [
+            "lib__api-spec>orval>typedoc>markdown-it"
+          ]
+        }
+      ]
+    }
+  ]
+}

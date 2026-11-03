@@ -2,7 +2,7 @@ import { Link } from "wouter";
 
 export function UtilityHeader() {
   return (
-    <div className="border-b border-border bg-muted px-4 py-1.5 text-xs font-medium text-muted-foreground">
+    <div className="site-utility border-b border-border bg-muted px-4 py-1.5 text-xs font-medium text-muted-foreground">
       <div className="container mx-auto flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
         <span>An initiative of PHSANZ</span>
         <Link

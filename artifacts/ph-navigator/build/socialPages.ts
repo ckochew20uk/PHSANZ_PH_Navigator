@@ -1,5 +1,5 @@
 import type { Plugin } from "vite";
-import { involvementPages } from "../src/data/getInvolved";
+import { searchIndex } from "../src/data/searchIndex";
 
 function escapeHtml(value: string) {
   return value.replace(
@@ -45,11 +45,19 @@ export function involvementSocialPages(
           this.error(
             "Expected the built index.html before generating involvement social pages.",
           );
-        const source =
+        const original =
           typeof entry.source === "string"
             ? entry.source
             : new TextDecoder().decode(entry.source);
-        for (const page of Object.values(involvementPages)) {
+        // Build only: development needs Vite's refresh scripts and websocket.
+        const policy =
+          "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.tile.openstreetmap.org; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'";
+        const source = original.replace(
+          '<meta charset="UTF-8" />',
+          `<meta charset="UTF-8" />\n    <meta http-equiv="Content-Security-Policy" content="${policy}" />`,
+        );
+        entry.source = source;
+        for (const page of searchIndex) {
           const title = `${page.title} | PH Navigator`;
           let html = source
             .replace(
@@ -84,11 +92,13 @@ export function involvementSocialPages(
             );
           }
           html = html.replace("</head>", `${tags.join("\n    ")}\n  </head>`);
-          this.emitFile({
-            type: "asset",
-            fileName: page.path.slice(1) + "/index.html",
-            source: html,
-          });
+          if (page.path === "/") entry.source = html;
+          else
+            this.emitFile({
+              type: "asset",
+              fileName: page.path.slice(1) + "/index.html",
+              source: html,
+            });
         }
       },
     },

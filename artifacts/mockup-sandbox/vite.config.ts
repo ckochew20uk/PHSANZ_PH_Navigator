@@ -62,7 +62,9 @@ export default defineConfig(async ({ command }): Promise<UserConfig> => {
     server: {
       port,
       host: "0.0.0.0",
-      allowedHosts: true,
+      allowedHosts: process.env.REPLIT_DEV_DOMAIN
+        ? [process.env.REPLIT_DEV_DOMAIN]
+        : [],
       fs: {
         strict: true,
       },
@@ -70,7 +72,6 @@ export default defineConfig(async ({ command }): Promise<UserConfig> => {
     preview: {
       port,
       host: "0.0.0.0",
-      allowedHosts: true,
     },
   };
 });
