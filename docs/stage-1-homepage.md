@@ -51,3 +51,11 @@ Screenshots from the local production preview (external fonts may fall back in t
 - [Mobile, 390px](stage-1-screenshots/homepage-mobile.png)
 
 No merge or deployment is authorised by this PR.
+
+## White-space refinement — 3 November 2026
+
+Following review, the hero uses a plain off-white background and most pathway cards are white with compact mint icon surfaces. Recently Diagnosed retains peach and Community Voices retains lavender. The education section now uses a white background and a mint reading panel. The lavender community section and dark teal closing section remain visual anchors.
+
+Pathway and resource cards now have subtle elevation and directional arrow feedback on hover and keyboard focus. Reduced-motion mode suppresses those transforms. No copy, routes or integrations were changed in this refinement.
+
+Revalidated frontend TypeScript and production build with Cloudflare's `BASE_PATH=/`. Chromium checks pass at 320, 390, 768 and 1440px, all 12 homepage destinations render, visible focus and reduced-motion checks pass, and no runtime errors were observed. Desktop and mobile screenshots above have been refreshed.

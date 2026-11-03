@@ -24,7 +24,9 @@ export function PathwayCard({
       <Card className="home-pathway">
         <CardHeader>
           <div className="home-card-top">
-            <Icon aria-hidden="true" size={28} />
+            <span className="home-pathway-icon">
+              <Icon aria-hidden="true" size={28} />
+            </span>
             {community && <span className="home-label">Our community</span>}
           </div>
           <h3 className="home-card-title">{title}</h3>

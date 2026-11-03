@@ -48,7 +48,6 @@ const pathways = [
     description: "Support for caring for someone with PH — and yourself.",
     href: "/caring-for-someone",
     icon: HeartHandshake,
-    tone: "peach" as const,
   },
   {
     title: "Find a specialist",
