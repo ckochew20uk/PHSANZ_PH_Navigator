@@ -1,3 +1,4 @@
+import { involvementPages } from "./getInvolved";
 export interface SearchItem {
   title: string;
   description: string;
@@ -7,6 +8,7 @@ export interface SearchItem {
 }
 
 export const searchIndex: SearchItem[] = [
+  ...Object.values(involvementPages).map(page => ({ title: page.title, description: page.description, path: page.path, category: "General" as const, keywords: ["get involved", "growing with you", "survey", "feedback", "focus group", "co-design", "contribute", "volunteer"] })),
   { title: 'Find your starting point', description: 'Choose newly diagnosed, living with PH, or supporting someone. No account needed.', path: '/start', category: 'General', keywords: ['start', 'QR', 'clinic', 'new diagnosis', 'carer', 'family'] },
   { title: 'Understanding PH', description: 'A place to explore PH, diagnosis, treatment, tests and appointment preparation.', path: '/understanding-ph', category: 'General', keywords: ['understand', 'diagnosis', 'treatment', 'tests', 'information'] },
   {

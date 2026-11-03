@@ -1,3 +1,4 @@
+import { InvolvementInvite } from "@/components/involvement/InvolvementInvite";
 import { SectionHeading } from "@/components/content/SectionHeading";
 import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence, easeOut } from "framer-motion";
@@ -452,6 +453,7 @@ export default function ResourceLibrary() {
           </div>
         </div>
       </section>
+      <section className="design-section"><div className="content-container"><InvolvementInvite title="Help guide future resources" description="We want future resources to reflect what people affected by PH need. Explore the planned ways to help shape this collection." /></div></section>
     </div>
   );
 }

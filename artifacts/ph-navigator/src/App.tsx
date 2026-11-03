@@ -99,6 +99,11 @@ const AccessibilityStatement = React.lazy(() =>
   })),
 );
 
+const GetInvolved = React.lazy(() => import('@/pages/get-involved'));
+const FeedbackOpportunity = React.lazy(() => import('@/pages/get-involved').then(module => ({ default: module.FeedbackOpportunity })));
+const FocusGroupOpportunity = React.lazy(() => import('@/pages/get-involved').then(module => ({ default: module.FocusGroupOpportunity })));
+const ContributionOpportunity = React.lazy(() => import('@/pages/get-involved').then(module => ({ default: module.ContributionOpportunity })));
+
 const queryClient = new QueryClient();
 
 function Router() {
@@ -163,6 +168,14 @@ function Router() {
       <Route path="/privacy" component={PrivacyInformation} />
       <Route path="/terms" component={TermsOfUse} />
       <Route path="/accessibility" component={AccessibilityStatement} />
+      <Route path="/get-involved" component={GetInvolved} />
+      <Route path="/get-involved/" component={GetInvolved} />
+      <Route path="/get-involved/feedback" component={FeedbackOpportunity} />
+      <Route path="/get-involved/feedback/" component={FeedbackOpportunity} />
+      <Route path="/get-involved/focus-groups" component={FocusGroupOpportunity} />
+      <Route path="/get-involved/focus-groups/" component={FocusGroupOpportunity} />
+      <Route path="/get-involved/contribute" component={ContributionOpportunity} />
+      <Route path="/get-involved/contribute/" component={ContributionOpportunity} />
       <Route component={NotFound} />
     </Switch>
   );

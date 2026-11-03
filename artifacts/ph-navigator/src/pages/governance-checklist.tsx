@@ -5,6 +5,16 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 const checklistItems = [
   {
+    title: "Participation readiness",
+    detail:
+      "Keep Get Involved marked in development until the receiving team, survey/form provider, fields, privacy/consent, retention, response process and activity classification (service improvement/co-design or research) are confirmed. Newsletter signup must remain separate.",
+  },
+  {
+    title: "Social publishing readiness",
+    detail:
+      "Verify official Facebook and Instagram URLs and account controls before linking them. Publish updates directing participation back to the website; do not introduce social discussion groups, embeds or message-based intake. Confirm PUBLIC_SITE_ORIGIN before enabling absolute sharing URLs.",
+  },
+  {
     title: "Institutional responsibility and contact",
     detail:
       "Public contact details are intentionally a placeholder at the project lead’s request. Revisit them in every launch/governance check; confirm a verified PHSANZ project, privacy and accessibility contact route, responsible entity and copyright/reuse notices before launch.",

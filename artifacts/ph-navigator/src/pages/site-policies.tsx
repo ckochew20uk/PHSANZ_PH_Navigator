@@ -85,6 +85,17 @@ export function PrivacyInformation() {
         </p>
       </section>
       <section>
+        <SectionHeading className="mb-3">Get Involved</SectionHeading>
+        <p>
+          Get Involved currently provides information about planned surveys,
+          focus groups and contribution opportunities. It does not collect
+          feedback, expressions of interest or donations. Any future collection
+          needs a defined receiving team, privacy arrangements and consent
+          information before it opens. Newsletter subscription remains a
+          separate choice.
+        </p>
+      </section>
+      <section>
         <SectionHeading className="mb-3">Patient stories</SectionHeading>
         <p>
           Patient story submissions are not open. Do not send personal or health

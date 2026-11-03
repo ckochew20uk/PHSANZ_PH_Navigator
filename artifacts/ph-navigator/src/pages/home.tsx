@@ -1,3 +1,4 @@
+import { InvolvementInvite } from "@/components/involvement/InvolvementInvite";
 import { Link } from "wouter";
 import { BookOpen, Leaf, Users } from "lucide-react";
 import { HomeHero } from "@/components/home/HomeHero";
@@ -40,6 +41,7 @@ export default function Home() {
         </div>
       </section>
       <FeaturedStories />
+      <section className="home-section"><div className="home-container"><InvolvementInvite /></div></section>
       <section
         className="home-section home-credibility"
         aria-labelledby="credibility-title"

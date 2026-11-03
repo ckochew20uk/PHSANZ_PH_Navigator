@@ -58,6 +58,7 @@ export const footerPatientLinks = [
   { title: "Resource library", path: "/resource-library" },
 ];
 export const footerOrganisationLinks = [
+  { title: "Get Involved", path: "/get-involved" },
   { title: "About PH Navigator", path: "/about" },
   { title: "Our Partners", path: "/about/partnership" },
   { title: "Our Review Panels", path: "/about/advisory-panel" },

@@ -1,3 +1,4 @@
+import { SocialUpdates } from "@/components/involvement/SocialUpdates";
 import { Link, useLocation } from "wouter";
 import { Logo } from "@/components/ui/logo";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
@@ -27,6 +28,12 @@ export function Footer() {
               className="py-1 text-secondary underline underline-offset-4"
             >
               About PH Navigator
+            </Link>
+            <Link
+              href="/get-involved"
+              className="py-1 text-secondary underline underline-offset-4"
+            >
+              Get Involved
             </Link>
             {informationLinks.map((item) => (
               <Link
@@ -75,6 +82,7 @@ export function Footer() {
               <p className="mt-2 text-sm text-primary-foreground/90">
                 Pulmonary Hypertension Society of Australia and New Zealand
               </p>
+              <SocialUpdates />
             </div>
             <nav aria-label="Patient information">
               <h2 className="mb-4 font-heading text-xl font-bold">

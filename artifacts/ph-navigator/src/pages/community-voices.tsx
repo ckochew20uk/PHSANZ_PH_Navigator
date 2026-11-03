@@ -1,3 +1,4 @@
+import { InvolvementInvite } from "@/components/involvement/InvolvementInvite";
 import { Link } from "wouter";
 import {
   ArrowRight,
@@ -202,6 +203,7 @@ export default function CommunityVoices() {
           </Link>
         </ContentContainer>
       </section>
+      <section className="design-section"><ContentContainer><InvolvementInvite title="Help shape our community" description="Explore future ways to contribute lived experience or help guide this developing initiative. Story submissions remain closed." /></ContentContainer></section>
     </div>
   );
 }

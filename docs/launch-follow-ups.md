@@ -21,4 +21,8 @@ The proposal's budgets/grant targets are planning context. Do not treat them as 
 
 ## Clinic entry and visitor flow
 
-`/start` and the simplified patient journeys are implemented on `feat/patient-journeys`. Before producing clinic flyers/cards, confirm the permanent public origin and test QR print proofs against its stable `/start` URL; see `clinic-qr-brief.md`. No QR should point to a temporary preview. Feedback collection and the response workflow are explicitly deferred by the user and are not part of this update.
+`/start` and the simplified patient journeys are implemented on `feat/patient-journeys`. Before producing clinic flyers/cards, confirm the permanent public origin and test QR print proofs against its stable `/start` URL; see `clinic-qr-brief.md`. No QR should point to a temporary preview. Get Involved information pages have since been added as a foundation. Feedback and expression-of-interest collection remain closed pending a separately agreed receiving team, privacy arrangements and workflow.
+
+## Get Involved and social publishing foundation
+
+`/get-involved` and its three opportunity pages are information-only and marked in development. Before activation, confirm receiving/review ownership, provider/storage, minimal fields, consent, retention/deletion, response expectations, and whether activities are service improvement/co-design or research. Newsletter signup is separate. Official Facebook/Instagram URLs and PUBLIC_SITE_ORIGIN remain pending; no social discussion group, feed, SDK or message intake is introduced.
