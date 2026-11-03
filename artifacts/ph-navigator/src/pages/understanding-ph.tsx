@@ -26,6 +26,18 @@ export default function UnderstandingPH() {
           title: "Understanding the basics",
           links: [
             {
+              title: "Your first steps after diagnosis",
+              path: "/recently-diagnosed/first-steps",
+            },
+            {
+              title: "Children, young people and families",
+              path: "/recently-diagnosed/children-families",
+            },
+            {
+              title: "Genetics and family questions",
+              path: "/recently-diagnosed/genetics",
+            },
+            {
               title: "Newly diagnosed? Begin here",
               path: "/recently-diagnosed",
             },
@@ -39,6 +51,23 @@ export default function UnderstandingPH() {
         {
           title: "Treatment and tests",
           links: [
+            {
+              title: "Symptoms and seeking help",
+              path: "/treatments/when-to-seek-help",
+            },
+            {
+              title: "Your medicine safety plan",
+              path: "/treatments/medicine-safety",
+            },
+            { title: "Understanding CTEPH", path: "/treatments/cteph" },
+            {
+              title: "What to expect from tests",
+              path: "/treatments/tests-and-procedures",
+            },
+            {
+              title: "Research and your choices",
+              path: "/treatments/research",
+            },
             { title: "Treatments and clinical facts", path: "/treatments" },
             { title: "Treatments explained", path: "/treatments/explained" },
             {

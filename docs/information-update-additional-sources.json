@@ -1,0 +1,26 @@
+[
+  {
+    "id": "UP01",
+    "title": "Queensland Health home oxygen safety handbook",
+    "url": "https://www.health.qld.gov.au/__data/assets/pdf_file/0027/428472/oxygen-handbook.pdf",
+    "checked": "2026-11-03",
+    "access": "Indexed PDF safety excerpt inspected",
+    "limits": "General equipment/fire/backup safety, not a universal prescription or current state funding eligibility."
+  },
+  {
+    "id": "UP02",
+    "title": "Australian Government: what is palliative care?",
+    "url": "https://www.health.gov.au/topics/palliative-care/about-palliative-care/what-is-palliative-care",
+    "checked": "2026-11-03",
+    "access": "Indexed body inspected",
+    "limits": "General explanation; individual service access and clinical plan require local advice."
+  },
+  {
+    "id": "UP03",
+    "title": "Fair Work Ombudsman: employees with disability",
+    "url": "https://www.fairwork.gov.au/find-help-for/employees-with-disability",
+    "checked": "2026-11-03",
+    "access": "Indexed body inspected",
+    "limits": "General workplace/adjustment signposting, not individual legal or employment advice."
+  }
+]

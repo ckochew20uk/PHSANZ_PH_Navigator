@@ -6,14 +6,14 @@ export default function RecentlyDiagnosed() {
       introduction="A diagnosis can feel overwhelming. You don’t need to understand everything today. Begin with the basics, prepare for your next appointment and find support."
       note={{
         title: "A note on finding information online",
-        body: "When newly diagnosed, it is natural to search the internet for answers. Please be aware that much of the information online regarding pulmonary hypertension is outdated or clinically inaccurate. Survival rates and treatment options have improved dramatically in recent years. Always rely on information from your specialist team and trusted sources like PH Navigator.",
+        body: "Online information can vary in quality and date. Use it to prepare questions for your treating team, and check which PH type and country it applies to. PH Navigator\u2019s article review process is being established.",
       }}
       recommended={[
         {
-          title: "Understand the basics",
+          title: "Your first steps",
           description:
-            "A plain-language introduction to pulmonary hypertension.",
-          path: "/recently-diagnosed/what-is-ph",
+            "A calm guide to your diagnosis, contacts and next conversation.",
+          path: "/recently-diagnosed/first-steps",
         },
         {
           title: "Prepare for your next appointment",
@@ -41,6 +41,14 @@ export default function RecentlyDiagnosed() {
         {
           title: "Care and appointments",
           links: [
+            {
+              title: "Symptoms and seeking help",
+              path: "/treatments/when-to-seek-help",
+            },
+            {
+              title: "Your medicine safety plan",
+              path: "/treatments/medicine-safety",
+            },
             { title: "Treatments explained", path: "/treatments/explained" },
             {
               title: "Understanding test results",

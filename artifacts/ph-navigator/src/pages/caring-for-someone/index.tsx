@@ -38,6 +38,11 @@ export default function CaringForSomeoneHub() {
           title: "Supporting everyday care",
           links: [
             {
+              title: "Symptoms and contact plan",
+              path: "/treatments/when-to-seek-help",
+            },
+            { title: "Medicine safety", path: "/treatments/medicine-safety" },
+            {
               title: "The carer’s role",
               path: "/caring-for-someone/carers-role",
             },
@@ -51,6 +56,14 @@ export default function CaringForSomeoneHub() {
         {
           title: "Support for you",
           links: [
+            {
+              title: "Supportive care and planning ahead",
+              path: "/living-well/planning-ahead",
+            },
+            {
+              title: "Children and families",
+              path: "/recently-diagnosed/children-families",
+            },
             {
               title: "Your wellbeing",
               path: "/caring-for-someone/carer-wellbeing",

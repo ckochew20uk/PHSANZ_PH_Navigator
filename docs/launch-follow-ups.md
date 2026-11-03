@@ -50,3 +50,23 @@ clinical approval or a deployed content revision.
 The public contact placeholder remains intentional. This Australian-focused
 review does not establish full New Zealand localisation or final privacy/legal
 approval. Technical PR #18 remains a separate change set to reconcile.
+
+## Informational implementation — review pending
+
+The user authorised source changes after the desk audit. See
+[the implementation record](information-update.md) and
+[per-finding/topic status](information-update-status.json). Existing copy has
+been revised and 16 introductory guides added within the existing journeys.
+These remain clinical-review-pending drafts; implementation is not clinical closure.
+
+- [ ] Review and approve the P1 medical and policy wording, with relevant
+  nurse/pharmacist, clinical and social-work/access expertise.
+- [ ] Validate the reference-listed and pending directory records with providers;
+  confirm phone purpose, age scope and referral arrangements. No new map
+  coordinates or direct contact details were invented for reference-only entries.
+- [ ] Complete the remaining guideline/access, paediatric, cultural co-design,
+  qualified language and lived-experience work recorded in the topic matrix.
+- [ ] Approve real PDF/story publication separately; the resource library offers
+  working web/print guides while planned PDFs and participation remain gated.
+- [ ] Verify current branch/PR status and reconcile technical PR #18's overlapping
+  metadata, print and layout changes. No source build establishes live deployment.

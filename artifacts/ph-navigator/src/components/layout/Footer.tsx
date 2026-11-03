@@ -123,13 +123,13 @@ export function Footer() {
                 Urgent support
               </h2>
               <p className="text-sm">
-                Medical emergency: <strong>000</strong>
+                Medical emergency (Australia): <strong>000</strong>
               </p>
               <p className="mt-3 text-sm">
-                Lifeline: <strong>13 11 14</strong>
+                Lifeline (Australia): <strong>13 11 14</strong>
               </p>
               <p className="mt-3 text-sm">
-                Beyond Blue: <strong>1300 22 4636</strong>
+                Medical emergency (New Zealand): <strong>111</strong>
               </p>
             </div>
           </div>

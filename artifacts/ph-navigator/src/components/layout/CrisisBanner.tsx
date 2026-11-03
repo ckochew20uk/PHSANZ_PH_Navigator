@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React, { useState, useEffect } from "react";
+import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function CrisisBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const dismissed = localStorage.getItem('ph-navigator-crisis-dismissed');
+    const dismissed = localStorage.getItem("ph-navigator-crisis-dismissed");
     if (!dismissed) {
       setIsVisible(true);
     }
@@ -14,7 +14,7 @@ export function CrisisBanner() {
 
   const dismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ph-navigator-crisis-dismissed', 'true');
+    localStorage.setItem("ph-navigator-crisis-dismissed", "true");
   };
 
   if (!isVisible) return null;
@@ -24,14 +24,27 @@ export function CrisisBanner() {
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between text-sm sm:text-base font-medium">
         <div className="flex-1 pr-8">
           <p>
-            <strong className="font-bold">Emergency:</strong> If you are in crisis or need urgent medical attention, call <strong className="font-bold text-white">000</strong> immediately. 
-            <span className="hidden md:inline"> | </span>
-            <span className="block md:inline mt-1 md:mt-0">For emotional support: Lifeline <strong className="font-bold text-white">13 11 14</strong> | Beyond Blue <strong className="font-bold text-white">1300 22 4636</strong></span>
+            <strong>Medical emergency:</strong> Australia{" "}
+            <a className="whitespace-nowrap underline" href="tel:000">
+              000
+            </a>{" "}
+            · New Zealand{" "}
+            <a className="whitespace-nowrap underline" href="tel:111">
+              111
+            </a>
+            .
+            <span className="block mt-1">
+              Emotional crisis support in Australia: Lifeline{" "}
+              <a className="whitespace-nowrap underline" href="tel:+61131114">
+                13 11 14
+              </a>
+              .
+            </span>
           </p>
         </div>
-        <Button 
-          variant="ghost" 
-          size="icon" 
+        <Button
+          variant="ghost"
+          size="icon"
           className="no-default-hover-elevate no-default-active-elevate absolute right-2 top-2 sm:relative sm:top-0 sm:right-0 text-white hover:bg-white/20 hover:text-white"
           onClick={dismiss}
           aria-label="Dismiss banner"

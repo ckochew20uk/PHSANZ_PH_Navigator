@@ -1,11 +1,11 @@
 import { involvementSocialPages } from "./build/socialPages";
-import { defineConfig } from "vite";
+import { defineConfig, type UserConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
-export default defineConfig(async ({ command }) => {
+export default defineConfig(async ({ command }): Promise<UserConfig> => {
   const isBuild = command === "build";
 
   // PORT is only needed for the dev server

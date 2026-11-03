@@ -1,0 +1,528 @@
+{
+  "date": "2026-11-03",
+  "branch": "feat/information-update",
+  "findings": [
+    {
+      "id": "INF-01",
+      "title": "Strict PVR boundary and complete diagnostic context",
+      "code_status": "Implemented in review-pending source",
+      "change": "Corrected strict PVR operator and combined haemodynamic context.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-02",
+      "title": "Wedge pressure does not identify the clinical group on its own",
+      "code_status": "Implemented in review-pending source",
+      "change": "Qualified wedge-pressure/group interpretation.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-03",
+      "title": "PDE-5 mechanism is misstated",
+      "code_status": "Implemented in review-pending source",
+      "change": "Corrected PDE-5 mechanism.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-04",
+      "title": "Explain sGC stimulation without equating it to PDE-5 inhibition",
+      "code_status": "Implemented in review-pending source",
+      "change": "Reworded sGC role and persistent/recurrent CTEPH scope.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-05",
+      "title": "Add medicine-interaction and monitoring safeguards",
+      "code_status": "Implemented in review-pending source",
+      "change": "Added interactions, monitoring and medicine-safety guide.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-06",
+      "title": "Distinguish treatment suitability from Australian access",
+      "code_status": "Implemented in review-pending source",
+      "change": "Separated medicine scope, regulation, subsidy, supply and suitability.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-07",
+      "title": "Review newer treatment pathways and 2026 guidance",
+      "code_status": "Implemented in review-pending source",
+      "change": "Added newer pathway overview with explicit access/review limits.",
+      "remaining": "Full 2026 guideline appraisal and current Australian PBS/supply checks remain outstanding; no funded/unfunded access asserted.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-08",
+      "title": "Selected vasoreactive PAH treatment needs explanation",
+      "code_status": "Implemented in review-pending source",
+      "change": "Added selected vasoreactive-patient CCB explanation without a dosing recommendation.",
+      "remaining": "Exact patient-selection and testing details require clinician review.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-09",
+      "title": "Blanket no-cure wording conflicts with CTEPH",
+      "code_status": "Implemented in review-pending source",
+      "change": "Reconciled no-cure wording with potentially curative PEA and distinct BPA role.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-10",
+      "title": "Keep rare PAH distinct from PH as an umbrella",
+      "code_status": "Implemented in review-pending source",
+      "change": "Qualified PH umbrella, rare PAH and cause-dependent explanation.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-11",
+      "title": "Sleep apnoea is not a routine stand-alone Group 3 explanation",
+      "code_status": "Implemented in review-pending source",
+      "change": "Qualified sleep-apnoea/hypoventilation context.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-12",
+      "title": "Avoid deterministic inheritance and unsupported frequency claims",
+      "code_status": "Implemented in review-pending source",
+      "change": "Removed deterministic inheritance and unsupported frequency ranking.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-13",
+      "title": "Do not imply every suggestive echo mandates RHC",
+      "code_status": "Implemented in review-pending source",
+      "change": "Qualified RHC decision-making after echo.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-14",
+      "title": "Do not normalise delay or suggest exclusion must finish before referral",
+      "code_status": "Implemented in review-pending source",
+      "change": "Reframed diagnostic waiting/referral urgency and symptom escalation.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-15",
+      "title": "Keep food/fluid/weight advice within an individual care plan",
+      "code_status": "Implemented in review-pending source",
+      "change": "Replaced generic fluid/weight prescriptions with personal-plan guidance; kept correct salt conversion.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-16",
+      "title": "Exercise red flags need more than stop and rest",
+      "code_status": "Implemented in review-pending source",
+      "change": "Added exercise symptom escalation and emergency context.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-17",
+      "title": "Do not attribute new symptoms to anxiety without assessment",
+      "code_status": "Implemented in review-pending source",
+      "change": "Added guard against attributing new symptoms to anxiety.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-18",
+      "title": "Rehabilitation advice needs stability, supervision and activity context",
+      "code_status": "Implemented in review-pending source",
+      "change": "Qualified safety, supervision and universal activity examples.",
+      "remaining": "Individual exercise suitability and rehabilitation advice need specialist/physiotherapy review.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-19",
+      "title": "Flight hydration advice must respect fluid restrictions",
+      "code_status": "Implemented in review-pending source",
+      "change": "Aligned travel hydration with prescribed fluid plan.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-20",
+      "title": "Airline equipment and battery rules must be carrier-specific",
+      "code_status": "Implemented in review-pending source",
+      "change": "Replaced universal FAA/battery wording with operating-carrier rules; qualified HAST/altitude advice.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-21",
+      "title": "Continuous infusion warning needs a failure-response plan",
+      "code_status": "Implemented in review-pending source",
+      "change": "Retained continuous-infusion safety warning and added personal failure/backup plan.",
+      "remaining": "No individual medicine/device emergency protocol is supplied; the treating service must provide it.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-22",
+      "title": "NDIS wording overstates access and encourages selective evidence",
+      "code_status": "Implemented in review-pending source",
+      "change": "Removed unsupported NDIS frequency claim and worst-days-only advice; added access/evidence scope.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-23",
+      "title": "PBS access is not a blanket approved-centre rule",
+      "code_status": "Implemented in review-pending source",
+      "change": "Corrected categorical PBS centre rule and qualified Safety Net costs/card/brand premiums.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-24",
+      "title": "DSP explanation omits key medical and non-medical rules",
+      "code_status": "Implemented in review-pending source",
+      "change": "Expanded DSP criteria without making eligibility promises.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-25",
+      "title": "Carer Payment does not always require inability to work",
+      "code_status": "Implemented in review-pending source",
+      "change": "Corrected Carer Payment inability-to-work implication.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-26",
+      "title": "Carer support is assessed; distinguish emergency access",
+      "code_status": "Implemented in review-pending source",
+      "change": "Qualified tailored packages and distinguished routine versus emergency respite access.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-27",
+      "title": "My Aged Care is not simply for those over 65",
+      "code_status": "Implemented in review-pending source",
+      "change": "Qualified aged-care age/situation pathways.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-28",
+      "title": "Medical decision-maker documents vary by jurisdiction",
+      "code_status": "Implemented in review-pending source",
+      "change": "Replaced universal medical-POA label with jurisdiction-specific decision-making guidance.",
+      "remaining": "Individual state/territory legal advice and document selection remain external.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-29",
+      "title": "Travel assistance is conditional, not a blanket entitlement",
+      "code_status": "Implemented in review-pending source",
+      "change": "Qualified state travel assistance and partial subsidies.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-30",
+      "title": "Keep Medicare session guidance but explain access/cost",
+      "code_status": "Implemented in review-pending source",
+      "change": "Kept supported Medicare concept and added individual/group/referral/cost context.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-31",
+      "title": "Reconcile the directory with PHSANZ without inventing designation",
+      "code_status": "Implemented in review-pending source",
+      "change": "Added eleven reference entries, retained four pending records, removed blanket designation and invented map placement.",
+      "remaining": "Service scope, age eligibility and current provider contacts still need confirmation; four older records remain explicitly pending.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-32",
+      "title": "Westmead switchboard differs; distinguish clinic and general lines",
+      "code_status": "Implemented in review-pending source",
+      "change": "Corrected Westmead phone and labelled general contacts, preserving RCH clinic/switchboard distinction.",
+      "remaining": "Westmead published switchboard corrected; Royal Children’s number is labelled general/switchboard rather than silently replaced with a PH-service number.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-33",
+      "title": "Urgent-support signposting needs explicit country scope",
+      "code_status": "Implemented in review-pending source",
+      "change": "Added explicit AU/NZ emergency labels and country-specific emotional-support scope.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-34",
+      "title": "Remove unsupported self-endorsement; add real article provenance",
+      "code_status": "Implemented in review-pending source",
+      "change": "Removed self-endorsement and added source dates/scopes/review-pending status to articles.",
+      "remaining": "Actual article-specific clinical/lived-experience review and approval records remain pending.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-35",
+      "title": "Search promises downloads and NZ benefits not provided",
+      "code_status": "Implemented in review-pending source",
+      "change": "Aligned search descriptions with available web guides, planned PDFs and Australian service scope.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-36",
+      "title": "Do not promote placeholder dates/page counts as review evidence",
+      "code_status": "Implemented in review-pending source",
+      "change": "Removed unsupported dates/page counts from all planned resource records.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-37",
+      "title": "Verify guideline titles and referral criteria before presenting resources",
+      "code_status": "Implemented in review-pending source",
+      "change": "Replaced unsupported guideline labels/inactive referral action with honest review-pending resources and real references.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-38",
+      "title": "Make wellbeing/carer wording supportive and non-deterministic",
+      "code_status": "Implemented in review-pending source",
+      "change": "Softened deterministic/guilt-inducing wellbeing language; preserved honest story placeholders.",
+      "remaining": "Actual lived-experience and psychology review has not taken place.",
+      "clinical_approval": false
+    },
+    {
+      "id": "INF-39",
+      "title": "Describe BNP and NT-proBNP as related but distinct biomarkers",
+      "code_status": "Implemented in review-pending source",
+      "change": "Distinguished BNP/NT-proBNP and contextual interpretation.",
+      "remaining": "Content remains subject to actual clinical/editorial review; no approval date invented.",
+      "clinical_approval": false
+    }
+  ],
+  "coverage": [
+    {
+      "id": "GAP-01",
+      "topic": "Symptoms, deterioration and a personal action plan",
+      "location": "/treatments/when-to-seek-help",
+      "implementation": "Draft guide and real printable blank contact plan.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-02",
+      "topic": "Pregnancy, contraception and reproductive decisions",
+      "location": "/living-well/pregnancy-family-planning",
+      "implementation": "Introductory discussion guide; individual reproductive-health advice remains essential.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-03",
+      "topic": "Medicine safety, monitoring, supply and interruption",
+      "location": "/treatments/medicine-safety",
+      "implementation": "Safety questions, interaction warning, monitoring/supply/infusion signposting.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-04",
+      "topic": "CTEPH as a distinct diagnosis and treatment journey",
+      "location": "/treatments/cteph",
+      "implementation": "Draft CTEPH overview and distinct assessment/treatment roles.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-05",
+      "topic": "Other PH groups and treatment boundaries",
+      "location": "/recently-diagnosed/what-is-ph",
+      "implementation": "Corrected scope and treatment boundaries.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-06",
+      "topic": "WHO functional class, groups, risk and test trends",
+      "location": "/treatments/test-results",
+      "implementation": "Added groups versus functional class/risk/trends explanation.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-07",
+      "topic": "What to expect from investigations",
+      "location": "/treatments/tests-and-procedures",
+      "implementation": "Draft preparation/questions guide without fasting or medicine-hold instructions.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-08",
+      "topic": "Home oxygen and equipment safety",
+      "location": "/living-well/oxygen-at-home",
+      "implementation": "Basic prescribed-use/fire/backup guide; state funding and individual equipment advice remain external.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-09",
+      "topic": "Fatigue, pacing, sleep and everyday routines",
+      "location": "/living-well/fatigue-sleep",
+      "implementation": "Draft pacing/sleep discussion guide.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-10",
+      "topic": "Sexual health, intimacy and relationships",
+      "location": "/living-well/relationships-life-stages",
+      "implementation": "Introductory intimacy and relationship guidance.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-11",
+      "topic": "Menopause and changing life stages",
+      "location": "/living-well/relationships-life-stages",
+      "implementation": "Life-stage discussion prompts; no unreviewed hormone-treatment recommendations.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-12",
+      "topic": "Driving, parking permits and mobility",
+      "location": "/living-well/work-driving",
+      "implementation": "Australian assessment/local-authority signposting, not a definitive permit/licensing determination.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-13",
+      "topic": "Employment, study and reasonable adjustments",
+      "location": "/living-well/work-driving",
+      "implementation": "Work/study adjustment discussion with Fair Work reference; individual legal/insurance advice remains external.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-14",
+      "topic": "Paediatric PH and transition to adult care",
+      "location": "/recently-diagnosed/children-families",
+      "implementation": "Family/transition signposting and adult-scope boundary; full paediatric clinical resource/review still needed.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-15",
+      "topic": "Talking with children about a parent’s PH",
+      "location": "/recently-diagnosed/children-families",
+      "implementation": "Introductory family discussion guidance; full age-specific materials need child/family review.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-16",
+      "topic": "Heritable PAH, genetics and family screening",
+      "location": "/recently-diagnosed/genetics",
+      "implementation": "Introductory counselling/family-assessment questions, no deterministic risk claims.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-17",
+      "topic": "Supportive/palliative care and planning ahead",
+      "location": "/living-well/planning-ahead",
+      "implementation": "Supportive care alongside treatment and local legal-process signposting.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-18",
+      "topic": "Vaccination, infection prevention and intercurrent illness",
+      "location": "/living-well/staying-well",
+      "implementation": "Individual prevention/illness-planning guide; current vaccine recommendation/funding review remains clinical.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-19",
+      "topic": "Rural/remote access, telehealth and local-team coordination",
+      "location": "/living-well/accessing-care",
+      "implementation": "Local/specialist coordination, telehealth and conditional travel assistance.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-20",
+      "topic": "Aboriginal and Torres Strait Islander cultural safety",
+      "location": "/living-well/accessing-care",
+      "implementation": "Interim cultural-support signposting only; genuine culturally appropriate co-design has not occurred.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-21",
+      "topic": "Languages, health literacy and accessible formats",
+      "location": "/living-well/accessing-care",
+      "implementation": "Print options and accessible-language requests; verified translations/audio and comprehension review remain outstanding.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-22",
+      "topic": "Research, registries and clinical trials",
+      "location": "/treatments/research",
+      "implementation": "Research/registry/co-design distinctions and questions; no recruitment, registry intake or unverified trial eligibility.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-23",
+      "topic": "Real community voices",
+      "location": "/community-voices",
+      "implementation": "Intentionally remains a consent-gated story placeholder; no real contributions available to publish.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-24",
+      "topic": "Useful printable resources",
+      "location": "/resource-library",
+      "implementation": "Four real read/print web-guide links; 22 PDF publications remain in development, not counterfeit downloads.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-25",
+      "topic": "Newly diagnosed reassurance with practical next steps",
+      "location": "/recently-diagnosed/first-steps",
+      "implementation": "Calm first-days guide connected from clinic journey and resource library.",
+      "status": "Review-pending content implemented",
+      "clinical_approval": false
+    },
+    {
+      "id": "GAP-26",
+      "topic": "New Zealand scope boundary",
+      "location": "Sitewide country labels",
+      "implementation": "Australian eligibility scope and AU/NZ emergency distinction implemented; full NZ localisation still outstanding.",
+      "status": "Interim or partial; external work remains",
+      "clinical_approval": false
+    }
+  ]
+}

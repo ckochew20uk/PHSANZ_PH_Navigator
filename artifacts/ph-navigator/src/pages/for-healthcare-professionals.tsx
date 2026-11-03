@@ -56,9 +56,10 @@ export default function ForProfessionals() {
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-foreground/90 mb-6">
                   <li>
-                    Unexplained dyspnea on exertion where common causes (asthma,
-                    COPD, left heart disease) have been excluded or are out of
-                    proportion to symptoms.
+                    Unexplained dyspnea on exertion where PH is suspected,
+                    particularly with concerning symptoms or findings. Referral
+                    urgency depends on the clinical picture; do not wait for
+                    exhaustive exclusion of every common cause.
                   </li>
                   <li>
                     Echocardiographic signs suggesting elevated right heart
@@ -74,13 +75,10 @@ export default function ForProfessionals() {
                     declining DLCO or new breathlessness.
                   </li>
                 </ul>
-                <Button
-                  variant="outline"
-                  className="w-full text-primary border-primary"
-                >
-                  <LinkIcon className="mr-2 h-4 w-4" /> View Full Referral
-                  Pathway
-                </Button>
+                <p className="rounded-lg bg-muted p-3 text-sm text-primary">
+                  Full referral pathway: in development and awaiting clinical
+                  review.
+                </p>
               </CardContent>
             </Card>
 
@@ -92,31 +90,37 @@ export default function ForProfessionals() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-foreground/80 mb-4">
-                  Access the latest consensus guidelines for the diagnosis and
-                  management of pulmonary hypertension.
+                  Clinical sources are being checked for currency and Australian
+                  relevance. Referral and echo findings require clinical
+                  interpretation; TRV alone does not diagnose PH.
                 </p>
                 <div className="space-y-4 mb-6">
-                  <div className="border border-border p-3 rounded hover:bg-muted transition-colors cursor-pointer flex justify-between items-center">
+                  <div className="border border-border p-3 rounded  flex justify-between items-center">
                     <div>
                       <p className="font-semibold text-primary">
-                        ESC/ERS Guidelines (2022)
+                        ESC/ERS diagnostic guidance and subsequent treatment
+                        updates
                       </p>
                       <p className="text-sm text-muted-foreground">
                         Diagnosis and treatment of pulmonary hypertension
                       </p>
                     </div>
-                    <ExternalLinkIcon className="h-5 w-5 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">
+                      Review pending
+                    </span>
                   </div>
-                  <div className="border border-border p-3 rounded hover:bg-muted transition-colors cursor-pointer flex justify-between items-center">
+                  <div className="border border-border p-3 rounded  flex justify-between items-center">
                     <div>
                       <p className="font-semibold text-primary">
-                        TSANZ Guidelines
+                        Australian referral and prescribing resources
                       </p>
                       <p className="text-sm text-muted-foreground">
                         Australian specific context and PBS prescribing
                       </p>
                     </div>
-                    <ExternalLinkIcon className="h-5 w-5 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">
+                      Review pending
+                    </span>
                   </div>
                 </div>
               </CardContent>

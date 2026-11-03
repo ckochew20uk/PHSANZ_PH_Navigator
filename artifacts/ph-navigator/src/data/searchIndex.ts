@@ -1,3 +1,4 @@
+import { informationGuides } from "./informationGuides";
 import { involvementPages } from "./getInvolved";
 export interface SearchItem {
   title: string;
@@ -8,9 +9,45 @@ export interface SearchItem {
 }
 
 export const searchIndex: SearchItem[] = [
-  ...Object.values(involvementPages).map(page => ({ title: page.title, description: page.description, path: page.path, category: "General" as const, keywords: ["get involved", "growing with you", "survey", "feedback", "focus group", "co-design", "contribute", "volunteer"] })),
-  { title: 'Find your starting point', description: 'Choose newly diagnosed, living with PH, or supporting someone. No account needed.', path: '/start', category: 'General', keywords: ['start', 'QR', 'clinic', 'new diagnosis', 'carer', 'family'] },
-  { title: 'Understanding PH', description: 'A place to explore PH, diagnosis, treatment, tests and appointment preparation.', path: '/understanding-ph', category: 'General', keywords: ['understand', 'diagnosis', 'treatment', 'tests', 'information'] },
+  ...informationGuides.map((guide) => ({
+    title: guide.title,
+    description: guide.description,
+    path: guide.path,
+    category: "General",
+    keywords: [guide.title, ...guide.sections.map((section) => section.title)],
+  })),
+  ...Object.values(involvementPages).map((page) => ({
+    title: page.title,
+    description: page.description,
+    path: page.path,
+    category: "General" as const,
+    keywords: [
+      "get involved",
+      "growing with you",
+      "survey",
+      "feedback",
+      "focus group",
+      "co-design",
+      "contribute",
+      "volunteer",
+    ],
+  })),
+  {
+    title: "Find your starting point",
+    description:
+      "Choose newly diagnosed, living with PH, or supporting someone. No account needed.",
+    path: "/start",
+    category: "General",
+    keywords: ["start", "QR", "clinic", "new diagnosis", "carer", "family"],
+  },
+  {
+    title: "Understanding PH",
+    description:
+      "A place to explore PH, diagnosis, treatment, tests and appointment preparation.",
+    path: "/understanding-ph",
+    category: "General",
+    keywords: ["understand", "diagnosis", "treatment", "tests", "information"],
+  },
   {
     title: "Privacy information — draft",
     description:
@@ -37,7 +74,7 @@ export const searchIndex: SearchItem[] = [
   {
     title: "Home",
     description:
-      "A calm, trusted guide for people living with pulmonary hypertension in Australia and New Zealand.",
+      "Information and practical navigation for people affected by pulmonary hypertension in Australia and New Zealand.",
     path: "/",
     category: "General",
     keywords: [
@@ -244,7 +281,7 @@ export const searchIndex: SearchItem[] = [
   {
     title: "Financial Support",
     description:
-      "Benefits, NDIS, insurance, and financial assistance available for people with PH in Australia and NZ.",
+      "Benefits, NDIS, insurance, and Australian financial-support pathways and their eligibility requirements.",
     path: "/living-well/financial-support",
     category: "Living Well",
     keywords: [
@@ -345,7 +382,7 @@ export const searchIndex: SearchItem[] = [
   {
     title: "Carer Support Networks",
     description:
-      "Finding carer support groups, services, and resources in Australia and New Zealand.",
+      "Explore Australian carer-support pathways and eligibility; New Zealand arrangements may differ.",
     path: "/caring-for-someone/carer-support",
     category: "Carers",
     keywords: [
@@ -362,7 +399,7 @@ export const searchIndex: SearchItem[] = [
   {
     title: "Resource Library",
     description:
-      "Downloadable fact sheets, guides, and educational materials about pulmonary hypertension.",
+      "Read and print available web guides; PDF publications are in development.",
     path: "/resource-library",
     category: "Resources",
     keywords: [

@@ -379,3 +379,19 @@
     inset: -1px;
   }
 }
+
+@media print {
+  .site-layout > header,
+  .site-layout > footer,
+  .site-layout > nav,
+  .site-layout > .site-utility,
+  .site-layout > .crisis-banner,
+  .site-layout .skip-link,
+  .site-layout [role="dialog"],
+  .site-layout #main-content > nav {
+    display: none !important;
+  }
+  .site-layout {
+    min-height: 0 !important;
+  }
+}

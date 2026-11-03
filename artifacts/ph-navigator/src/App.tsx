@@ -1,3 +1,4 @@
+import { informationGuides } from "@/data/informationGuides";
 import React, { Suspense } from "react";
 import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -9,8 +10,8 @@ import NotFound from "@/pages/not-found";
 // Lazy load pages
 const Home = React.lazy(() => import("@/pages/home"));
 
-const Start = React.lazy(() => import('@/pages/start'));
-const UnderstandingPH = React.lazy(() => import('@/pages/understanding-ph'));
+const Start = React.lazy(() => import("@/pages/start"));
+const UnderstandingPH = React.lazy(() => import("@/pages/understanding-ph"));
 
 // Recently Diagnosed
 const RecentlyDiagnosed = React.lazy(
@@ -99,10 +100,26 @@ const AccessibilityStatement = React.lazy(() =>
   })),
 );
 
-const GetInvolved = React.lazy(() => import('@/pages/get-involved'));
-const FeedbackOpportunity = React.lazy(() => import('@/pages/get-involved').then(module => ({ default: module.FeedbackOpportunity })));
-const FocusGroupOpportunity = React.lazy(() => import('@/pages/get-involved').then(module => ({ default: module.FocusGroupOpportunity })));
-const ContributionOpportunity = React.lazy(() => import('@/pages/get-involved').then(module => ({ default: module.ContributionOpportunity })));
+const GetInvolved = React.lazy(() => import("@/pages/get-involved"));
+const FeedbackOpportunity = React.lazy(() =>
+  import("@/pages/get-involved").then((module) => ({
+    default: module.FeedbackOpportunity,
+  })),
+);
+const FocusGroupOpportunity = React.lazy(() =>
+  import("@/pages/get-involved").then((module) => ({
+    default: module.FocusGroupOpportunity,
+  })),
+);
+const ContributionOpportunity = React.lazy(() =>
+  import("@/pages/get-involved").then((module) => ({
+    default: module.ContributionOpportunity,
+  })),
+);
+
+const InformationGuidePage = React.lazy(
+  () => import("@/pages/information-guide"),
+);
 
 const queryClient = new QueryClient();
 
@@ -172,10 +189,29 @@ function Router() {
       <Route path="/get-involved/" component={GetInvolved} />
       <Route path="/get-involved/feedback" component={FeedbackOpportunity} />
       <Route path="/get-involved/feedback/" component={FeedbackOpportunity} />
-      <Route path="/get-involved/focus-groups" component={FocusGroupOpportunity} />
-      <Route path="/get-involved/focus-groups/" component={FocusGroupOpportunity} />
-      <Route path="/get-involved/contribute" component={ContributionOpportunity} />
-      <Route path="/get-involved/contribute/" component={ContributionOpportunity} />
+      <Route
+        path="/get-involved/focus-groups"
+        component={FocusGroupOpportunity}
+      />
+      <Route
+        path="/get-involved/focus-groups/"
+        component={FocusGroupOpportunity}
+      />
+      <Route
+        path="/get-involved/contribute"
+        component={ContributionOpportunity}
+      />
+      <Route
+        path="/get-involved/contribute/"
+        component={ContributionOpportunity}
+      />
+      {informationGuides.map((guide) => (
+        <Route
+          key={guide.path}
+          path={guide.path}
+          component={InformationGuidePage}
+        />
+      ))}
       <Route component={NotFound} />
     </Switch>
   );
