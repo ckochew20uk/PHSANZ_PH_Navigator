@@ -181,3 +181,30 @@ These changes were developed as stacked feature branches. Do not assume a fresh 
 Useful detailed records: [logo kit](docs/brand-kit.md), [Stage 2](docs/stage-2-design-system.md), [community placeholders](docs/stage-3-community.md), [institutional update](docs/phsanz-governance-update.md), [patient journeys](docs/patient-journeys.md), [Get Involved foundation](docs/get-involved-foundation.md). Historical descriptions of removed features do not supersede the current decisions above.
 
 Update this file and the follow-up register when the user makes substantive decisions, clearly separating current facts, future plans and verified completion. Preserve that distinction in public copy, PR descriptions and future AI handovers.
+
+## Informational audit — 3 November 2026
+
+[The informational audit](docs/informational-audit.md) assesses main baseline
+`3f460a1bef8a72519d43b0df342da3a3f729d47f`. Its inventories, 39 findings,
+proposed corrections, 26-topic coverage matrix and source/access register are
+in `docs/informational-audit/`. This is documentation on a separate branch,
+not a clinical approval, content rewrite or deployed release. Check the current
+branch/PR status and reconcile technical PR #18 before applying overlapping
+search/professional-control changes.
+
+Use PHA UK for coverage and communication comparisons; Australian clinical,
+regulatory, prescribing and service sources determine local applicability.
+Source retrieval levels are explicit: some publications are descriptions only,
+some guidelines are indexed excerpts with full-text access blocked, and current
+sotatercept PBS/supply status remains unresolved. Do not turn those limits into
+claims of complete clinical validation, no subsidy or universal availability.
+
+Prioritise the P1 findings for actual expert review, including the strict PVR
+operator, treatment scope/interactions, CTEPH/no-cure contradiction, symptom and
+infusion safety plans, eligibility overstatements and country-specific urgent
+support. Keep the main three journeys and For Healthcare Professionals switch.
+The 22 planned resource records are not 22 completed PDFs. Real stories,
+participation, partner endorsements, public contact and review metadata remain
+subject to the existing user-approved gates. Do not invent review dates,
+patient outcomes, feedback findings or appointments. No one was contacted or
+recruited during this audit.

@@ -1,0 +1,706 @@
+{
+  "baseline": "3f460a1bef8a72519d43b0df342da3a3f729d47f",
+  "audit_date": "2026-11-03",
+  "timezone": "Australia/Sydney",
+  "method": "Canonical routes extracted from App.tsx; literal content, referenced shared components, search descriptions and resource records reviewed. All exact finding excerpts checked against source.",
+  "counts": {
+    "canonical_routes": 35,
+    "unique_route_source_files": 30,
+    "additional_not_found_page": 1,
+    "substantive_articles": 14,
+    "planned_resources": 22,
+    "clinical_pdf_files": 0,
+    "directory_records": 18
+  },
+  "global_scope": [
+    "CrisisBanner.tsx",
+    "Footer.tsx",
+    "Search descriptions",
+    "Newsletter signup copy (governance only)",
+    "HomeHero.tsx",
+    "JourneyHub.tsx",
+    "StoriesPlaceholder.tsx",
+    "ProjectContact.tsx"
+  ],
+  "routes": [
+    {
+      "path": "/",
+      "component": "Home",
+      "file": "artifacts/ph-navigator/src/pages/home.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Retain welcoming introduction and honest community-photography placeholder.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/start",
+      "component": "Start",
+      "file": "artifacts/ph-navigator/src/pages/start.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Retain three quick clinic-entry choices; no profile/account required.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/understanding-ph",
+      "component": "UnderstandingPH",
+      "file": "artifacts/ph-navigator/src/pages/understanding-ph.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Retain hub; update linked content before presenting it as clinically reviewed.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/recently-diagnosed",
+      "component": "RecentlyDiagnosed",
+      "file": "artifacts/ph-navigator/src/pages/recently-diagnosed/index.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Revise self-endorsement and provide a calm route to care without unsupported prognosis claims.",
+      "related_findings": [
+        "INF-34"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/recently-diagnosed/what-is-ph",
+      "component": "WhatIsPH",
+      "file": "artifacts/ph-navigator/src/pages/recently-diagnosed/what-is-ph.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Revise PH/PAH scope, inheritance and CTEPH/classification wording.",
+      "related_findings": [
+        "INF-09",
+        "INF-10",
+        "INF-11",
+        "INF-12"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/recently-diagnosed/diagnostic-journey",
+      "component": "DiagnosticJourney",
+      "file": "artifacts/ph-navigator/src/pages/recently-diagnosed/diagnostic-journey.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Qualify RHC and timelines; add deterioration/escalation guidance.",
+      "related_findings": [
+        "INF-13",
+        "INF-14"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/recently-diagnosed/questions-for-doctor",
+      "component": "QuestionsForDoctor",
+      "file": "artifacts/ph-navigator/src/pages/recently-diagnosed/questions-for-doctor.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Retain useful questions; add safety, reproductive-health and access prompts through clinician review.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/treatments",
+      "component": "TreatmentsHub",
+      "file": "artifacts/ph-navigator/src/pages/treatments/index.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Revise no-cure generalisation; retain individual-treatment warning.",
+      "related_findings": [
+        "INF-09"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/treatments/explained",
+      "component": "TreatmentsExplained",
+      "file": "artifacts/ph-navigator/src/pages/treatments/explained.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Substantial revision: mechanisms, scope, interactions, newer therapy and local access.",
+      "related_findings": [
+        "INF-03",
+        "INF-04",
+        "INF-05",
+        "INF-06",
+        "INF-07",
+        "INF-08"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/treatments/test-results",
+      "component": "TestResults",
+      "file": "artifacts/ph-navigator/src/pages/treatments/test-results.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Correct PVR operator and qualify haemodynamic interpretation; retain non-diagnostic framing.",
+      "related_findings": [
+        "INF-01",
+        "INF-02",
+        "INF-39"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/living-well",
+      "component": "LivingWellHub",
+      "file": "artifacts/ph-navigator/src/pages/living-well/index.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Retain hub; add deeper articles through existing groups rather than new main navigation.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/living-well/diet-nutrition",
+      "component": "DietNutrition",
+      "file": "artifacts/ph-navigator/src/pages/living-well/diet-nutrition.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Individualise fluid/salt/weight guidance; sodium-to-salt conversion is supported.",
+      "related_findings": [
+        "INF-15"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/living-well/exercise",
+      "component": "ExerciseActivity",
+      "file": "artifacts/ph-navigator/src/pages/living-well/exercise.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Retain pacing and specialist discussion; qualify safety/activity examples and add escalation.",
+      "related_findings": [
+        "INF-16",
+        "INF-18"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/living-well/travel-oxygen",
+      "component": "TravelOxygen",
+      "file": "artifacts/ph-navigator/src/pages/living-well/travel-oxygen.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Localise airline rules; reconcile hydration with prescribed fluid limits.",
+      "related_findings": [
+        "INF-19",
+        "INF-20"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/living-well/mental-wellbeing",
+      "component": "MentalWellbeing",
+      "file": "artifacts/ph-navigator/src/pages/living-well/mental-wellbeing.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Retain support signposting with country labels; qualify symptoms, prognosis and Medicare.",
+      "related_findings": [
+        "INF-09",
+        "INF-17",
+        "INF-30",
+        "INF-33",
+        "INF-38"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/living-well/financial-support",
+      "component": "FinancialSupport",
+      "file": "artifacts/ph-navigator/src/pages/living-well/financial-support.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Substantial Australian eligibility/access revision; not an NZ finance guide.",
+      "related_findings": [
+        "INF-22",
+        "INF-23",
+        "INF-24",
+        "INF-29"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/community-voices",
+      "component": "CommunityVoices",
+      "file": "artifacts/ph-navigator/src/pages/community-voices.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Intentional placeholder; do not invent stories or activate collection. Add verified Australian patient support links only after checking services.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/caring-for-someone",
+      "component": "CaringForSomeoneHub",
+      "file": "artifacts/ph-navigator/src/pages/caring-for-someone/index.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Retain carer hub; verify all linked services and avoid implying full resources already exist.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/caring-for-someone/carers-role",
+      "component": "CarersRole",
+      "file": "artifacts/ph-navigator/src/pages/caring-for-someone/carers-role.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Retain practical preparation; add a written infusion emergency plan and state-specific legal signposting.",
+      "related_findings": [
+        "INF-21",
+        "INF-28"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/caring-for-someone/carer-wellbeing",
+      "component": "CarerWellbeing",
+      "file": "artifacts/ph-navigator/src/pages/caring-for-someone/carer-wellbeing.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Review tone, respite and aged-care age/eligibility scope.",
+      "related_findings": [
+        "INF-27",
+        "INF-38"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/caring-for-someone/carer-support",
+      "component": "CarerSupport",
+      "file": "artifacts/ph-navigator/src/pages/caring-for-someone/carer-support.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Qualify payment/package eligibility and distinguish emergency respite access.",
+      "related_findings": [
+        "INF-25",
+        "INF-26"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/resource-library",
+      "component": "ResourceLibrary",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "22 explicitly planned resources, not 22 completed publications. Keep closed downloads; remove unsupported latent metadata before activation.",
+      "related_findings": [
+        "INF-07",
+        "INF-36"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/find-specialist",
+      "component": "FindSpecialist",
+      "file": "artifacts/ph-navigator/src/pages/find-specialist.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Reconcile all 18 records against the 25-entry PHSANZ reference; validate service/contact purpose.",
+      "related_findings": [
+        "INF-31",
+        "INF-32"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/about",
+      "component": "AboutHub",
+      "file": "artifacts/ph-navigator/src/pages/about/index.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Retain approved PHSANZ-only identity; no independent proof of accreditation or completed review.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/about/partnership",
+      "component": "Partnership",
+      "file": "artifacts/ph-navigator/src/pages/about/partnership.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Retain proposed/unconfirmed collaborations. No partner endorsements inferred.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/about/advisory-panel",
+      "component": "AdvisoryPanel",
+      "file": "artifacts/ph-navigator/src/pages/about/advisory-panel.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Retain named leads and developing membership. No content approval inferred from membership.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/for-healthcare-professionals",
+      "component": "ForProfessionals",
+      "file": "artifacts/ph-navigator/src/pages/for-healthcare-professionals.tsx",
+      "scope": "substantive patient/professional article",
+      "review_disposition": "Verify named guideline/version and clinical referral wording. Keep professional switch; incomplete materials stay labelled.",
+      "related_findings": [
+        "INF-14",
+        "INF-37"
+      ],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/governance-checklist",
+      "component": "GovernanceChecklist",
+      "file": "artifacts/ph-navigator/src/pages/governance-checklist.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Retain operational checklist; add article review/provenance and source-maintenance gates.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/privacy",
+      "component": "PrivacyInformation",
+      "file": "artifacts/ph-navigator/src/pages/site-policies.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Intentional draft; legal/data approval remains separate from medical information audit.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/terms",
+      "component": "TermsOfUse",
+      "file": "artifacts/ph-navigator/src/pages/site-policies.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Intentional draft; do not imply reuse rights for PHA UK material.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/accessibility",
+      "component": "AccessibilityStatement",
+      "file": "artifacts/ph-navigator/src/pages/site-policies.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Retain limitations; content readability testing and language review remain outstanding.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/get-involved",
+      "component": "GetInvolved",
+      "file": "artifacts/ph-navigator/src/pages/get-involved.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Intentional development status; UK participation services are not a required service model.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/get-involved/feedback",
+      "component": "FeedbackOpportunity",
+      "file": "artifacts/ph-navigator/src/pages/get-involved.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Remain closed; no feedback results fabricated.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/get-involved/focus-groups",
+      "component": "FocusGroupOpportunity",
+      "file": "artifacts/ph-navigator/src/pages/get-involved.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Remain closed; no recruitment or provider activation.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    },
+    {
+      "path": "/get-involved/contribute",
+      "component": "ContributionOpportunity",
+      "file": "artifacts/ph-navigator/src/pages/get-involved.tsx",
+      "scope": "navigation, directory, resource catalogue, governance or development page",
+      "review_disposition": "Remain closed; no donation, volunteering or peer-support intake implied.",
+      "related_findings": [],
+      "clinical_approval": "Not established by this audit"
+    }
+  ],
+  "planned_resources": [
+    {
+      "line": 37,
+      "id": "what-is-ph",
+      "title": "What is Pulmonary Hypertension? A Patient Guide",
+      "description": "A plain-language introduction to PH — what it is, how it affects your body, the different WHO groups, and what your diagnosis means for daily life.",
+      "category": "Newly Diagnosed",
+      "pages": 8,
+      "featured": "true",
+      "updated": "March 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 47,
+      "id": "just-diagnosed",
+      "title": "You've Just Been Diagnosed — What Now?",
+      "description": "A calm, step-by-step guide for the days immediately after a PH diagnosis. Covers who to tell, what to expect at your next appointments, and how to find support.",
+      "category": "Newly Diagnosed",
+      "pages": 6,
+      "featured": "true",
+      "updated": "February 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 57,
+      "id": "questions-for-doctor",
+      "title": "Questions to Ask Your Specialist",
+      "description": "A printable question list for your first and ongoing specialist appointments, organised by stage of care.",
+      "category": "Newly Diagnosed",
+      "pages": 4,
+      "updated": "January 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx",
+      "related_working_route": "/recently-diagnosed/questions-for-doctor"
+    },
+    {
+      "line": 66,
+      "id": "understanding-rhc",
+      "title": "Understanding Your Right Heart Catheterisation",
+      "description": "What to expect before, during, and after a right heart catheterisation — including how to read your results (mPAP, PCWP, PVR) and what they mean.",
+      "category": "Newly Diagnosed",
+      "pages": 5,
+      "updated": "April 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 75,
+      "id": "ph-groups-explained",
+      "title": "The Five WHO Groups of PH — Explained",
+      "description": "Breaks down each WHO classification group with its causes, distinguishing features, and implications for treatment choice.",
+      "category": "Newly Diagnosed",
+      "pages": 7,
+      "updated": "December 2024",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 84,
+      "id": "medications-overview",
+      "title": "PH Medications: An Overview",
+      "description": "A clear summary of the four main drug classes used in PH — ERAs, PDE5 inhibitors, prostacyclins, and sGC stimulators — how they work and how they're taken.",
+      "category": "Treatments",
+      "pages": 10,
+      "featured": "true",
+      "updated": "March 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 94,
+      "id": "oxygen-therapy-guide",
+      "title": "Living with Supplemental Oxygen",
+      "description": "Everything you need to know about home oxygen: equipment types, safety, travelling with oxygen concentrators, and connecting with your oxygen supplier.",
+      "category": "Treatments",
+      "pages": 9,
+      "updated": "January 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 103,
+      "id": "reading-test-results",
+      "title": "Understanding Your Test Results",
+      "description": "Helps patients interpret the most common PH tests — echocardiogram, 6-minute walk test, NT-proBNP, and lung function — with clear explanations of normal ranges and what changes may mean.",
+      "category": "Treatments",
+      "pages": 6,
+      "updated": "February 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 112,
+      "id": "warfarin-diet",
+      "title": "Anticoagulation and Diet: What to Know if You Take Warfarin",
+      "description": "Practical guidance on managing vitamin K in your diet when anticoagulated, including food lists and how to manage fluctuating INR results.",
+      "category": "Treatments",
+      "pages": 4,
+      "updated": "November 2024",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 121,
+      "id": "exercise-rehab",
+      "title": "Exercise Rehabilitation in PH",
+      "description": "Evidence-based guidance on safe physical activity for PH patients — why it helps, how to start, pacing techniques, what to avoid, and cardiac rehabilitation programs.",
+      "category": "Living Well",
+      "pages": 8,
+      "featured": "true",
+      "updated": "April 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 131,
+      "id": "travel-oxygen",
+      "title": "Flying with PH and Oxygen: A Practical Guide",
+      "description": "Step-by-step guidance for air travel with pulmonary hypertension — pre-flight assessments, HAST testing, airline documentation, portable concentrator approvals, and destination planning.",
+      "category": "Living Well",
+      "pages": 11,
+      "updated": "March 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 140,
+      "id": "diet-nutrition",
+      "title": "Eating Well with PH",
+      "description": "Dietary recommendations for PH patients including sodium restriction, fluid management, heart-healthy eating, and managing nutrition on complex medication regimens.",
+      "category": "Living Well",
+      "pages": 7,
+      "updated": "January 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 149,
+      "id": "mental-wellbeing",
+      "title": "Your Mental Wellbeing Matters: Living with PH",
+      "description": "Addresses the psychological impact of PH — anxiety, depression, grief — and offers practical coping strategies, support options, and guidance on when to seek professional help.",
+      "category": "Living Well",
+      "pages": 9,
+      "updated": "February 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 158,
+      "id": "financial-support",
+      "title": "Navigating Financial Support with PH",
+      "description": "An Australian guide to financial assistance options including NDIS, Centrelink DSP, PBS costs, IPTAAS for rural patients, and employment considerations.",
+      "category": "Living Well",
+      "pages": 10,
+      "updated": "April 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 167,
+      "id": "energy-conservation",
+      "title": "Energy Conservation Techniques",
+      "description": "Practical strategies for managing limited energy through pacing, prioritising, positioning, and planning — helping you do more of what matters most.",
+      "category": "Living Well",
+      "pages": 5,
+      "updated": "December 2024",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 176,
+      "id": "carers-guide",
+      "title": "A Guide for Carers of People with PH",
+      "description": "Everything a carer needs to know — the practical realities of supporting someone with PH, coordinating care, managing medications, and recognising signs of deterioration.",
+      "category": "For Carers",
+      "pages": 12,
+      "featured": "true",
+      "updated": "March 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 186,
+      "id": "carer-wellbeing",
+      "title": "Looking After Yourself as a Carer",
+      "description": "A compassionate guide to preventing carer burnout — recognising the signs, finding respite, and maintaining your own physical and mental health alongside your caring role.",
+      "category": "For Carers",
+      "pages": 6,
+      "updated": "February 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 195,
+      "id": "advance-care-planning",
+      "title": "Advance Care Planning and Legal Preparations",
+      "description": "An introduction to advance care directives, enduring powers of attorney, and other legal preparations relevant to PH patients and their families.",
+      "category": "For Carers",
+      "pages": 8,
+      "updated": "January 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 204,
+      "id": "talking-to-children",
+      "title": "Talking to Children About a Parent's PH Diagnosis",
+      "description": "Age-appropriate guidance on how to explain pulmonary hypertension to children, answer their questions honestly, and maintain family connection through a difficult diagnosis.",
+      "category": "For Carers",
+      "pages": 5,
+      "updated": "November 2024",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 213,
+      "id": "gp-referral-guide",
+      "title": "PH Referral Criteria for General Practitioners",
+      "description": "A concise clinical summary of when to suspect PH, the appropriate referral pathway to a specialist centre, and what investigations to order before referral.",
+      "category": "For Healthcare Professionals",
+      "pages": 4,
+      "updated": "April 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 222,
+      "id": "diagnostic-algorithm",
+      "title": "Diagnostic Algorithm: Investigating Suspected PH",
+      "description": "A step-by-step clinical algorithm for investigating suspected pulmonary hypertension in adults, consistent with ESC/ERS 2022 guidelines.",
+      "category": "For Healthcare Professionals",
+      "pages": 3,
+      "updated": "March 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    },
+    {
+      "line": 231,
+      "id": "patient-handout-ph",
+      "title": "Patient Information Handout: Pulmonary Hypertension",
+      "description": "A printable one-page summary of PH suitable for giving to newly diagnosed patients at their first specialist appointment.",
+      "category": "For Healthcare Professionals",
+      "pages": 2,
+      "updated": "February 2025",
+      "availability": "Planned; no corresponding clinical PDF identified",
+      "review_status": "Draft/review pending; actual review date not established",
+      "metadata_warning": "Existing updated/pages fields are template values, not verified file/review evidence",
+      "file": "artifacts/ph-navigator/src/pages/resource-library.tsx"
+    }
+  ],
+  "additional_items": [
+    {
+      "file": "artifacts/ph-navigator/src/pages/not-found.tsx",
+      "status": "Technical/developer wording, not clinical content; replacing developer-oriented help copy is a low-priority UX task."
+    },
+    {
+      "file": "artifacts/ph-navigator/public/brand/ph-navigator-digital-kit.zip",
+      "status": "Brand asset bundle, excluded from clinical resource count."
+    }
+  ]
+}
