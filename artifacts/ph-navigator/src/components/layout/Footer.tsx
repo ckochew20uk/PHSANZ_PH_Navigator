@@ -1,206 +1,156 @@
-import React from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Logo } from "@/components/ui/logo";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { ContentContainer } from "@/components/content/ContentContainer";
+import { footerPatientLinks, footerOrganisationLinks } from "@/data/navigation";
 
+const informationLinks = [
+  { title: "Privacy Policy", path: "/privacy" },
+  { title: "Terms of Use", path: "/terms" },
+  { title: "Accessibility", path: "/accessibility" },
+];
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-
+  const [location] = useLocation();
+  if (location === "/start")
+    return (
+      <footer className="clinic-footer border-t border-border bg-white py-6 pb-[calc(6rem+env(safe-area-inset-bottom))] lg:pb-6">
+        <ContentContainer>
+          <p className="text-sm font-medium text-primary">
+            PH Navigator · An initiative of PHSANZ
+          </p>
+          <nav
+            aria-label="Clinic landing information"
+            className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm"
+          >
+            <Link
+              href="/about"
+              className="py-1 text-secondary underline underline-offset-4"
+            >
+              About PH Navigator
+            </Link>
+            {informationLinks.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                className="py-1 text-secondary underline underline-offset-4"
+              >
+                {item.title}
+              </Link>
+            ))}
+          </nav>
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+            Information on this website supports, and does not replace, advice
+            from your healthcare team.
+          </p>
+        </ContentContainer>
+      </footer>
+    );
   return (
-    <footer className="bg-primary text-primary-foreground border-t-[8px] border-secondary">
-      {/* Newsletter Band */}
-      <div className="bg-primary/90 border-b border-white/10 py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+    <footer className="border-t-[6px] border-secondary bg-primary pb-[calc(5rem+env(safe-area-inset-bottom))] text-primary-foreground lg:pb-0">
+      <div className="border-b border-white/20 py-10">
+        <ContentContainer>
+          <div className="grid gap-8 lg:grid-cols-2">
             <div>
-              <p className="text-white font-semibold text-sm uppercase tracking-wide mb-2">
+              <p className="mb-3 text-sm font-medium uppercase tracking-widest">
                 Stay connected
               </p>
-              <h2 className="text-3xl font-heading font-bold text-white mb-3 leading-snug">
+              <h2 className="mb-4 font-heading text-3xl font-bold">
                 Updates from the PH community
               </h2>
-              <p className="text-primary-foreground/75 text-lg leading-relaxed">
-                New resources, research news, upcoming events, and support
-                information — delivered to your inbox. Sign up to stay informed
-                about what matters to you.
+              <p className="max-w-lg text-primary-foreground/90">
+                Sign up for newsletter updates about PH Navigator and its
+                developing resources.
               </p>
             </div>
-            <div>
-              <NewsletterSignup variant="footer" />
-            </div>
+            <NewsletterSignup variant="footer" />
           </div>
-        </div>
+        </ContentContainer>
       </div>
-
-      {/* Main Footer */}
-      <div className="pt-14 pb-8">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
-            <div className="lg:col-span-2">
-              <div className="inline-block mb-6">
-                <Logo size="lg" variant="white" />
-              </div>
-              <p className="text-primary-foreground/90 text-lg mb-6 leading-relaxed max-w-md">
-                Navigating life with pulmonary hypertension — together. A
-                trusted guide for patients and carers across Australia and New
-                Zealand.
+      <div className="py-10">
+        <ContentContainer>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <Logo size="lg" variant="white" />
+              <p className="mt-5 text-sm">An initiative of PHSANZ</p>
+              <p className="mt-2 text-sm text-primary-foreground/90">
+                Pulmonary Hypertension Society of Australia and New Zealand
               </p>
-              <div className="space-y-2 text-primary-foreground/80 text-sm">
-                <p className="font-semibold text-white">
-                  An initiative of PHSANZ
-                </p>
-                <p>
-                  Pulmonary Hypertension Society of Australia and New Zealand
-                </p>
-              </div>
             </div>
-
-            <div>
-              <h3 className="font-heading text-xl font-bold mb-4 text-white border-b border-primary-foreground/20 pb-2">
-                Support
-              </h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="/recently-diagnosed"
-                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                  >
-                    Recently Diagnosed
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/treatments"
-                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                  >
-                    Treatments
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/living-well"
-                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                  >
-                    Living Well
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/caring-for-someone"
-                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                  >
-                    For Carers
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/resource-library"
-                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                  >
-                    Resource Library
-                  </Link>
-                </li>
+            <nav aria-label="Patient information">
+              <h2 className="mb-4 font-heading text-xl font-bold">
+                Information and support
+              </h2>
+              <ul className="space-y-2">
+                {footerPatientLinks.map((item) => (
+                  <li key={item.path}>
+                    <Link
+                      href={item.path}
+                      className="inline-block py-1 text-sm text-primary-foreground/90 underline-offset-4 hover:underline"
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
-            </div>
-
-            <div>
-              <h3 className="font-heading text-xl font-bold mb-4 text-white border-b border-primary-foreground/20 pb-2">
-                Community
-              </h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="/community-voices"
-                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                  >
-                    Patient Stories
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/find-specialist"
-                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                  >
-                    Find a Specialist
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/about"
-                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/for-healthcare-professionals"
-                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                  >
-                    For Professionals
-                  </Link>
-                </li>
+            </nav>
+            <nav aria-label="About and governance">
+              <h2 className="mb-4 font-heading text-xl font-bold">
+                About PH Navigator
+              </h2>
+              <ul className="space-y-2">
+                {footerOrganisationLinks.map((item) => (
+                  <li key={item.path}>
+                    <Link
+                      href={item.path}
+                      className="inline-block py-1 text-sm text-primary-foreground/90 underline-offset-4 hover:underline"
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
-            </div>
-
+            </nav>
             <div>
-              <h3 className="font-heading text-xl font-bold mb-4 text-white border-b border-primary-foreground/20 pb-2">
-                Emergency
-              </h3>
-              <ul className="space-y-3 text-primary-foreground/80">
-                <li>
-                  Medical Emergency: <strong className="text-white">000</strong>
-                </li>
-                <li>
-                  Lifeline: <strong className="text-white">13 11 14</strong>
-                </li>
-                <li>
-                  Beyond Blue:{" "}
-                  <strong className="text-white">1300 22 4636</strong>
-                </li>
-              </ul>
+              <h2 className="mb-4 font-heading text-xl font-bold">
+                Urgent support
+              </h2>
+              <p className="text-sm">
+                Medical emergency: <strong>000</strong>
+              </p>
+              <p className="mt-3 text-sm">
+                Lifeline: <strong>13 11 14</strong>
+              </p>
+              <p className="mt-3 text-sm">
+                Beyond Blue: <strong>1300 22 4636</strong>
+              </p>
             </div>
           </div>
-
-          <div className="pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
-            <p>PH Navigator · An initiative of PHSANZ · {currentYear}</p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/privacy"
-                className="hover:text-white underline underline-offset-4"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="hover:text-white underline underline-offset-4"
-              >
-                Terms of Use
-              </Link>
-              <Link
-                href="/accessibility"
-                className="hover:text-white underline underline-offset-4"
-              >
-                Accessibility
-              </Link>
-              <Link
-                href="/governance-checklist"
-                className="hover:text-white transition-colors"
-              >
-                Governance Checklist
-              </Link>
-            </div>
-          </div>
-
-          <div className="mt-8 text-xs text-primary-foreground/80 text-center max-w-4xl mx-auto">
+          <div className="mt-8 flex flex-wrap justify-between gap-4 border-t border-white/20 pt-6 text-sm">
             <p>
-              Disclaimer: The information provided on PH Navigator is for
-              educational purposes only and does not substitute for professional
-              medical advice. Always consult with your PH specialist team
-              regarding your treatment and care.
+              PH Navigator · An initiative of PHSANZ ·{" "}
+              {new Date().getFullYear()}
             </p>
+            <nav
+              aria-label="Website information"
+              className="flex flex-wrap gap-4"
+            >
+              {informationLinks.map((item) => (
+                <Link
+                  key={item.path}
+                  href={item.path}
+                  className="underline underline-offset-4"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </nav>
           </div>
-        </div>
+          <p className="mt-5 max-w-3xl text-sm text-primary-foreground/90">
+            The information on PH Navigator is for general education and does
+            not substitute for individual medical advice. Discuss treatment and
+            care with your PH specialist team.
+          </p>
+        </ContentContainer>
       </div>
     </footer>
   );

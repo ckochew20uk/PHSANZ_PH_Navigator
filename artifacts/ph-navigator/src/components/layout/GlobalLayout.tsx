@@ -1,3 +1,4 @@
+import { JourneyTrail } from "@/components/journeys/JourneyTrail";
 import { MotionConfig } from "framer-motion";
 import React, { Suspense } from "react";
 import { CrisisBanner } from "./CrisisBanner";
@@ -21,8 +22,9 @@ function LayoutInner({ children }: { children: React.ReactNode }) {
       <main
         id="main-content"
         tabIndex={-1}
-        className="flex-1 w-full flex flex-col pb-16 xl:pb-0"
+        className="flex-1 w-full flex flex-col"
       >
+        <JourneyTrail />
         <Suspense
           fallback={
             <div className="flex-1 flex items-center justify-center min-h-[50vh]">

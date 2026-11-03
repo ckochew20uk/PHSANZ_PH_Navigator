@@ -18,18 +18,8 @@ export function HomeHero() {
           </p>
           <div className="home-actions">
             <Button asChild size="lg" className="home-primary">
-              <Link href="/recently-diagnosed">
-                I'm newly diagnosed <ArrowRight aria-hidden="true" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="home-secondary"
-            >
-              <Link href="/living-well">
-                Living well with PH <ArrowRight aria-hidden="true" />
+              <Link href="/start">
+                Find your starting point <ArrowRight aria-hidden="true" />
               </Link>
             </Button>
           </div>

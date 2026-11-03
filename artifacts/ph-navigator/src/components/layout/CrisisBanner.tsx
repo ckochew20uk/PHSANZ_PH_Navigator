@@ -20,7 +20,7 @@ export function CrisisBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-destructive text-destructive-foreground py-3 px-4 relative z-50">
+    <div className="crisis-banner bg-destructive text-destructive-foreground py-3 px-4 relative z-50">
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between text-sm sm:text-base font-medium">
         <div className="flex-1 pr-8">
           <p>
@@ -32,7 +32,7 @@ export function CrisisBanner() {
         <Button 
           variant="ghost" 
           size="icon" 
-          className="absolute right-2 top-2 sm:relative sm:top-0 sm:right-0 text-white hover:bg-white/20 hover:text-white"
+          className="no-default-hover-elevate no-default-active-elevate absolute right-2 top-2 sm:relative sm:top-0 sm:right-0 text-white hover:bg-white/20 hover:text-white"
           onClick={dismiss}
           aria-label="Dismiss banner"
         >

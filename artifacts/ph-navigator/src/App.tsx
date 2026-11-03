@@ -9,6 +9,9 @@ import NotFound from "@/pages/not-found";
 // Lazy load pages
 const Home = React.lazy(() => import("@/pages/home"));
 
+const Start = React.lazy(() => import('@/pages/start'));
+const UnderstandingPH = React.lazy(() => import('@/pages/understanding-ph'));
+
 // Recently Diagnosed
 const RecentlyDiagnosed = React.lazy(
   () => import("@/pages/recently-diagnosed/index"),
@@ -102,6 +105,8 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/start" component={Start} />
+      <Route path="/understanding-ph" component={UnderstandingPH} />
 
       <Route path="/recently-diagnosed" component={RecentlyDiagnosed} />
       <Route path="/recently-diagnosed/what-is-ph" component={WhatIsPH} />

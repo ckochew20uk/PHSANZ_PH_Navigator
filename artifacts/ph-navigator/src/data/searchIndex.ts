@@ -7,6 +7,8 @@ export interface SearchItem {
 }
 
 export const searchIndex: SearchItem[] = [
+  { title: 'Find your starting point', description: 'Choose newly diagnosed, living with PH, or supporting someone. No account needed.', path: '/start', category: 'General', keywords: ['start', 'QR', 'clinic', 'new diagnosis', 'carer', 'family'] },
+  { title: 'Understanding PH', description: 'A place to explore PH, diagnosis, treatment, tests and appointment preparation.', path: '/understanding-ph', category: 'General', keywords: ['understand', 'diagnosis', 'treatment', 'tests', 'information'] },
   {
     title: "Privacy information — draft",
     description:
@@ -47,7 +49,7 @@ export const searchIndex: SearchItem[] = [
 
   // Recently Diagnosed
   {
-    title: "Recently Diagnosed",
+    title: "Newly diagnosed with PH",
     description:
       "Guidance and support for those newly diagnosed with pulmonary hypertension.",
     path: "/recently-diagnosed",
@@ -160,7 +162,7 @@ export const searchIndex: SearchItem[] = [
 
   // Living Well
   {
-    title: "Living Well with PH",
+    title: "Living with PH",
     description:
       "Practical advice for maintaining quality of life while managing pulmonary hypertension.",
     path: "/living-well",
@@ -294,7 +296,7 @@ export const searchIndex: SearchItem[] = [
 
   // Caring for Someone
   {
-    title: "Caring for Someone with PH",
+    title: "Supporting someone with PH",
     description:
       "Support and resources for carers, family members, and friends of people living with PH.",
     path: "/caring-for-someone",

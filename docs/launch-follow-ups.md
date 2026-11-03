@@ -18,3 +18,7 @@ These are outstanding decisions, not completed safeguards. Revisit in future lau
 | Hosting/accreditation | Approved roadmap, not verified completion | Confirm PHSANZ domain/infrastructure migration and any formal accreditation separately. |
 
 The proposal's budgets/grant targets are planning context. Do not treat them as payment records, secured matched funding or public partner endorsements.
+
+## Clinic entry and visitor flow
+
+`/start` and the simplified patient journeys are implemented on `feat/patient-journeys`. Before producing clinic flyers/cards, confirm the permanent public origin and test QR print proofs against its stable `/start` URL; see `clinic-qr-brief.md`. No QR should point to a temporary preview. Feedback collection and the response workflow are explicitly deferred by the user and are not part of this update.
