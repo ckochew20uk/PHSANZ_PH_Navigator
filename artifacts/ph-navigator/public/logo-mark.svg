@@ -1,11 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-     width="996" height="996" viewBox="0 0 996 996"
-     role="img" aria-labelledby="logo-title logo-description">
-  <title id="logo-title">Sailboat and heart logo</title>
-  <desc id="logo-description">Editable vector reconstruction of the supplied logo: a navy sailboat and flag, teal and blue sails, a heart outline, and two waves. Every visible element is a vector path with an editable solid or gradient fill. The background is transparent.</desc>
-  <defs>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="996" height="996" viewBox="0 0 996 996" role="img"><title>PH Navigator</title>  <defs>
     <linearGradient id="navy-gradient" gradientUnits="userSpaceOnUse" x1="270" y1="90" x2="650" y2="875">
       <stop offset="0" stop-color="#142d59"/>
       <stop offset="0.55" stop-color="#172e5b"/>

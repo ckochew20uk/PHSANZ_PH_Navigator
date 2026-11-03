@@ -107,12 +107,12 @@ export function MobileBottomNav() {
         <>
           {/* Backdrop */}
           <div
-            className="lg:hidden fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
+            className="xl:hidden fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
             onClick={closeDrawer}
           />
 
           {/* Drawer panel */}
-          <div className="lg:hidden fixed bottom-16 left-0 right-0 z-50 rounded-t-2xl bg-white shadow-2xl border-t border-border/30 max-h-[75dvh] flex flex-col">
+          <div className="xl:hidden fixed bottom-16 left-0 right-0 z-50 rounded-t-2xl bg-white shadow-2xl border-t border-border/30 max-h-[75dvh] flex flex-col">
             {/* Handle + header */}
             <div className="relative flex items-center justify-between px-5 pt-4 pb-3 border-b border-border/30">
               <div className="w-10 h-1 rounded-full bg-muted absolute left-1/2 -translate-x-1/2 top-2" />
@@ -214,7 +214,7 @@ export function MobileBottomNav() {
       )}
 
       {/* ── Fixed bottom tab bar ── */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-border/40 shadow-[0_-2px_16px_rgba(0,0,0,0.06)]">
+      <nav className="xl:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-border/40 shadow-[0_-2px_16px_rgba(0,0,0,0.06)]">
         <div className="flex items-stretch h-16">
           {bottomTabs.map((tab) => {
             const Icon = tab.icon;

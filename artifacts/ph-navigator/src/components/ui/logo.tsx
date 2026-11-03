@@ -7,7 +7,7 @@ const heights: Record<LogoSize, number> = { sm: 48, md: 64, lg: 80 };
 
 const logoSrc: Record<LogoVariant, string> = {
   primary: `${import.meta.env.BASE_URL}logo-primary.svg`,
-  white: `${import.meta.env.BASE_URL}logo-primary.svg`,
+  white: `${import.meta.env.BASE_URL}logo-white.svg`,
   mark: `${import.meta.env.BASE_URL}logo-mark.svg`,
 };
 
@@ -17,7 +17,11 @@ interface LogoProps {
   className?: string;
 }
 
-export function Logo({ variant = "primary", size = "md", className }: LogoProps) {
+export function Logo({
+  variant = "primary",
+  size = "md",
+  className,
+}: LogoProps) {
   const h = heights[size];
 
   return (
@@ -25,7 +29,15 @@ export function Logo({ variant = "primary", size = "md", className }: LogoProps)
       src={logoSrc[variant]}
       alt="PH Navigator"
       className={className}
-      style={{ height: h, width: "auto" }}
+      style={
+        variant === "mark"
+          ? { height: h, width: h }
+          : {
+              width: size === "lg" ? 260 : size === "sm" ? 150 : 180,
+              height: "auto",
+              maxWidth: "100%",
+            }
+      }
     />
   );
 }

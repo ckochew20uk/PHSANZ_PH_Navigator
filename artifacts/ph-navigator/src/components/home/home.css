@@ -1,11 +1,11 @@
 .home-modern {
-  --home-teal: #246c68;
-  --home-ink: #183f3d;
-  --home-mint: #d9ebe5;
-  --home-lavender: #e9e5f5;
+  --home-teal: #17748c;
+  --home-ink: #172e5b;
+  --home-mint: #e3f2f2;
+  --home-lavender: #eceaf6;
   --home-peach: #f8e2d5;
   color: var(--home-ink);
-  background: #f7f8f5;
+  background: #f7f9fb;
   font-family: var(--app-font-sans);
 }
 .home-modern * {
@@ -55,7 +55,7 @@
   margin-bottom: 1rem;
 }
 .home-hero {
-  background: #f7f8f5;
+  background: #f7f9fb;
   overflow: hidden;
 }
 .home-hero-grid {
@@ -88,7 +88,7 @@
   border-color: var(--home-teal);
 }
 .home-modern .home-primary:hover {
-  background: #194f4c;
+  background: #11566a;
 }
 .home-modern .home-secondary {
   border: 2px solid var(--home-teal);
@@ -99,7 +99,7 @@
   background: var(--home-mint);
 }
 .home-modern a:focus-visible {
-  outline: 3px solid #183f3d;
+  outline: 3px solid #172e5b;
   outline-offset: 5px;
   box-shadow: 0 0 0 2px white;
 }
@@ -158,7 +158,7 @@
   flex-direction: column;
   background: transparent;
   color: inherit;
-  border: 1px solid #183f3d24;
+  border: 1px solid #172e5b24;
   border-radius: 1.5rem;
   box-shadow: none;
   transition:
@@ -169,7 +169,7 @@
 .home-card-link:hover .home-pathway,
 .home-card-link:focus-visible .home-pathway {
   border-color: var(--home-teal);
-  box-shadow: 0 12px 28px #183f3d14;
+  box-shadow: 0 12px 28px #172e5b14;
   transform: translateY(-3px);
 }
 .home-card-top {
@@ -197,7 +197,7 @@
   font-size: 0.75rem;
   font-weight: 800;
   padding: 0.35rem 0.65rem;
-  border: 1px solid #183f3d55;
+  border: 1px solid #172e5b55;
   border-radius: 999px;
 }
 .home-modern .home-card-title {
@@ -256,7 +256,7 @@
   align-items: flex-start;
   gap: 1.5rem;
   padding: 2rem;
-  border: 1px solid #183f3d35;
+  border: 1px solid #172e5b35;
   border-radius: 1.5rem;
   margin-top: 2rem;
   max-width: 850px;
@@ -276,7 +276,7 @@
 .home-story {
   background: white;
   padding: 1.75rem;
-  border: 1px solid #183f3d35;
+  border: 1px solid #172e5b35;
   border-radius: 1.5rem;
 }
 .home-resource {
@@ -290,7 +290,7 @@
 .home-resource:hover,
 .home-resource:focus-visible {
   border-color: var(--home-teal);
-  box-shadow: 0 12px 28px #183f3d14;
+  box-shadow: 0 12px 28px #172e5b14;
   transform: translateY(-3px);
 }
 .home-resource {

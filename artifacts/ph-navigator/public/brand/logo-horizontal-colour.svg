@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1080" height="260" viewBox="0 0 1080 260" role="img"><title>PH Navigator</title><g transform="translate(0 0) scale(0.26104417670682734)">  <defs>
+    <linearGradient id="navy-gradient" gradientUnits="userSpaceOnUse" x1="270" y1="90" x2="650" y2="875">
+      <stop offset="0" stop-color="#142d59"/>
+      <stop offset="0.55" stop-color="#172e5b"/>
+      <stop offset="1" stop-color="#192f60"/>
+    </linearGradient>
+    <linearGradient id="left-sail-gradient" gradientUnits="userSpaceOnUse" x1="385" y1="220" x2="180" y2="710">
+      <stop offset="0" stop-color="#16a1aa"/>
+      <stop offset="0.55" stop-color="#159ba6"/>
+      <stop offset="1" stop-color="#1b9aa5"/>
+    </linearGradient>
+    <linearGradient id="main-sail-gradient" gradientUnits="userSpaceOnUse" x1="440" y1="185" x2="667" y2="685">
+      <stop offset="0" stop-color="#248db7"/>
+      <stop offset="0.5" stop-color="#278dbd"/>
+      <stop offset="1" stop-color="#2786bd"/>
+    </linearGradient>
+    <linearGradient id="inner-sail-gradient" gradientUnits="userSpaceOnUse" x1="440" y1="205" x2="530" y2="660">
+      <stop offset="0" stop-color="#1a7d96"/>
+      <stop offset="0.55" stop-color="#19758f"/>
+      <stop offset="1" stop-color="#17748c"/>
+    </linearGradient>
+    <linearGradient id="heart-gradient" gradientUnits="userSpaceOnUse" x1="590" y1="295" x2="917" y2="580">
+      <stop offset="0" stop-color="#158e9f"/>
+      <stop offset="0.5" stop-color="#0da3ab"/>
+      <stop offset="1" stop-color="#14a0aa"/>
+    </linearGradient>
+    <linearGradient id="wave-gradient" gradientUnits="userSpaceOnUse" x1="205" y1="873" x2="645" y2="936">
+      <stop offset="0" stop-color="#1b7b96"/>
+      <stop offset="0.55" stop-color="#107c9e"/>
+      <stop offset="1" stop-color="#1687a9"/>
+    </linearGradient>
+  </defs>
+
+  <g id="heart" inkscape:label="Heart">
+    <path id="heart-teal-outline" inkscape:label="Heart — teal outer ribbon" fill="url(#heart-gradient)"
+      d="M 560,296
+         C 614,272 675,290 713,336
+         C 757,288 809,277 852,293
+         C 906,310 937,352 939,405
+         C 944,487 875,578 789,639
+         L 745,670 L 691,672
+         C 764,628 818,572 854,516
+         C 881,473 892,437 884,402
+         C 877,370 859,349 835,341
+         C 791,324 746,346 718,397
+         L 715,402
+         Q 713,405 711,400
+         C 682,342 641,319 585,335 Z"/>
+    <path id="heart-navy-outline" inkscape:label="Heart — navy inner ribbon" fill="url(#navy-gradient)"
+      d="M 560,296
+         C 616,276 674,305 713,359
+         C 748,319 791,301 835,315
+         C 882,327 912,368 912,421
+         C 914,505 831,601 745,670
+         L 691,672
+         C 764,628 818,572 854,516
+         C 881,473 892,437 884,402
+         C 877,370 859,349 835,341
+         C 791,324 746,346 718,397
+         L 715,402
+         Q 713,405 711,400
+         C 682,342 641,319 585,335 Z"/>
+  </g>
+
+  <g id="sails" inkscape:label="Sails">
+    <path id="port-sail" inkscape:label="Left teal sail" fill="url(#left-sail-gradient)"
+      d="M 398,218 L 392,699
+         C 319,663 253,669 149,710 Z"/>
+    <path id="starboard-sail" inkscape:label="Right blue sail" fill="url(#main-sail-gradient)"
+      d="M 431,177
+         C 565,297 665,466 692,672
+         L 682,677
+         C 609,646 538,651 438,697
+         L 438,637
+         C 468,559 477,483 474,413
+         C 471,318 453,240 431,190 Z"/>
+    <path id="sail-shaded-panel" inkscape:label="Right sail — shaded teal panel" fill="url(#inner-sail-gradient)"
+      d="M 431,188
+         C 501,291 548,417 556,529
+         C 560,588 551,636 537,663
+         C 505,668 472,681 438,697
+         L 438,637
+         C 466,558 477,480 474,414
+         C 471,322 454,245 431,188 Z"/>
+  </g>
+
+  <g id="boat" inkscape:label="Boat and flag" fill="url(#navy-gradient)">
+    <path id="mast" inkscape:label="Mast"
+      d="M 415,74
+         C 415,64 428,63 429,73
+         L 440,744 L 406,750 Z"/>
+    <path id="flag" inkscape:label="Waving flag"
+      d="M 430,78
+         C 456,70 484,71 502,79
+         C 513,83 515,89 516,97
+         C 519,111 537,109 558,106
+         C 584,102 600,107 617,118
+         C 594,113 578,120 560,131
+         C 539,144 515,150 502,145
+         C 495,143 495,137 495,129
+         C 481,121 454,133 433,142
+         C 443,114 441,101 430,78 Z"/>
+    <path id="hull" inkscape:label="Sweeping boat hull"
+      d="M 108,757
+         C 211,760 316,756 406,742
+         L 439,738
+         C 539,722 625,706 692,671
+         C 713,659 735,645 756,630
+         L 790,636
+         C 758,662 728,689 701,720
+         C 667,759 642,805 621,826
+         C 554,846 490,841 427,825
+         C 352,806 299,789 231,796
+         C 198,798 168,805 141,813
+         C 123,797 112,781 108,757 Z"/>
+  </g>
+
+  <g id="waves" inkscape:label="Waves">
+    <path id="upper-navy-wave" inkscape:label="Upper navy wave" fill="url(#navy-gradient)"
+      d="M 43,885
+         C 114,824 193,807 270,813
+         C 354,817 414,853 502,855
+         C 587,858 662,839 735,787
+         C 690,847 615,886 535,891
+         C 444,898 381,864 300,850
+         C 207,832 129,849 43,885 Z"/>
+    <path id="lower-teal-wave" inkscape:label="Lower teal wave" fill="url(#wave-gradient)"
+      d="M 183,872
+         C 249,858 309,875 366,893
+         C 468,927 576,929 669,872
+         C 615,923 556,944 494,942
+         C 425,940 376,918 319,898
+         C 269,880 224,873 183,872 Z"/>
+  </g>
+</g><g fill="#172e5b"><path d="M188 1493H827Q1112 1493 1264.5 1366.5Q1417 1240 1417 1006Q1417 771 1264.5 644.5Q1112 518 827 518H573V0H188ZM573 1214V797H786Q898 797 959.0 851.5Q1020 906 1020 1006Q1020 1106 959.0 1160.0Q898 1214 786 1214Z" transform="translate(285.0 159) scale(0.048828125 -0.048828125)"/><path d="M188 1493H573V924H1141V1493H1526V0H1141V633H573V0H188Z" transform="translate(358.291015625 159) scale(0.048828125 -0.048828125)"/><path d="" transform="translate(441.982421875 159) scale(0.048828125 -0.048828125)"/><path d="M188 1493H618L1161 469V1493H1526V0H1096L553 1024V0H188Z" transform="translate(476.796875 159) scale(0.048828125 -0.048828125)"/><path d="M674 504Q562 504 505.5 466.0Q449 428 449 354Q449 286 494.5 247.5Q540 209 621 209Q722 209 791.0 281.5Q860 354 860 463V504ZM1221 639V0H860V166Q788 64 698.0 17.5Q608 -29 479 -29Q305 -29 196.5 72.5Q88 174 88 336Q88 533 223.5 625.0Q359 717 649 717H860V745Q860 830 793.0 869.5Q726 909 584 909Q469 909 370.0 886.0Q271 863 186 817V1090Q301 1118 417.0 1132.5Q533 1147 649 1147Q952 1147 1086.5 1027.5Q1221 908 1221 639Z" transform="translate(560.48828125 159) scale(0.048828125 -0.048828125)"/><path d="M31 1120H389L668 346L946 1120H1305L864 0H471Z" transform="translate(627.96875 159) scale(0.048828125 -0.048828125)"/><path d="M172 1120H530V0H172ZM172 1556H530V1264H172Z" transform="translate(693.154296875 159) scale(0.048828125 -0.048828125)"/><path d="M934 190Q860 92 771.0 46.0Q682 0 565 0Q360 0 226.0 161.5Q92 323 92 573Q92 824 226.0 984.5Q360 1145 565 1145Q682 1145 771.0 1099.0Q860 1053 934 954V1120H1294V113Q1294 -157 1123.5 -299.5Q953 -442 629 -442Q524 -442 426.0 -426.0Q328 -410 229 -377V-98Q323 -152 413.0 -178.5Q503 -205 594 -205Q770 -205 852.0 -128.0Q934 -51 934 113ZM698 887Q587 887 525.0 805.0Q463 723 463 573Q463 419 523.0 339.5Q583 260 698 260Q810 260 872.0 342.0Q934 424 934 573Q934 723 872.0 805.0Q810 887 698 887Z" transform="translate(727.431640625 159) scale(0.048828125 -0.048828125)"/><path d="M674 504Q562 504 505.5 466.0Q449 428 449 354Q449 286 494.5 247.5Q540 209 621 209Q722 209 791.0 281.5Q860 354 860 463V504ZM1221 639V0H860V166Q788 64 698.0 17.5Q608 -29 479 -29Q305 -29 196.5 72.5Q88 174 88 336Q88 533 223.5 625.0Q359 717 649 717H860V745Q860 830 793.0 869.5Q726 909 584 909Q469 909 370.0 886.0Q271 863 186 817V1090Q301 1118 417.0 1132.5Q533 1147 649 1147Q952 1147 1086.5 1027.5Q1221 908 1221 639Z" transform="translate(799.013671875 159) scale(0.048828125 -0.048828125)"/><path d="M563 1438V1120H932V864H563V389Q563 311 594.0 283.5Q625 256 717 256H901V0H594Q382 0 293.5 88.5Q205 177 205 389V864H27V1120H205V1438Z" transform="translate(866.494140625 159) scale(0.048828125 -0.048828125)"/><path d="M705 891Q586 891 523.5 805.5Q461 720 461 559Q461 398 523.5 312.5Q586 227 705 227Q822 227 884.0 312.5Q946 398 946 559Q946 720 884.0 805.5Q822 891 705 891ZM705 1147Q994 1147 1156.5 991.0Q1319 835 1319 559Q1319 283 1156.5 127.0Q994 -29 705 -29Q415 -29 251.5 127.0Q88 283 88 559Q88 835 251.5 991.0Q415 1147 705 1147Z" transform="translate(914.296875 159) scale(0.048828125 -0.048828125)"/><path d="M1004 815Q957 837 910.5 847.5Q864 858 817 858Q679 858 604.5 769.5Q530 681 530 516V0H172V1120H530V936Q599 1046 688.5 1096.5Q778 1147 903 1147Q921 1147 942.0 1145.5Q963 1144 1003 1139Z" transform="translate(982.998046875 159) scale(0.048828125 -0.048828125)"/></g></svg>
