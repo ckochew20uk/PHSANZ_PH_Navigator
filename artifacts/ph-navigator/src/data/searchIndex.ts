@@ -115,10 +115,10 @@ export const searchIndex: SearchItem[] = [
   // Community Voices
   {
     title: "Community Voices",
-    description: "Stories and experiences from people living with PH and their carers across Australia and New Zealand.",
+    description: "Our patient and carer story collection is being developed. Explore planned themes and existing support guidance.",
     path: "/community-voices",
     category: "Community",
-    keywords: ["stories", "personal", "patient stories", "experiences", "community", "forum", "voices", "carer stories"],
+    keywords: ["stories", "personal", "patient stories", "experiences", "community", "voices", "carer stories"],
   },
   {
     title: "Phase 1 Governance Checklist",
