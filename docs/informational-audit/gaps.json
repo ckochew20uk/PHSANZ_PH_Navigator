@@ -1,0 +1,478 @@
+{
+  "gaps": [
+    {
+      "id": "GAP-01",
+      "topic": "Symptoms, deterioration and a personal action plan",
+      "priority": "P1",
+      "current_coverage": "Symptoms listed; generic emergency banner, exercise stop/rest advice and carer monitoring exist. No joined-up action plan.",
+      "proposed_location": "/understanding-ph and linked short safety article; cross-links from living/carer pages",
+      "deliverable": "Explain emergency vs same-day team contact vs routine questions; country-labelled contacts, personal team/after-hours plan and infusion exception.",
+      "benchmark_source_ids": [
+        "UK04",
+        "UK09"
+      ],
+      "local_source_ids": [
+        "AU21",
+        "AU22",
+        "NZ01"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel and PH nurse",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-02",
+      "topic": "Pregnancy, contraception and reproductive decisions",
+      "priority": "P1",
+      "current_coverage": "No substantive patient article; a medication-list context cannot substitute for counselling.",
+      "proposed_location": "/living-well under Your care; links from treatments",
+      "deliverable": "Sensitive, current risk communication, preconception advice, unplanned-pregnancy contact, medicine-specific precautions, contraception interactions and specialist counselling. No unsupported blanket mortality percentage.",
+      "benchmark_source_ids": [
+        "UK20"
+      ],
+      "local_source_ids": [
+        "AU01",
+        "AU02",
+        "CL04"
+      ],
+      "proposed_review_role": "PH clinician, reproductive-health specialist and lived-experience reviewers",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-03",
+      "topic": "Medicine safety, monitoring, supply and interruption",
+      "priority": "P1",
+      "current_coverage": "Names/mechanisms and general never-stop disclaimer; little practical safety information.",
+      "proposed_location": "/treatments/explained plus a short medicines-safety page",
+      "deliverable": "Current CMI links, interaction check, monitoring plan, side-effect triage, safe missed-dose signposting, travel/supply continuity and exact continuous-infusion plan.",
+      "benchmark_source_ids": [
+        "UK09",
+        "UK30"
+      ],
+      "local_source_ids": [
+        "AU01",
+        "AU02",
+        "AU08",
+        "AU09"
+      ],
+      "proposed_review_role": "PH pharmacist and infusion-trained nurse with clinician sign-off",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-04",
+      "topic": "CTEPH as a distinct diagnosis and treatment journey",
+      "priority": "P1",
+      "current_coverage": "One accordion and short PEA/BPA/riociguat mentions.",
+      "proposed_location": "/understanding-ph and /treatments grouped links",
+      "deliverable": "Explain investigation, multidisciplinary operability assessment, PEA/BPA/medicine roles, follow-up and anticoagulation without universal instructions or guaranteed cure.",
+      "benchmark_source_ids": [
+        "UK05",
+        "UK10"
+      ],
+      "local_source_ids": [
+        "AU02",
+        "AU09",
+        "CL02"
+      ],
+      "proposed_review_role": "CTEPH specialist team",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-05",
+      "topic": "Other PH groups and treatment boundaries",
+      "priority": "P1",
+      "current_coverage": "Five-group introduction; medicine overview mostly PAH-focused.",
+      "proposed_location": "/recently-diagnosed/what-is-ph and /treatments/explained",
+      "deliverable": "Clearly distinguish Group 1 PAH from left-heart/lung-disease PH and other causes; show why another person’s medicine may not be appropriate.",
+      "benchmark_source_ids": [
+        "UK05"
+      ],
+      "local_source_ids": [
+        "CL01",
+        "CL02"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-06",
+      "topic": "WHO functional class, groups, risk and test trends",
+      "priority": "P1",
+      "current_coverage": "Five groups and some test numbers present; no clear functional-class/risk explanation.",
+      "proposed_location": "/treatments/test-results",
+      "deliverable": "Separate cause-group from functional class; explain that walk tests, biomarkers, imaging and trends are interpreted together, not as self-scored prognosis. Do not copy EmPHasis-10.",
+      "benchmark_source_ids": [
+        "UK05",
+        "UK25",
+        "UK29"
+      ],
+      "local_source_ids": [
+        "CL01",
+        "CL03"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-07",
+      "topic": "What to expect from investigations",
+      "priority": "P2",
+      "current_coverage": "Brief diagnostic sequence and RHC measurements; no detailed procedure preparation/recovery; RHC resource is only planned.",
+      "proposed_location": "/recently-diagnosed/diagnostic-journey and linked test sections",
+      "deliverable": "Explain RHC, echo, V/Q, CT and lung-function tests in plain language; local instructions come from the treating service, not generic fasting/medicine-hold directions.",
+      "benchmark_source_ids": [
+        "UK06"
+      ],
+      "local_source_ids": [
+        "CL01",
+        "CL02"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel and relevant diagnostic nurses",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-08",
+      "topic": "Home oxygen and equipment safety",
+      "priority": "P1",
+      "current_coverage": "Mainly travel-focused; oxygen guide listed as planned.",
+      "proposed_location": "/living-well within Your care",
+      "deliverable": "Purpose, prescribed use, fire/smoking safety, supplier/backup arrangements and equipment planning; verify state funding and avoid generic flow rates.",
+      "benchmark_source_ids": [
+        "UK14"
+      ],
+      "local_source_ids": [
+        "AU11"
+      ],
+      "proposed_review_role": "Clinician/oxygen-service reviewer; Australian supplier/funding facts require further verification",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-09",
+      "topic": "Fatigue, pacing, sleep and everyday routines",
+      "priority": "P2",
+      "current_coverage": "Pacing appears inside exercise; energy-conservation resource is planned.",
+      "proposed_location": "/living-well under Everyday life",
+      "deliverable": "Develop realistic daily-life examples, rest/activity balance, sleep concerns and support without implying fatigue is a motivation problem.",
+      "benchmark_source_ids": [
+        "UK12",
+        "UK16"
+      ],
+      "local_source_ids": [
+        "AU21"
+      ],
+      "proposed_review_role": "Occupational therapist, PH nurse and Lived Experience Panel",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-10",
+      "topic": "Sexual health, intimacy and relationships",
+      "priority": "P2",
+      "current_coverage": "No substantive coverage.",
+      "proposed_location": "/living-well under Everyday life",
+      "deliverable": "Patient-centred discussion prompts, adapting intimacy, communication and medicine concerns; no copied booklet or universal exercise equivalence.",
+      "benchmark_source_ids": [
+        "UK22",
+        "UK15"
+      ],
+      "local_source_ids": [
+        "AU01",
+        "AU02"
+      ],
+      "proposed_review_role": "PH clinician, sexual-health clinician and Lived Experience Panel",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-11",
+      "topic": "Menopause and changing life stages",
+      "priority": "P2",
+      "current_coverage": "No substantive coverage.",
+      "proposed_location": "/living-well as a later subsection or linked guide",
+      "deliverable": "Assess patient needs and provide current specialist-reviewed symptom/treatment signposting; do not claim a UK hormone recommendation applies in Australia.",
+      "benchmark_source_ids": [
+        "UK03"
+      ],
+      "local_source_ids": [
+        "AU01",
+        "AU02"
+      ],
+      "proposed_review_role": "Relevant specialist and Lived Experience Panel; additional evidence required",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-12",
+      "topic": "Driving, parking permits and mobility",
+      "priority": "P2",
+      "current_coverage": "Absent.",
+      "proposed_location": "/living-well under Practical support",
+      "deliverable": "Use Australian fitness-to-drive assessment and state/territory licensing/permit sources; no blanket DVLA rule or universal right to a permit.",
+      "benchmark_source_ids": [
+        "UK13"
+      ],
+      "local_source_ids": [
+        "AU20"
+      ],
+      "proposed_review_role": "Clinician and Australian licensing/transport reviewer",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-13",
+      "topic": "Employment, study and reasonable adjustments",
+      "priority": "P2",
+      "current_coverage": "Financial article discusses reducing work and insurance; no practical workplace/study guide.",
+      "proposed_location": "/living-well under Practical support",
+      "deliverable": "Disclosing a condition, adjustments, flexible work/study, leave, social-work and legal signposting; verify Fair Work, education and insurer-specific claims separately.",
+      "benchmark_source_ids": [
+        "UK12",
+        "UK19"
+      ],
+      "local_source_ids": [
+        "AU07",
+        "AU16"
+      ],
+      "proposed_review_role": "Social worker/employment-rights reviewer; additional primary legal sources needed",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-14",
+      "topic": "Paediatric PH and transition to adult care",
+      "priority": "P1",
+      "current_coverage": "Paediatric centres listed, but information is predominantly adult; no dedicated paediatric guide.",
+      "proposed_location": "/understanding-ph as clearly labelled family/young-person signposting",
+      "deliverable": "State adult scope until reviewed; develop age-appropriate family/young-person and transition guidance rather than applying adult tests/treatments automatically.",
+      "benchmark_source_ids": [
+        "UK21"
+      ],
+      "local_source_ids": [
+        "AU04",
+        "CL01"
+      ],
+      "proposed_review_role": "Paediatric PH specialist and young-person/family reviewers",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-15",
+      "topic": "Talking with children about a parent’s PH",
+      "priority": "P2",
+      "current_coverage": "One planned resource description; no completed content.",
+      "proposed_location": "/caring-for-someone within family support",
+      "deliverable": "Age-appropriate conversations and support routes; distinguish this topic from a child personally living with PH.",
+      "benchmark_source_ids": [
+        "UK21"
+      ],
+      "local_source_ids": [
+        "AU10"
+      ],
+      "proposed_review_role": "Psychology/child-family practitioner and lived-experience reviewers",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-16",
+      "topic": "Heritable PAH, genetics and family screening",
+      "priority": "P2",
+      "current_coverage": "One deterministic sentence; no practical counselling guide.",
+      "proposed_location": "/understanding-ph linked from PAH types",
+      "deliverable": "Explain the role and limits of genetic counselling/testing and family assessment without inferring deterministic inheritance or giving an unverified risk percentage.",
+      "benchmark_source_ids": [
+        "UK05"
+      ],
+      "local_source_ids": [
+        "CL01",
+        "CL02"
+      ],
+      "proposed_review_role": "PH/genetics specialists",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-17",
+      "topic": "Supportive/palliative care and planning ahead",
+      "priority": "P2",
+      "current_coverage": "Legal-preparation paragraph and planned resource; no explanation of supportive care alongside treatment.",
+      "proposed_location": "/living-well under Your care; /caring-for-someone cross-link",
+      "deliverable": "Explain symptom support, personal goals and planning as compatible with ongoing treatment; separately localise legal documents and service access.",
+      "benchmark_source_ids": [
+        "UK31"
+      ],
+      "local_source_ids": [
+        "AU17"
+      ],
+      "proposed_review_role": "PH/palliative-care clinicians and Lived Experience Panel",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-18",
+      "topic": "Vaccination, infection prevention and intercurrent illness",
+      "priority": "P2",
+      "current_coverage": "No substantive coverage.",
+      "proposed_location": "/living-well under Your care",
+      "deliverable": "Prompt individual vaccination review and an illness/contact plan. Verify the current Australian Immunisation Handbook and funding separately; no hard-coded universal vaccine schedule.",
+      "benchmark_source_ids": [
+        "UK12"
+      ],
+      "local_source_ids": [
+        "AU23"
+      ],
+      "proposed_review_role": "Clinician/immunisation reviewer",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-19",
+      "topic": "Rural/remote access, telehealth and local-team coordination",
+      "priority": "P2",
+      "current_coverage": "Directory briefly mentions telehealth; finance page names three travel schemes.",
+      "proposed_location": "/living-well practical support and /find-specialist",
+      "deliverable": "Explain local GP/PH team coordination, telehealth limits, travel planning, prescription continuity and state-specific assistance; do not imply everyone must move or travel to a capital.",
+      "benchmark_source_ids": [
+        "UK14"
+      ],
+      "local_source_ids": [
+        "AU04",
+        "AU18",
+        "AU19"
+      ],
+      "proposed_review_role": "Rural-care/social-work reviewer and relevant lived-experience contributors",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-20",
+      "topic": "Aboriginal and Torres Strait Islander cultural safety",
+      "priority": "P2",
+      "current_coverage": "No tailored clinical/resource pathway beyond general Australia coverage.",
+      "proposed_location": "Across relevant care/support content; co-designed resource pathway",
+      "deliverable": "Seek appropriate cultural review and co-design; include eligible aged-care/travel pathways without treating diverse communities as one or inventing Indigenous patient experiences.",
+      "benchmark_source_ids": [],
+      "local_source_ids": [
+        "AU13",
+        "AU18"
+      ],
+      "proposed_review_role": "Appropriate Aboriginal and Torres Strait Islander reviewers with clinical/service owners",
+      "publication_gate": "Requires genuine participation, consent and suitable institutional arrangements; no tokenistic invented content.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-21",
+      "topic": "Languages, health literacy and accessible formats",
+      "priority": "P2",
+      "current_coverage": "Readable design and accessibility statement; no verified translated clinical content or low-literacy/audio suite.",
+      "proposed_location": "Across articles and /resource-library",
+      "deliverable": "Test comprehension, explain acronyms, provide text/print alternatives and qualified translation review. Do not present automatic medical translation as validated.",
+      "benchmark_source_ids": [
+        "UK01",
+        "UK28"
+      ],
+      "local_source_ids": [
+        "AU06"
+      ],
+      "proposed_review_role": "Health-literacy/accessibility reviewers and qualified language reviewers",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-22",
+      "topic": "Research, registries and clinical trials",
+      "priority": "P2",
+      "current_coverage": "Get Involved covers website feedback/focus groups, not clinical trials.",
+      "proposed_location": "/understanding-ph or professional footer resource link",
+      "deliverable": "Distinguish care, registry participation, clinical trials and website co-design; explain informed choice and verified trial signposting without recruitment promises.",
+      "benchmark_source_ids": [
+        "UK01",
+        "UK07"
+      ],
+      "local_source_ids": [
+        "AU04"
+      ],
+      "proposed_review_role": "Clinician/research-governance reviewer; verify current trial/registry pages separately",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-23",
+      "topic": "Real community voices",
+      "priority": "P2",
+      "current_coverage": "Intentional story placeholder, no approved contributions.",
+      "proposed_location": "/community-voices",
+      "deliverable": "Develop a consent-led range of real experiences, including ordinary adaptations and uncertainty; avoid implying everyone achieves the same outcome.",
+      "benchmark_source_ids": [
+        "UK01",
+        "UK15"
+      ],
+      "local_source_ids": [],
+      "proposed_review_role": "Lived Experience Panel and editorial/privacy owners",
+      "publication_gate": "Real contributions, consent, editorial approval, attribution/withdrawal process; submissions remain closed.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-24",
+      "topic": "Useful printable resources",
+      "priority": "P2",
+      "current_coverage": "22 planned records; no clinical PDFs. Appointment question page can be printed.",
+      "proposed_location": "/resource-library and existing question route",
+      "deliverable": "Prioritise original appointment questions/personal contact plan, diagnosis overview, medicines checklist and travel planner. Verify files and versions before enabling download actions.",
+      "benchmark_source_ids": [
+        "UK02",
+        "UK27",
+        "UK28"
+      ],
+      "local_source_ids": [
+        "AU11"
+      ],
+      "proposed_review_role": "Clinical/editorial owners with lived-experience review",
+      "publication_gate": "Approved real files, copyright permission, accessibility checks and version records. No mass reproduction of UK publications.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-25",
+      "topic": "Newly diagnosed reassurance with practical next steps",
+      "priority": "P1",
+      "current_coverage": "Quick entry/hub exists; no complete first-days guide.",
+      "proposed_location": "/recently-diagnosed within current hub",
+      "deliverable": "Provide a short take-home guide: know your PH type/team, questions, medicines plan, symptoms/contact plan and support. Balance hope with individual variation; no unsupported survival figures.",
+      "benchmark_source_ids": [
+        "UK03",
+        "UK04"
+      ],
+      "local_source_ids": [
+        "AU21",
+        "CL01"
+      ],
+      "proposed_review_role": "Clinician and Lived Experience Panels",
+      "publication_gate": "Draft, review and publish within the existing navigation; no new collection service.",
+      "status": "Development recommendation; not implemented"
+    },
+    {
+      "id": "GAP-26",
+      "topic": "New Zealand scope boundary",
+      "priority": "P1",
+      "current_coverage": "ANZ branding; Australian finance/carer/mental-health services mixed with NZ directory entries.",
+      "proposed_location": "Across page scope labels and future NZ pathway",
+      "deliverable": "Label Australian eligibility and contacts explicitly; maintain safe NZ emergency signposting and plan a separately evidenced NZ localisation, not Australian scheme substitution.",
+      "benchmark_source_ids": [],
+      "local_source_ids": [
+        "NZ01",
+        "AU05",
+        "AU07",
+        "AU10"
+      ],
+      "proposed_review_role": "Australian and New Zealand jurisdiction reviewers",
+      "publication_gate": "This audit is Australian-focused and is not full NZ clinical/access validation.",
+      "status": "Development recommendation; not implemented"
+    }
+  ]
+}

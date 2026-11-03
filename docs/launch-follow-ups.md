@@ -26,3 +26,27 @@ The proposal's budgets/grant targets are planning context. Do not treat them as 
 ## Get Involved and social publishing foundation
 
 `/get-involved` and its three opportunity pages are information-only and marked in development. Before activation, confirm receiving/review ownership, provider/storage, minimal fields, consent, retention/deletion, response expectations, and whether activities are service improvement/co-design or research. Newsletter signup is separate. Official Facebook/Instagram URLs and PUBLIC_SITE_ORIGIN remain pending; no social discussion group, feed, SDK or message intake is introduced.
+
+## Informational audit — 3 November 2026
+
+See [the informational audit](informational-audit.md), including a 35-route
+inventory, 39 findings with proposed wording, 26-topic development matrix and
+Australian source register. This is a desk audit and review package, not
+clinical approval or a deployed content revision.
+
+- [ ] Adjudicate P1 definitions, medicine-safety, symptom escalation and
+  Australian eligibility/localisation findings before promoting the content.
+- [ ] Reconcile the 18-entry directory with PHSANZ/provider references; confirm
+  service scope and contact purpose. Registry participation is not accreditation.
+- [ ] Complete current treatment-guideline, medicine information, PBS and supply
+  checks where full text/current access could not be established.
+- [ ] Arrange actual clinical, lived-experience and relevant specialist/policy
+  review; record article-specific approval and review dates only when completed.
+- [ ] Develop the agreed priority resources within the existing patient journeys;
+  preserve deliberate story/download/participation placeholders until ready.
+- [ ] Verify rights before reproducing third-party guides or assessment instruments;
+  no PHA UK publication or EmPHasis-10 questionnaire has been copied or activated.
+
+The public contact placeholder remains intentional. This Australian-focused
+review does not establish full New Zealand localisation or final privacy/legal
+approval. Technical PR #18 remains a separate change set to reconcile.

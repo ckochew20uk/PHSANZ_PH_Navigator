@@ -1,0 +1,1016 @@
+{
+  "baseline": "3f460a1bef8a72519d43b0df342da3a3f729d47f",
+  "review_date": "2026-11-03",
+  "timezone": "Australia/Sydney",
+  "findings": [
+    {
+      "id": "INF-01",
+      "priority": "P1",
+      "category": "Factual discrepancy",
+      "title": "Strict PVR boundary and complete diagnostic context",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/treatments/test-results.tsx",
+          "line": 54,
+          "excerpt": "PVR &ge; 2 WU is a criteria"
+        }
+      ],
+      "reason": "The 2024 definition uses PVR >2 WU, not ≥2. Pre-capillary PH needs the combined mPAP/PAWP/PVR definition; a number does not establish Group 1 PAH or treatment eligibility.",
+      "proposed_wording": "Pre-capillary PH is defined at right heart catheterisation by mPAP >20 mmHg, PAWP ≤15 mmHg and PVR >2 Wood units. Your specialist interprets these measurements with other tests to identify the cause; they should not be used to diagnose yourself or decide treatment.",
+      "source_ids": [
+        "CL01",
+        "CL02"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-02",
+      "priority": "P1",
+      "category": "Overgeneralisation",
+      "title": "Wedge pressure does not identify the clinical group on its own",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/treatments/test-results.tsx",
+          "line": 49,
+          "excerpt": "It helps doctors distinguish between Group 1 PAH"
+        }
+      ],
+      "reason": "The two-group shorthand omits other pre-capillary causes and combined post-/pre-capillary disease. The existing ≤15/>15 boundary is not itself the error.",
+      "proposed_wording": "Wedge pressure helps your team understand whether pressure from the left side of the heart contributes to PH. It is interpreted alongside pulmonary vascular resistance, imaging and your medical history; it cannot identify your PH group by itself.",
+      "source_ids": [
+        "CL01",
+        "CL02"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-03",
+      "priority": "P2",
+      "category": "Factual discrepancy",
+      "title": "PDE-5 mechanism is misstated",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/treatments/explained.tsx",
+          "line": 56,
+          "excerpt": "allowing the lungs to produce more nitric oxide"
+        }
+      ],
+      "reason": "Sildenafil inhibits breakdown of cGMP, enhancing the nitric-oxide signalling pathway. Increasing production of nitric oxide is not the mechanism described in the Australian product information.",
+      "proposed_wording": "PDE-5 inhibitors, such as sildenafil and tadalafil, help a natural blood-vessel relaxation signal last longer by reducing the breakdown of cGMP. Your specialist decides whether this medicine is suitable for your type of PH.",
+      "source_ids": [
+        "AU01"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-04",
+      "priority": "P2",
+      "category": "Qualification",
+      "title": "Explain sGC stimulation without equating it to PDE-5 inhibition",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/treatments/explained.tsx",
+          "line": 69,
+          "excerpt": "sGC stimulators enhance the body's sensitivity to nitric oxide"
+        }
+      ],
+      "reason": "The existing wording captures part of the pathway but omits direct sGC stimulation. The clinical CTEPH indication also includes persistent/recurrent disease after surgery, not just patients unable to have surgery.",
+      "proposed_wording": "Riociguat acts on the sGC/cGMP pathway to help blood vessels relax. It may be used for selected PAH patients and for inoperable or persistent/recurrent CTEPH after surgery, following specialist assessment.",
+      "source_ids": [
+        "AU02",
+        "AU09"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-05",
+      "priority": "P1",
+      "category": "Safety omission",
+      "title": "Add medicine-interaction and monitoring safeguards",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/treatments/explained.tsx",
+          "line": 31,
+          "excerpt": "Your specialist may prescribe one or a combination of these medications."
+        }
+      ],
+      "reason": "Combination therapy is not permission to combine any listed drugs. Australian CMIs explicitly warn about riociguat/PDE-5 inhibitors and nitrates; patient copy lacks medication-specific safety navigation, monitoring and missed-dose/pump advice.",
+      "proposed_wording": "Only take combinations prescribed by your PH team. Riociguat must not be taken with PDE-5 inhibitors such as sildenafil or tadalafil; nitrate medicines can also be unsafe with these treatments. Check your current Consumer Medicine Information and ask your PH team or pharmacist before adding any medicine, including non-prescription or herbal products. Ask for your monitoring and missed-dose plan.",
+      "source_ids": [
+        "AU01",
+        "AU02",
+        "UK30"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel with a PH pharmacist",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-06",
+      "priority": "P1",
+      "category": "Scope/access ambiguity",
+      "title": "Distinguish treatment suitability from Australian access",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/treatments/explained.tsx",
+          "line": 31,
+          "excerpt": "Targeted therapies (often used for WHO Group 1 PAH)"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/treatments/explained.tsx",
+          "line": 83,
+          "excerpt": "Epoprostenol, Iloprost, Treprostinil, Selexipag."
+        }
+      ],
+      "reason": "Often used for PAH is too weak a boundary for an all-PH audience. A drug/route list also does not establish TGA indication, PBS funding or practical Australian supply; treprostinil access was not resolved in this audit.",
+      "proposed_wording": "Treatment depends on the cause and type of PH. Medicines used for PAH are not suitable for every PH group. This overview describes treatment approaches; Australian registration, subsidy and supply vary by medicine and indication. Your specialist and pharmacist can explain the options that apply to you.",
+      "source_ids": [
+        "CL03",
+        "AU08",
+        "AU09",
+        "UK11"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-07",
+      "priority": "P1",
+      "category": "Currency gap",
+      "title": "Review newer treatment pathways and 2026 guidance",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/treatments/explained.tsx",
+          "line": 29,
+          "excerpt": "Targeted PH Therapies"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/resource-library.tsx",
+          "line": 88,
+          "excerpt": "A clear summary of the four main drug classes used in PH"
+        }
+      ],
+      "reason": "The treatment taxonomy omits activin-signalling therapy. TGA published a Winrevair assessment and a September 2026 ERS update exists. Detailed current PBS access and the full 2026 guideline were not retrievable, so neither is inferred.",
+      "proposed_wording": "Treatment approaches continue to develop, including medicines that act on the activin-signalling pathway, such as sotatercept for selected adults with PAH. Ask your PH team about its role and current Australian access. Editorial instruction: add an Australian medicines/access review before publishing detailed eligibility or monitoring text.",
+      "source_ids": [
+        "AU03",
+        "CL03",
+        "CL04",
+        "LIM01"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel with PH pharmacist and access-policy reviewer",
+      "confidence": "Currency gap confirmed; detailed new-guideline appraisal and current subsidy/supply unresolved",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-08",
+      "priority": "P2",
+      "category": "Coverage gap",
+      "title": "Selected vasoreactive PAH treatment needs explanation",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/treatments/explained.tsx",
+          "line": 29,
+          "excerpt": "Targeted PH Therapies"
+        }
+      ],
+      "reason": "The overview lacks the selected-patient role of calcium-channel blockers and vasoreactivity testing. This is a missing explanation, not a recommendation for readers to start a common blood-pressure medicine.",
+      "proposed_wording": "A small, selected group of people with certain types of PAH may be offered calcium-channel blockers after specialist testing. These medicines are not suitable for everyone with PH and should never be started or adjusted for PH without specialist advice.",
+      "source_ids": [
+        "CL02",
+        "UK08"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Coverage gap confirmed; exact selection/testing text requires full guideline review",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-09",
+      "priority": "P1",
+      "category": "Internal contradiction",
+      "title": "Blanket no-cure wording conflicts with CTEPH",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/treatments/index.tsx",
+          "line": 17,
+          "excerpt": "While there is no cure for PH"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/mental-wellbeing.tsx",
+          "line": 47,
+          "excerpt": "You cannot cure PH"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/recently-diagnosed/what-is-ph.tsx",
+          "line": 113,
+          "excerpt": "CTEPH can sometimes be cured or significantly improved"
+        }
+      ],
+      "reason": "The umbrella statement contradicts the same site’s potentially curative CTEPH surgery section. BPA should be described as a treatment option rather than guaranteeing cure. General health sites may also oversimplify; internal consistency and expert evidence matter.",
+      "proposed_wording": "Many forms of PH need ongoing treatment. Some people with CTEPH can have surgery that may be curative; others may benefit from balloon pulmonary angioplasty or medicines. Your specialist team can explain what is possible for your particular type of PH.",
+      "source_ids": [
+        "UK10",
+        "AU02",
+        "AU09",
+        "CL02"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-10",
+      "priority": "P2",
+      "category": "Scope/epidemiology",
+      "title": "Keep rare PAH distinct from PH as an umbrella",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/recently-diagnosed/what-is-ph.tsx",
+          "line": 31,
+          "excerpt": "is a rare, complex, and serious condition"
+        }
+      ],
+      "reason": "The website serves all five groups. Presenting every PH phenotype as rare and as narrowed pulmonary arteries obscures PH associated with common left-heart/lung disease. The proposal’s rare-disease rationale still suits PAH-focused clinic journeys; clarify scope rather than discard it.",
+      "proposed_wording": "PH means higher-than-normal pressure in the blood vessels of the lungs. It has several causes, including heart or lung disease. PAH is a rare type of PH. The cause matters because investigations, treatment and support needs differ.",
+      "source_ids": [
+        "UK05",
+        "CL01",
+        "AU04"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-11",
+      "priority": "P2",
+      "category": "Classification qualification",
+      "title": "Sleep apnoea is not a routine stand-alone Group 3 explanation",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/recently-diagnosed/what-is-ph.tsx",
+          "line": 102,
+          "excerpt": "or severe sleep apnea."
+        }
+      ],
+      "reason": "The guideline distinguishes hypoventilation and coexisting lung disease; isolated obstructive sleep apnoea should not be presented as a common cause of significant PH without qualification.",
+      "proposed_wording": "Group 3 PH is associated with lung disease and/or low oxygen, including some hypoventilation conditions. If you have sleep apnoea, your specialist will consider whether other lung or breathing conditions contribute to PH.",
+      "source_ids": [
+        "CL02"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-12",
+      "priority": "P2",
+      "category": "Genetic communication",
+      "title": "Avoid deterministic inheritance and unsupported frequency claims",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/recently-diagnosed/what-is-ph.tsx",
+          "line": 77,
+          "excerpt": "Passed down through genetics."
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/recently-diagnosed/what-is-ph.tsx",
+          "line": 76,
+          "excerpt": "The cause is unknown (the most common type of PAH)."
+        }
+      ],
+      "reason": "Heritable does not mean every relative will develop PH. The most-common ranking lacks an identified population/source; replace it rather than invent Australian prevalence.",
+      "proposed_wording": "Idiopathic PAH means no cause has been identified. Heritable PAH can involve a genetic change that increases risk; carrying a change does not mean a person will necessarily develop PAH. Your team can advise whether genetic counselling or family assessment is relevant.",
+      "source_ids": [
+        "UK05",
+        "CL01"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel with genetics input where required",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-13",
+      "priority": "P1",
+      "category": "Overgeneralisation",
+      "title": "Do not imply every suggestive echo mandates RHC",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/recently-diagnosed/diagnostic-journey.tsx",
+          "line": 28,
+          "excerpt": "If the echocardiogram suggests PH, you will need a Right Heart Catheterisation."
+        }
+      ],
+      "reason": "RHC is the haemodynamic confirmation test, but its use depends on clinical context and whether results inform management. Echo estimates probability and is not a diagnosis; adult clinic content must not prescribe one test pathway to everyone.",
+      "proposed_wording": "If PH is suspected, your specialist will decide which tests are needed. Right heart catheterisation directly measures pressures and is used when confirmation and further classification will guide care. An echocardiogram alone cannot confirm PH.",
+      "source_ids": [
+        "UK06",
+        "CL02"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-14",
+      "priority": "P1",
+      "category": "Safety framing",
+      "title": "Do not normalise delay or suggest exclusion must finish before referral",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/recently-diagnosed/diagnostic-journey.tsx",
+          "line": 62,
+          "excerpt": "It is not uncommon for it to take months"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/for-healthcare-professionals.tsx",
+          "line": 59,
+          "excerpt": "where common causes (asthma,"
+        }
+      ],
+      "reason": "Acknowledging historical delays is reasonable, but the copy may make ongoing delay sound necessary. Add a route for worsening symptoms and avoid implying all common diagnoses must be exhaustively excluded before PH referral.",
+      "proposed_wording": "Diagnosis can involve several tests and the order varies. If symptoms worsen while you are waiting, contact your treating team rather than waiting for the next routine appointment. Severe breathing difficulty, collapse or concerning chest pain needs emergency assessment. Professional referral wording should follow a cited pathway and clinical urgency.",
+      "source_ids": [
+        "AU21",
+        "AU22",
+        "CL02"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-15",
+      "priority": "P1",
+      "category": "Individualisation",
+      "title": "Keep food/fluid/weight advice within an individual care plan",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/diet-nutrition.tsx",
+          "line": 33,
+          "excerpt": "Most PH specialists recommend limiting sodium intake"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/diet-nutrition.tsx",
+          "line": 49,
+          "excerpt": "usually to about 1.5 to 2 litres."
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/diet-nutrition.tsx",
+          "line": 52,
+          "excerpt": "1.5-2kg in 1-2 days"
+        }
+      ],
+      "reason": "The sodium-to-salt conversion is supported; do not label it an arithmetic error. The problem is universalising a PH-specific prescription and relying on a numerical weight example as the escalation threshold. Fluid and weight targets depend on the person’s care plan.",
+      "proposed_wording": "Ask your PH team or dietitian whether you need a salt or fluid limit and what target is right for you. If you have a prescribed fluid limit, follow it rather than general hydration advice. Ask how to monitor your weight and when to contact the team. Do not wait for a particular weight change if you feel suddenly unwell.",
+      "source_ids": [
+        "AU12",
+        "AU21"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel with dietitian/PH nurse",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-16",
+      "priority": "P1",
+      "category": "Safety omission",
+      "title": "Exercise red flags need more than stop and rest",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/exercise.tsx",
+          "line": 42,
+          "excerpt": "If you feel dizzy, lightheaded, or experience chest pain, stop immediately and rest."
+        }
+      ],
+      "reason": "Stopping exertion is appropriate but may be insufficient for collapse, severe breathlessness or concerning chest pain. Distinguish the individual exercise plan, contacting the team and emergency care.",
+      "proposed_wording": "Stop activity if you feel unwell. Follow the symptom plan agreed with your PH team. Collapse, severe breathing difficulty or concerning chest pain needs urgent assessment; in an Australian medical emergency call 000. Do not simply restart exercise because symptoms settle without discussing new or recurring symptoms with your team.",
+      "source_ids": [
+        "AU21",
+        "AU22"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel with rehabilitation clinician",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-17",
+      "priority": "P1",
+      "category": "Safety qualification",
+      "title": "Do not attribute new symptoms to anxiety without assessment",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/mental-wellbeing.tsx",
+          "line": 41,
+          "excerpt": "can actually mimic the physical sensations of a panic attack"
+        }
+      ],
+      "reason": "The overlap is plausible, but the paragraph lacks a guard against attributing new/worsening cardiopulmonary symptoms to anxiety. General coping advice must not delay assessment.",
+      "proposed_wording": "Anxiety and physical symptoms can influence each other. New or worsening breathlessness, chest pain, fainting or other concerning symptoms should not be assumed to be anxiety. Follow your PH team’s symptom plan and seek urgent help when needed.",
+      "source_ids": [
+        "AU21",
+        "AU22"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-18",
+      "priority": "P1",
+      "category": "Overgeneralisation",
+      "title": "Rehabilitation advice needs stability, supervision and activity context",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/exercise.tsx",
+          "line": 37,
+          "excerpt": "is safe and highly beneficial."
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/exercise.tsx",
+          "line": 46,
+          "excerpt": "like walking, light cycling, or swimming."
+        }
+      ],
+      "reason": "The introductory specialist-approval caution is useful and should remain. Broad safety claims and a swimming example can still be read as a universal safe-activity list; suitability depends on symptoms, stability and any infusion equipment. Do not replace it with a blanket exercise ban.",
+      "proposed_wording": "A tailored activity or rehabilitation plan can help many people with PH. Ask your team which activities and level of exertion suit your current health, and whether supervised rehabilitation is appropriate. Activities involving water, heavy effort or infusion equipment need specific advice. Keep pacing guidance and avoid a universal safe-sport list.",
+      "source_ids": [
+        "UK16",
+        "CL02"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel with physiotherapist/rehabilitation clinician",
+      "confidence": "Qualification recommended; full exercise evidence appraisal and activity-specific advice require reviewer confirmation",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-19",
+      "priority": "P1",
+      "category": "Internal inconsistency",
+      "title": "Flight hydration advice must respect fluid restrictions",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/travel-oxygen.tsx",
+          "line": 75,
+          "excerpt": "Stay hydrated during the flight."
+        }
+      ],
+      "reason": "Generic hydration advice can conflict with the diet page and an individual fluid limit. Give a consistent personal-plan instruction rather than a new flight target.",
+      "proposed_wording": "Follow the fluid plan agreed with your PH team during travel. Ask about leg movement, mobility support, clot prevention and oxygen before departure; do not independently increase fluids, oxygen or medicines.",
+      "source_ids": [
+        "AU11",
+        "AU12"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-20",
+      "priority": "P2",
+      "category": "Australian localisation",
+      "title": "Airline equipment and battery rules must be carrier-specific",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/travel-oxygen.tsx",
+          "line": 54,
+          "excerpt": "FAA-approved Portable Oxygen Concentrator"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/travel-oxygen.tsx",
+          "line": 56,
+          "excerpt": "150% of the flight time"
+        }
+      ],
+      "reason": "A percentage or FAA label is not a universal Australian carrier rule. Qantas publishes device, clearance, battery and operating-carrier requirements; HAST also informs rather than alone determines the whole fitness-to-travel decision.",
+      "proposed_wording": "Check the current rules of every operating airline for medical clearance, accepted equipment, battery capacity, spare batteries and booking lead times. Your PH team will advise about fitness to fly and oxygen assessment. Do not rely on a generic battery percentage or assume a device accepted by one airline is accepted by another.",
+      "source_ids": [
+        "AU11",
+        "UK14"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-21",
+      "priority": "P1",
+      "category": "Safety-plan gap",
+      "title": "Continuous infusion warning needs a failure-response plan",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/caring-for-someone/carers-role.tsx",
+          "line": 47,
+          "excerpt": "the pump must never be stopped or turned off"
+        }
+      ],
+      "reason": "The warning is important and should not be softened into routine interruption. It needs a written, medicine/device-specific backup and emergency plan. It must not be extended to all subcutaneous injections merely because newer medicines share a route.",
+      "proposed_wording": "For continuous prostacyclin treatment, an interruption can be dangerous. Ask your PH team for a written plan covering alarms, line problems, backup equipment, supply and emergency contacts. Follow that plan immediately if delivery fails. Make sure emergency clinicians know the exact medicine and delivery method. Do not attempt an improvised device or dose change.",
+      "source_ids": [
+        "UK09",
+        "AU08"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel with infusion-trained PH nurse/pharmacist",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-22",
+      "priority": "P1",
+      "category": "Australian eligibility",
+      "title": "NDIS wording overstates access and encourages selective evidence",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/financial-support.tsx",
+          "line": 36,
+          "excerpt": "many patients are eligible"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/financial-support.tsx",
+          "line": 42,
+          "excerpt": "be honest about your \"worst days,\" not your best days."
+        }
+      ],
+      "reason": "A PH diagnosis does not establish access; age, residence, impairment and support requirements apply. No evidence supports many patients. Evidence should accurately describe usual function, fluctuation, frequency and assistance needed, not present only worst days.",
+      "proposed_wording": "Some people with PH may meet NDIS access requirements; diagnosis alone does not determine eligibility. Age, residence and disability or early-intervention requirements apply. Ask your treating professionals to document your functional impact accurately, including how it varies over time, treatments tried and support needed.",
+      "source_ids": [
+        "AU05",
+        "AU06"
+      ],
+      "proposed_review_role": "Australian disability-policy/social-work reviewer with clinical input",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-23",
+      "priority": "P1",
+      "category": "Australian access discrepancy",
+      "title": "PBS access is not a blanket approved-centre rule",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/financial-support.tsx",
+          "line": 56,
+          "excerpt": "you must be treated at an approved PH specialist centre."
+        }
+      ],
+      "reason": "The official PAH page specifies a physician with expertise in PAH, hospital/section 100 arrangements and item-specific restrictions. The site’s categorical centre claim could deter someone using another legitimate pathway. Do not convert registry membership into PBS eligibility.",
+      "proposed_wording": "PBS access depends on the medicine, indication and current restriction. PAH authority applications are managed by a physician with expertise in PAH under the applicable hospital arrangements. Your treating team and pharmacist can explain eligibility, costs and supply; CTEPH has separate arrangements. The PBS Safety Net applies to eligible costs and may require a card; some extra charges can remain.",
+      "source_ids": [
+        "AU08",
+        "AU09",
+        "AU26"
+      ],
+      "proposed_review_role": "PH prescribing/access-policy reviewer",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-24",
+      "priority": "P1",
+      "category": "Australian eligibility",
+      "title": "DSP explanation omits key medical and non-medical rules",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/financial-support.tsx",
+          "line": 90,
+          "excerpt": "if you are unable to work 15 hours or more a week"
+        }
+      ],
+      "reason": "The hours test is only one part of the assessment. Condition duration, diagnosed/reasonably treated/stabilised status, impairment points and Program of Support rules may apply, along with non-medical rules.",
+      "proposed_wording": "DSP has medical and non-medical eligibility rules. These include how long your impairment is expected to last, treatment and stabilisation, assessed functional impact and work capacity. Program of Support rules may apply. Check current Services Australia guidance and consider help from a hospital social worker or welfare-rights service.",
+      "source_ids": [
+        "AU07"
+      ],
+      "proposed_review_role": "Australian welfare-policy/social-work reviewer",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-25",
+      "priority": "P2",
+      "category": "Australian eligibility",
+      "title": "Carer Payment does not always require inability to work",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/caring-for-someone/carer-support.tsx",
+          "line": 85,
+          "excerpt": "if you are unable to work due to providing constant care."
+        }
+      ],
+      "reason": "Current Services Australia rules allow some paid work while receiving Carer Payment. The wording could discourage eligible carers; detailed income/work-hour rules also change.",
+      "proposed_wording": "Carer Payment may support eligible people whose caring responsibilities affect their ability to earn income. Some paid work may be allowed under current rules. Carer Payment and Carer Allowance have different requirements; check the current Services Australia criteria for your circumstances.",
+      "source_ids": [
+        "AU16"
+      ],
+      "proposed_review_role": "Australian welfare-policy/social-work reviewer",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-26",
+      "priority": "P2",
+      "category": "Service qualification",
+      "title": "Carer support is assessed; distinguish emergency access",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/caring-for-someone/carer-support.tsx",
+          "line": 36,
+          "excerpt": "It is the first place you should register."
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/caring-for-someone/carer-support.tsx",
+          "line": 42,
+          "excerpt": "One-off funding for things like a laptop"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/caring-for-someone/carer-support.tsx",
+          "line": 46,
+          "excerpt": "Monday to Friday, 8am to 5pm"
+        }
+      ],
+      "reason": "Carer Gateway is a reasonable starting point, but package examples are not automatic cash entitlements. The weekday hours are correct for routine support; emergency respite can be requested at any time, subject to suitable services.",
+      "proposed_wording": "Carer Gateway can help you explore support tailored to your caring situation. Services and packages depend on assessment and local availability. Ask about planned respite and an emergency care plan. Routine support and emergency respite have different access arrangements; link to the current official guidance.",
+      "source_ids": [
+        "AU14",
+        "AU15"
+      ],
+      "proposed_review_role": "Carer-services/social-work reviewer",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-27",
+      "priority": "P2",
+      "category": "Australian eligibility",
+      "title": "My Aged Care is not simply for those over 65",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/caring-for-someone/carer-wellbeing.tsx",
+          "line": 64,
+          "excerpt": "My Aged Care (for those over 65)"
+        }
+      ],
+      "reason": "The age shorthand omits assessed need and earlier pathways, including Aboriginal and Torres Strait Islander people. The official wording also uses 65 or older, not over 65.",
+      "proposed_wording": "My Aged Care may help eligible people access support after assessment. Age, needs and circumstances matter, with earlier pathways for some people, including Aboriginal and Torres Strait Islander people. Ask the service or hospital social worker which pathway applies.",
+      "source_ids": [
+        "AU13"
+      ],
+      "proposed_review_role": "Aged-care/social-work reviewer with culturally appropriate review",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-28",
+      "priority": "P2",
+      "category": "Legal localisation",
+      "title": "Medical decision-maker documents vary by jurisdiction",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/caring-for-someone/carers-role.tsx",
+          "line": 56,
+          "excerpt": "Enduring Power of Attorney (Medical):"
+        }
+      ],
+      "reason": "The page acknowledges state variation but first presents one document name as universal. Financial powers do not necessarily confer medical authority. Advance directives also do not remove every future uncertainty.",
+      "proposed_wording": "You can discuss who should speak for you if you cannot make a healthcare decision. The role, document name and legal requirements vary by state or territory. Use the current forms and advice for your jurisdiction, and tell your healthcare team where your documents are stored.",
+      "source_ids": [
+        "AU17"
+      ],
+      "proposed_review_role": "State/territory legal or advance-care-planning reviewer",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-29",
+      "priority": "P2",
+      "category": "Australian eligibility",
+      "title": "Travel assistance is conditional, not a blanket entitlement",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/financial-support.tsx",
+          "line": 70,
+          "excerpt": "you can claim financial assistance"
+        }
+      ],
+      "reason": "Eligibility varies by state, residence, distance, nearest suitable service, referral and other funding. IPTAAS is a subsidy, not guaranteed full reimbursement; the source’s general claim is too broad.",
+      "proposed_wording": "You may be eligible for help with travel and accommodation for specialist care. Each state and territory has its own rules and claim process, and assistance may cover only part of the cost. Check eligibility and any approvals before travel with the scheme or hospital social worker.",
+      "source_ids": [
+        "AU18",
+        "AU19"
+      ],
+      "proposed_review_role": "State-scheme/social-work reviewer",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-30",
+      "priority": "P2",
+      "category": "Qualification; core claim supported",
+      "title": "Keep Medicare session guidance but explain access/cost",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/mental-wellbeing.tsx",
+          "line": 61,
+          "excerpt": "up to 10 sessions per calendar year"
+        }
+      ],
+      "reason": "The ten individual-session limit is supported; do not flag it as an obsolete count. Improve precision with eligible practitioners, referral/review requirements, separate group-session allowance and possible out-of-pocket costs.",
+      "proposed_wording": "If eligible, a mental health treatment plan and referral can support Medicare rebates for up to 10 individual and 10 group sessions each calendar year with eligible mental health professionals. A rebate may not cover the full fee. Ask about costs, referral requirements and other support options.",
+      "source_ids": [
+        "AU10"
+      ],
+      "proposed_review_role": "Mental-health clinician and Medicare-policy reviewer",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-31",
+      "priority": "P1",
+      "category": "Directory completeness/authority",
+      "title": "Reconcile the directory with PHSANZ without inventing designation",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/find-specialist.tsx",
+          "line": 146,
+          "excerpt": "Designated PH centres across Australia and New Zealand"
+        }
+      ],
+      "reason": "Navigator lists 18 sites; the inspected PHSANZ registry-participating referral list has 25. Four Navigator entries are absent from that reference and eleven reference entries are absent from Navigator. Absence is not evidence that a centre lacks expertise; designated/accredited status is not established for every entry.",
+      "proposed_wording": "This directory is being checked against PHSANZ’s referral-centre information. Confirm the current PH service, referral requirements, age group and contact route with the provider before arranging care. Editorial instruction: reconcile all records and distinguish registry participation, provider-confirmed service and unverified entries.",
+      "source_ids": [
+        "AU04"
+      ],
+      "proposed_review_role": "PHSANZ directory owner with provider confirmation",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-32",
+      "priority": "P1",
+      "category": "Verified contact discrepancy",
+      "title": "Westmead switchboard differs; distinguish clinic and general lines",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/find-specialist.tsx",
+          "line": 30,
+          "excerpt": "(02) 9845 0000"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/find-specialist.tsx",
+          "line": 34,
+          "excerpt": "(03) 9345 5522"
+        }
+      ],
+      "reason": "PHSANZ and the Westmead provider show (02) 7825 0000 for the current switchboard. The Royal Children’s Hospital number differs from the PHSANZ PH-service contact, which may reflect switchboard versus clinic, not an invalid number. Detailed reconciliation is in directory.csv.",
+      "proposed_wording": "Use the provider-confirmed Westmead switchboard (02) 7825 0000 when publishing a general contact. Label switchboard and PH clinic contacts separately. Do not replace other differing numbers without confirming their purpose and currency.",
+      "source_ids": [
+        "AU04",
+        "AU24"
+      ],
+      "proposed_review_role": "Directory owner and relevant hospital service",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-33",
+      "priority": "P1",
+      "category": "Jurisdiction/safety",
+      "title": "Urgent-support signposting needs explicit country scope",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/components/layout/CrisisBanner.tsx",
+          "line": 27,
+          "excerpt": "call <strong className=\"font-bold text-white\">000"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/components/layout/Footer.tsx",
+          "line": 126,
+          "excerpt": "Medical emergency:"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/mental-wellbeing.tsx",
+          "line": 32,
+          "excerpt": "Lifeline on 13 11 14"
+        }
+      ],
+      "reason": "The site serves Australia and New Zealand but displays Australian services without territorial labels. New Zealand medical emergencies use 111. The word crisis also conflates medical emergency, emotional support and routine PH-team advice.",
+      "proposed_wording": "Medical emergency: in Australia call 000; in New Zealand call 111. Keep emotional-support services in a separately labelled, verified country-specific block. For non-emergency care questions, follow your treating team’s contact plan. Do not describe an Australian support number as covering both countries.",
+      "source_ids": [
+        "AU21",
+        "AU22",
+        "NZ01",
+        "AU25"
+      ],
+      "proposed_review_role": "Clinician and jurisdiction-specific service reviewer",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-34",
+      "priority": "P1",
+      "category": "Evidence/governance",
+      "title": "Remove unsupported self-endorsement; add real article provenance",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/recently-diagnosed/index.tsx",
+          "line": 9,
+          "excerpt": "trusted sources like PH Navigator."
+        }
+      ],
+      "reason": "Articles contain no content-specific source/review record, while the panel page correctly says review is being established. Self-identifying as trusted risks implying completed review. This audit is not evidence of panel approval.",
+      "proposed_wording": "Online information can vary in quality and date. Use it to prepare questions for your treating team, and check which PH type and country it applies to. PH Navigator’s article review process is being established. Editorial instruction: publish real sources, jurisdiction and review status; add named/date review details only after actual review.",
+      "source_ids": [
+        "CL01",
+        "CL04",
+        "AU08"
+      ],
+      "proposed_review_role": "Editorial/governance owner with both review panels",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-35",
+      "priority": "P2",
+      "category": "Metadata/content mismatch",
+      "title": "Search promises downloads and NZ benefits not provided",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/data/searchIndex.ts",
+          "line": 365,
+          "excerpt": "Downloadable fact sheets, guides, and educational materials"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/data/searchIndex.ts",
+          "line": 247,
+          "excerpt": "financial assistance available for people with PH in Australia and NZ."
+        }
+      ],
+      "reason": "The resource page explicitly has no downloads and the finance article covers Australia. Search snippets are informational content too. The resource snippet overlaps a correction proposed in technical PR #18; reconcile rather than apply twice.",
+      "proposed_wording": "Resource search description: Planned PH information resources; downloads are not yet available. Financial-support description: An introduction to Australian support pathways and their eligibility requirements. New Zealand information requires a separate, clearly scoped resource.",
+      "source_ids": [
+        "UK02",
+        "AU05",
+        "AU07"
+      ],
+      "proposed_review_role": "Editorial owner",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-36",
+      "priority": "P3",
+      "category": "Hidden editorial metadata",
+      "title": "Do not promote placeholder dates/page counts as review evidence",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/resource-library.tsx",
+          "line": 45,
+          "excerpt": "updated: \"March 2025\""
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/resource-library.tsx",
+          "line": 43,
+          "excerpt": "pages: 8"
+        }
+      ],
+      "reason": "The 22 planned records retain hard-coded dates/page counts despite no clinical files being present. These values are not currently displayed as review dates and are not a current patient-facing false approval claim; remove or mark them provisional before a future template exposes them.",
+      "proposed_wording": "Editorial instruction: replace unsupported review dates/page counts with null or explicitly provisional metadata until a real file and review record exist. Preserve the current in-development labels and distinguish the working print worksheet from an unavailable downloadable booklet.",
+      "source_ids": [
+        "UK02"
+      ],
+      "proposed_review_role": "Editorial/content-model owner",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-37",
+      "priority": "P2",
+      "category": "Professional content provenance",
+      "title": "Verify guideline titles and referral criteria before presenting resources",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/for-healthcare-professionals.tsx",
+          "line": 113,
+          "excerpt": "TSANZ Guidelines"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/for-healthcare-professionals.tsx",
+          "line": 65,
+          "excerpt": "TRV &gt; 2.8 m/s"
+        }
+      ],
+      "reason": "No exact TSANZ document/version/link is supplied. TRV is one part of echo probability, not a standalone diagnosis. Clinical referral text and any latest-guidelines claim need exact current sources. The inactive controls themselves are also addressed in technical PR #18.",
+      "proposed_wording": "Clinical referral resources are being verified. Echocardiographic findings must be interpreted with other signs and clinical context. Editorial instruction: supply the exact guideline title, version, URL, intended population and Australian relevance, or retain a clearly labelled resource-development placeholder.",
+      "source_ids": [
+        "CL02",
+        "CL04",
+        "AU04"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel",
+      "confidence": "Supported discrepancy or documented gap",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-38",
+      "priority": "P2",
+      "category": "Patient communication judgement",
+      "title": "Make wellbeing/carer wording supportive and non-deterministic",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/caring-for-someone/carer-wellbeing.tsx",
+          "line": 19,
+          "excerpt": "You cannot provide good care if you are exhausted"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/caring-for-someone/carer-wellbeing.tsx",
+          "line": 43,
+          "excerpt": "Guilt is normal, but unhelpful"
+        },
+        {
+          "file": "artifacts/ph-navigator/src/pages/living-well/mental-wellbeing.tsx",
+          "line": 38,
+          "excerpt": "life-limiting illness carries a heavy emotional burden."
+        }
+      ],
+      "reason": "These are tone/scope concerns, not evidence that a clinical statement is universally false. Categorical descriptions can create guilt or imply a uniform prognosis. Pair realism with variability, support and patient choice; retain no invented success stories.",
+      "proposed_wording": "Caring can be demanding, and your own needs matter too. Feeling tired, worried or conflicted does not mean you are failing. Support and breaks can help. People experience PH differently; your healthcare team can explain what your condition means for you and help you find practical and emotional support.",
+      "source_ids": [
+        "UK12",
+        "UK15",
+        "UK31"
+      ],
+      "proposed_review_role": "Lived Experience Panel with clinical/psychology review",
+      "confidence": "Editorial recommendation; requires lived-experience validation",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    },
+    {
+      "id": "INF-39",
+      "priority": "P2",
+      "category": "Biochemical precision",
+      "title": "Describe BNP and NT-proBNP as related but distinct biomarkers",
+      "locations": [
+        {
+          "file": "artifacts/ph-navigator/src/pages/treatments/test-results.tsx",
+          "line": 89,
+          "excerpt": "This is a hormone released by the heart"
+        }
+      ],
+      "reason": "BNP is a biologically active peptide; NT-proBNP is an inactive fragment measured as a biomarker. The shared hormone description blurs that distinction. Results also need clinical context rather than implying a direct measure of how hard the heart works.",
+      "proposed_wording": "BNP and NT-proBNP are related blood markers that can help your team assess strain on the heart and follow changes over time. They are different tests. Your clinician interprets the result alongside symptoms, other tests and factors such as kidney function; it does not determine your outlook on its own.",
+      "source_ids": [
+        "CL05",
+        "CL03"
+      ],
+      "proposed_review_role": "Clinician Advisory Panel with laboratory/biomarker expertise",
+      "confidence": "Terminology discrepancy supported; final patient wording and contextual interpretation require clinical review",
+      "status": "Proposed only; not applied or clinically approved",
+      "acceptance": "Reviewer approves scope/wording against current sources; all occurrences and related search/resource summaries reconciled before publication."
+    }
+  ]
+}

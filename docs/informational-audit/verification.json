@@ -1,0 +1,13 @@
+{
+  "result": "passed",
+  "baseline": "3f460a1bef8a72519d43b0df342da3a3f729d47f",
+  "routes": 35,
+  "planned_resources": 22,
+  "findings": 39,
+  "source_entries": 68,
+  "coverage_topics": 26,
+  "exact_source_locations": 60,
+  "directory_rows": 29,
+  "relative_document_links": 257,
+  "limits": "Integrity only: does not establish clinical approval, external URL health or provider availability."
+}
