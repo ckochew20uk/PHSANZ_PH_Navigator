@@ -1,0 +1,30 @@
+[
+  {
+    "path": "/",
+    "violations": []
+  },
+  {
+    "path": "/start",
+    "violations": []
+  },
+  {
+    "path": "/understanding-ph",
+    "violations": []
+  },
+  {
+    "path": "/recently-diagnosed",
+    "violations": []
+  },
+  {
+    "path": "/living-well",
+    "violations": []
+  },
+  {
+    "path": "/caring-for-someone",
+    "violations": []
+  },
+  {
+    "path": "/community-voices",
+    "violations": []
+  }
+]

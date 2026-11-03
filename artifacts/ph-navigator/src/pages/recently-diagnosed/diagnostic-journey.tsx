@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -37,13 +38,11 @@ export default function DiagnosticJourney() {
     <div className="w-full">
       <section className="bg-muted py-10 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <Link href="/recently-diagnosed">
-            <Button variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10">
+          <Button asChild variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10"><Link href="/recently-diagnosed">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Recently Diagnosed
-            </Button>
-          </Link>
+            </Link></Button>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">The Diagnostic Journey</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">The Diagnostic Journey</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
               Getting a confirmed diagnosis of pulmonary hypertension can take time. Understanding the process can help you feel more prepared and less anxious.
             </p>
@@ -65,7 +64,7 @@ export default function DiagnosticJourney() {
             </div>
           </div>
 
-          <h2 className="text-3xl font-serif font-bold text-primary mb-10">Step-by-Step Process</h2>
+          <h2 className="text-3xl font-heading font-bold text-primary mb-10">Step-by-Step Process</h2>
           
           <div className="relative border-l-4 border-muted ml-6 md:ml-10 space-y-12 pb-8">
             {steps.map((step, index) => (
@@ -84,11 +83,9 @@ export default function DiagnosticJourney() {
               <h4 className="font-bold text-primary text-xl mb-1">Prepare for your appointments</h4>
               <p className="text-foreground/80">Take a list of questions to make the most of your specialist visits.</p>
             </div>
-            <Link href="/recently-diagnosed/questions-for-doctor">
-              <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-full px-6"><Link href="/recently-diagnosed/questions-for-doctor">
                 View Questions <ArrowLeft className="ml-2 h-4 w-4 rotate-180" />
-              </Button>
-            </Link>
+              </Link></Button>
           </div>
         </div>
       </section>

@@ -1,98 +1,107 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'wouter';
-import { ArrowLeft, Stethoscope, UserCheck } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from "wouter";
+import { ArrowLeft, Stethoscope, Users } from "lucide-react";
+import { ContentContainer } from "@/components/content/ContentContainer";
+import { SectionHeading } from "@/components/content/SectionHeading";
+import { siteIdentity } from "@/data/siteIdentity";
 
 export default function AdvisoryPanel() {
-  const medicalPanel = [
-    { name: "Prof. Sarah Jenkins", role: "Respiratory Physician & PH Specialist", hospital: "The Alfred Hospital, VIC" },
-    { name: "Dr. James Chen", role: "Cardiologist", hospital: "Royal Prince Alfred Hospital, NSW" },
-    { name: "Assoc. Prof. Emily White", role: "Paediatric Respiratory Physician", hospital: "Royal Children's Hospital, VIC" },
-    { name: "Marcus Thorne, RN", role: "PH Clinical Nurse Consultant", hospital: "St Vincent's Hospital, NSW" },
-    { name: "Dr. Lisa Patel", role: "Rheumatologist", hospital: "Royal Adelaide Hospital, SA" }
-  ];
-
-  const patientPanel = [
-    { name: "David M.", role: "Patient Representative (CTEPH)", location: "Queensland" },
-    { name: "Anita K.", role: "Patient Representative (PAH)", location: "New South Wales" },
-    { name: "Robert T.", role: "Carer Representative", location: "Victoria" },
-    { name: "Chloe S.", role: "Young Adult Representative", location: "Western Australia" }
-  ];
-
   return (
     <div className="w-full">
-      <section className="bg-muted py-10 border-b border-border/50">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <Link href="/about">
-            <Button variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to About Us
-            </Button>
+      <section className="design-section bg-accent">
+        <ContentContainer>
+          <Link
+            href="/about"
+            className="mb-6 inline-flex items-center gap-2 py-2 text-secondary underline underline-offset-4"
+          >
+            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+            Back to About PH Navigator
           </Link>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Our Review Panels</h1>
-            <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
-              Every resource on PH Navigator is scrutinised by two separate panels to ensure it is both medically precise and deeply empathetic.
-            </p>
-          </motion.div>
-        </div>
+          <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary">
+            An initiative of PHSANZ
+          </p>
+          <SectionHeading as="h1" className="mb-5">
+            Our Review Panels
+          </SectionHeading>
+          <p className="max-w-2xl text-lg">
+            Our developing review structure brings clinical knowledge together
+            with lived experience, under the governance of the PHSANZ Patient
+            Advocacy Subcommittee.
+          </p>
+        </ContentContainer>
       </section>
-
-      <section className="py-16 md:py-20">
-        <div className="container mx-auto px-4 max-w-5xl">
-          
-          <div className="mb-16">
-            <div className="flex items-center gap-4 mb-8 border-b pb-4">
-              <div className="bg-primary/10 p-3 rounded-lg text-primary">
-                <Stethoscope size={28} />
-              </div>
-              <h2 className="text-3xl font-serif font-bold text-primary">Medical Advisory Panel</h2>
-            </div>
-            <p className="text-lg text-foreground/80 mb-8 max-w-3xl">
-              Drawn from leading PH specialist centres across Australia, this panel reviews all clinical content. They ensure our explanations of treatments, tests, and pathophysiology reflect the latest clinical guidelines approved by PHSANZ.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {medicalPanel.map((member, i) => (
-                <Card key={i} className="shadow-sm border-t border-t-primary/20">
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-xl font-bold text-primary">{member.name}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-foreground/90 font-medium mb-1">{member.role}</p>
-                    <p className="text-sm text-foreground/60">{member.hospital}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+      <section className="design-section">
+        <ContentContainer>
+          <div className="grid gap-8 lg:grid-cols-2">
+            {[
+              {
+                title: "Clinician Advisory Panel",
+                lead: siteIdentity.clinicianLead,
+                description:
+                  "Led by Dr Christopher Chew, this panel will guide clinical accuracy and relevance. It is designed to include medical and nursing perspectives, with allied health participation planned as the panel develops.",
+                scope:
+                  "Planned remit: clinical accuracy, relevance and alignment with appropriate evidence and guidance.",
+                Icon: Stethoscope,
+                colour: "bg-accent",
+              },
+              {
+                title: "Lived Experience Panel",
+                lead: siteIdentity.livedExperienceLead,
+                description:
+                  "Led by Tharuka Kossinna, this panel will help ensure PH Navigator reflects patient and carer priorities and communicates in clear, respectful and practical language.",
+                scope:
+                  "Planned remit: accessibility of language, practical usefulness and patient and carer perspectives.",
+                Icon: Users,
+                colour: "bg-[var(--brand-lavender)]",
+              },
+            ].map(({ title, lead, description, scope, Icon, colour }) => (
+              <article
+                key={title}
+                className="rounded-2xl border border-border bg-white p-6 sm:p-8"
+              >
+                <span className={`mb-5 inline-flex rounded-xl p-3 ${colour}`}>
+                  <Icon className="h-7 w-7 text-primary" aria-hidden="true" />
+                </span>
+                <SectionHeading className="mb-4">{title}</SectionHeading>
+                <p className="text-foreground">{description}</p>
+                <div className="my-6 rounded-xl bg-background p-5">
+                  <p className="text-sm font-medium text-muted-foreground">
+                    Panel lead
+                  </p>
+                  <h3 className="mt-1 font-heading text-2xl font-bold text-primary">
+                    {lead}
+                  </h3>
+                </div>
+                <p className="font-medium text-primary">
+                  Further membership being developed
+                </p>
+                <p className="mt-2 text-muted-foreground">
+                  Additional members will be listed after their participation
+                  and public details are confirmed.
+                </p>
+                <p className="mt-5 border-t border-border pt-5 text-sm text-muted-foreground">
+                  {scope}
+                </p>
+              </article>
+            ))}
           </div>
-
-          <div className="mb-10">
-            <div className="flex items-center gap-4 mb-8 border-b pb-4">
-              <div className="bg-secondary/10 p-3 rounded-lg text-secondary">
-                <UserCheck size={28} />
-              </div>
-              <h2 className="text-3xl font-serif font-bold text-primary">Patient Review Panel</h2>
-            </div>
-            <p className="text-lg text-foreground/80 mb-8 max-w-3xl">
-              Medical accuracy means nothing if the patient cannot understand it. Appointed by PHA Australia, this panel of lived-experience experts reads every article. They hold the veto power to rewrite jargon into plain language.
+          <div className="mt-10 rounded-2xl border border-border bg-accent p-6">
+            <SectionHeading className="mb-4">
+              How review will work
+            </SectionHeading>
+            <p className="max-w-3xl">
+              The review workflow is being established. Panel membership does
+              not mean that every article or resource has already been reviewed
+              or approved. Content-specific review details will be added as
+              reviews are completed.
             </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {patientPanel.map((member, i) => (
-                <Card key={i} className="shadow-sm bg-muted/30 border border-border">
-                  <CardContent className="pt-6">
-                    <h3 className="text-lg font-bold text-primary mb-1">{member.name}</h3>
-                    <p className="text-sm text-foreground/80 mb-2">{member.role}</p>
-                    <p className="text-xs text-muted-foreground uppercase tracking-wider">{member.location}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <Link
+              href="/governance-checklist"
+              className="mt-4 inline-block py-2 font-medium text-secondary underline underline-offset-4"
+            >
+              Read the launch governance checklist
+            </Link>
           </div>
-
-        </div>
+        </ContentContainer>
       </section>
     </div>
   );

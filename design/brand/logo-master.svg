@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="996" height="996" viewBox="0 0 996 996"
+     role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">Sailboat and heart logo</title>
+  <desc id="logo-description">Editable vector reconstruction of the supplied logo: a navy sailboat and flag, teal and blue sails, a heart outline, and two waves. Every visible element is a vector path with an editable solid or gradient fill. The background is transparent.</desc>
+  <defs>
+    <linearGradient id="navy-gradient" gradientUnits="userSpaceOnUse" x1="270" y1="90" x2="650" y2="875">
+      <stop offset="0" stop-color="#142d59"/>
+      <stop offset="0.55" stop-color="#172e5b"/>
+      <stop offset="1" stop-color="#192f60"/>
+    </linearGradient>
+    <linearGradient id="left-sail-gradient" gradientUnits="userSpaceOnUse" x1="385" y1="220" x2="180" y2="710">
+      <stop offset="0" stop-color="#16a1aa"/>
+      <stop offset="0.55" stop-color="#159ba6"/>
+      <stop offset="1" stop-color="#1b9aa5"/>
+    </linearGradient>
+    <linearGradient id="main-sail-gradient" gradientUnits="userSpaceOnUse" x1="440" y1="185" x2="667" y2="685">
+      <stop offset="0" stop-color="#248db7"/>
+      <stop offset="0.5" stop-color="#278dbd"/>
+      <stop offset="1" stop-color="#2786bd"/>
+    </linearGradient>
+    <linearGradient id="inner-sail-gradient" gradientUnits="userSpaceOnUse" x1="440" y1="205" x2="530" y2="660">
+      <stop offset="0" stop-color="#1a7d96"/>
+      <stop offset="0.55" stop-color="#19758f"/>
+      <stop offset="1" stop-color="#17748c"/>
+    </linearGradient>
+    <linearGradient id="heart-gradient" gradientUnits="userSpaceOnUse" x1="590" y1="295" x2="917" y2="580">
+      <stop offset="0" stop-color="#158e9f"/>
+      <stop offset="0.5" stop-color="#0da3ab"/>
+      <stop offset="1" stop-color="#14a0aa"/>
+    </linearGradient>
+    <linearGradient id="wave-gradient" gradientUnits="userSpaceOnUse" x1="205" y1="873" x2="645" y2="936">
+      <stop offset="0" stop-color="#1b7b96"/>
+      <stop offset="0.55" stop-color="#107c9e"/>
+      <stop offset="1" stop-color="#1687a9"/>
+    </linearGradient>
+  </defs>
+
+  <g id="heart" inkscape:label="Heart">
+    <path id="heart-teal-outline" inkscape:label="Heart — teal outer ribbon" fill="url(#heart-gradient)"
+      d="M 560,296
+         C 614,272 675,290 713,336
+         C 757,288 809,277 852,293
+         C 906,310 937,352 939,405
+         C 944,487 875,578 789,639
+         L 745,670 L 691,672
+         C 764,628 818,572 854,516
+         C 881,473 892,437 884,402
+         C 877,370 859,349 835,341
+         C 791,324 746,346 718,397
+         L 715,402
+         Q 713,405 711,400
+         C 682,342 641,319 585,335 Z"/>
+    <path id="heart-navy-outline" inkscape:label="Heart — navy inner ribbon" fill="url(#navy-gradient)"
+      d="M 560,296
+         C 616,276 674,305 713,359
+         C 748,319 791,301 835,315
+         C 882,327 912,368 912,421
+         C 914,505 831,601 745,670
+         L 691,672
+         C 764,628 818,572 854,516
+         C 881,473 892,437 884,402
+         C 877,370 859,349 835,341
+         C 791,324 746,346 718,397
+         L 715,402
+         Q 713,405 711,400
+         C 682,342 641,319 585,335 Z"/>
+  </g>
+
+  <g id="sails" inkscape:label="Sails">
+    <path id="port-sail" inkscape:label="Left teal sail" fill="url(#left-sail-gradient)"
+      d="M 398,218 L 392,699
+         C 319,663 253,669 149,710 Z"/>
+    <path id="starboard-sail" inkscape:label="Right blue sail" fill="url(#main-sail-gradient)"
+      d="M 431,177
+         C 565,297 665,466 692,672
+         L 682,677
+         C 609,646 538,651 438,697
+         L 438,637
+         C 468,559 477,483 474,413
+         C 471,318 453,240 431,190 Z"/>
+    <path id="sail-shaded-panel" inkscape:label="Right sail — shaded teal panel" fill="url(#inner-sail-gradient)"
+      d="M 431,188
+         C 501,291 548,417 556,529
+         C 560,588 551,636 537,663
+         C 505,668 472,681 438,697
+         L 438,637
+         C 466,558 477,480 474,414
+         C 471,322 454,245 431,188 Z"/>
+  </g>
+
+  <g id="boat" inkscape:label="Boat and flag" fill="url(#navy-gradient)">
+    <path id="mast" inkscape:label="Mast"
+      d="M 415,74
+         C 415,64 428,63 429,73
+         L 440,744 L 406,750 Z"/>
+    <path id="flag" inkscape:label="Waving flag"
+      d="M 430,78
+         C 456,70 484,71 502,79
+         C 513,83 515,89 516,97
+         C 519,111 537,109 558,106
+         C 584,102 600,107 617,118
+         C 594,113 578,120 560,131
+         C 539,144 515,150 502,145
+         C 495,143 495,137 495,129
+         C 481,121 454,133 433,142
+         C 443,114 441,101 430,78 Z"/>
+    <path id="hull" inkscape:label="Sweeping boat hull"
+      d="M 108,757
+         C 211,760 316,756 406,742
+         L 439,738
+         C 539,722 625,706 692,671
+         C 713,659 735,645 756,630
+         L 790,636
+         C 758,662 728,689 701,720
+         C 667,759 642,805 621,826
+         C 554,846 490,841 427,825
+         C 352,806 299,789 231,796
+         C 198,798 168,805 141,813
+         C 123,797 112,781 108,757 Z"/>
+  </g>
+
+  <g id="waves" inkscape:label="Waves">
+    <path id="upper-navy-wave" inkscape:label="Upper navy wave" fill="url(#navy-gradient)"
+      d="M 43,885
+         C 114,824 193,807 270,813
+         C 354,817 414,853 502,855
+         C 587,858 662,839 735,787
+         C 690,847 615,886 535,891
+         C 444,898 381,864 300,850
+         C 207,832 129,849 43,885 Z"/>
+    <path id="lower-teal-wave" inkscape:label="Lower teal wave" fill="url(#wave-gradient)"
+      d="M 183,872
+         C 249,858 309,875 366,893
+         C 468,927 576,929 669,872
+         C 615,923 556,944 494,942
+         C 425,940 376,918 319,898
+         C 269,880 224,873 183,872 Z"/>
+  </g>
+</svg>

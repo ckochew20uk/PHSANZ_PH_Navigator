@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -9,13 +10,11 @@ export default function CarerWellbeing() {
     <div className="w-full">
       <section className="bg-muted py-10 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <Link href="/caring-for-someone">
-            <Button variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10">
+          <Button asChild variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10"><Link href="/caring-for-someone">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Carers Hub
-            </Button>
-          </Link>
+            </Link></Button>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Protecting Your Own Wellbeing</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Protecting Your Own Wellbeing</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
               Carer burnout is real, common, and dangerous. You cannot provide good care if you are exhausted, resentful, or physically unwell.
             </p>

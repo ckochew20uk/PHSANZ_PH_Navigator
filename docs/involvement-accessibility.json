@@ -1,0 +1,38 @@
+[
+  {
+    "path": "/get-involved",
+    "violations": []
+  },
+  {
+    "path": "/get-involved/feedback",
+    "violations": []
+  },
+  {
+    "path": "/get-involved/focus-groups",
+    "violations": []
+  },
+  {
+    "path": "/get-involved/contribute",
+    "violations": []
+  },
+  {
+    "path": "/",
+    "violations": []
+  },
+  {
+    "path": "/start",
+    "violations": []
+  },
+  {
+    "path": "/community-voices",
+    "violations": []
+  },
+  {
+    "path": "/resource-library",
+    "violations": []
+  },
+  {
+    "path": "/privacy",
+    "violations": []
+  }
+]

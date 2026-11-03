@@ -1,80 +1,97 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'wouter';
-import { ArrowLeft, Mail } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Link } from "wouter";
+import { ArrowLeft, HeartHandshake, BookOpen } from "lucide-react";
+import { ContentContainer } from "@/components/content/ContentContainer";
+import { SectionHeading } from "@/components/content/SectionHeading";
+import { ProjectContact } from "@/components/governance/ProjectContact";
 
-export default function Partnership() {
+export default function OurPartners() {
   return (
     <div className="w-full">
-      <section className="bg-muted py-10 border-b border-border/50">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <Link href="/about">
-            <Button variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to About Us
-            </Button>
+      <section className="design-section bg-accent">
+        <ContentContainer>
+          <Link
+            href="/about"
+            className="mb-6 inline-flex items-center gap-2 py-2 text-secondary underline underline-offset-4"
+          >
+            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+            Back to About PH Navigator
           </Link>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">The Partnership</h1>
-            <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
-              PH Navigator is the result of a landmark collaboration between the patient advocacy community and clinical specialists.
-            </p>
-          </motion.div>
-        </div>
+          <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary">
+            An initiative of PHSANZ
+          </p>
+          <SectionHeading as="h1" className="mb-5">
+            Our Partners
+          </SectionHeading>
+          <p className="max-w-2xl text-lg">
+            PH Navigator is launching as an initiative of PHSANZ. Future
+            collaborations will help strengthen lived-experience content and
+            practical resources. Partnerships will be listed here as
+            arrangements are confirmed.
+          </p>
+        </ContentContainer>
       </section>
-
-      <section className="py-16 md:py-20">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="prose prose-lg prose-p:text-foreground/90 prose-headings:text-primary max-w-none">
-            
-            <h2>Two Voices, One Goal</h2>
-            <p>
-              Historically, medical information online has either been highly clinical and impossible for patients to understand, or written by laypeople without the necessary medical accuracy. PH Navigator was built to bridge this gap.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-8 my-10">
-              <div className="bg-card border border-border p-8 rounded-xl shadow-sm border-t-4 border-t-primary">
-                <h3 className="font-serif text-2xl font-bold mt-0 mb-4 text-primary">PHA Australia</h3>
-                <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Patient Advocacy</p>
-                <p>
-                  The Pulmonary Hypertension Association Australia represents the lived experience. They ensure the tone of this site is warm, the advice is practical, and the realities of daily life with PH are accurately reflected. They advocate for patient rights, fund research, and run peer support networks.
+      <section className="design-section">
+        <ContentContainer>
+          <SectionHeading className="mb-4">
+            Future collaborations
+          </SectionHeading>
+          <p className="mb-8 max-w-2xl text-muted-foreground">
+            This section is a work in progress. The organisations below are
+            proposed collaborators, not confirmed partners in PH Navigator.
+          </p>
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              {
+                name: "PHA Australia",
+                fullName: "Pulmonary Hypertension Association Australia",
+                focus: "Lived-experience collaboration",
+                description:
+                  "A proposed future collaboration to support patient and carer perspectives, community engagement and co-design.",
+                Icon: HeartHandshake,
+                colour: "bg-[var(--brand-lavender)]",
+              },
+              {
+                name: "Lung Foundation Australia",
+                fullName: "Lung Foundation Australia",
+                focus: "Resource collaboration",
+                description:
+                  "A proposed future collaboration to develop accessible patient information and practical resources.",
+                Icon: BookOpen,
+                colour: "bg-accent",
+              },
+            ].map(({ name, fullName, focus, description, Icon, colour }) => (
+              <article
+                key={name}
+                className="rounded-2xl border border-border bg-white p-6 sm:p-8"
+              >
+                <span className={`mb-5 inline-flex rounded-xl p-3 ${colour}`}>
+                  <Icon className="h-7 w-7 text-primary" aria-hidden="true" />
+                </span>
+                <h3 className="font-heading text-2xl font-bold text-primary">
+                  {name}
+                </h3>
+                {fullName !== name && (
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {fullName}
+                  </p>
+                )}
+                <p className="mt-4 font-medium text-primary">{focus}</p>
+                <p className="mt-3 text-muted-foreground">{description}</p>
+                <p className="mt-5 rounded-xl bg-muted px-4 py-3 text-sm font-medium text-primary">
+                  Proposed collaboration — not yet confirmed
                 </p>
-              </div>
-
-              <div className="bg-card border border-border p-8 rounded-xl shadow-sm border-t-4 border-t-secondary">
-                <h3 className="font-serif text-2xl font-bold mt-0 mb-4 text-primary">PHSANZ</h3>
-                <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Medical Expertise</p>
-                <p>
-                  The Pulmonary Hypertension Society of Australia and New Zealand is the peak professional body for clinicians treating PH. They ensure every medical fact, treatment description, and piece of clinical advice on this platform is evidence-based, accurate, and reflects current best-practice guidelines.
-                </p>
-              </div>
-            </div>
-
-            <h2>How PH Navigator was Developed</h2>
-            <p>
-              This platform was built through a co-design process. Focus groups of newly diagnosed patients were asked what information they desperately needed but couldn't find. Clinical nurse consultants were asked what questions they answer every day.
-            </p>
-            <p>
-              Every article on this site passes through a rigorous dual-review process: first by the Medical Advisory Panel for clinical accuracy, and then by the Patient Review Panel to ensure the language is accessible and empathetic.
-            </p>
-
-            <div className="bg-muted p-8 rounded-xl my-10 flex flex-col md:flex-row items-center md:items-start gap-6">
-              <div className="bg-primary/10 p-4 rounded-full text-primary shrink-0">
-                <Mail size={32} />
-              </div>
-              <div>
-                <h3 className="font-bold text-xl mt-0 mb-2 text-primary">Contact Us</h3>
-                <p className="m-0 text-foreground/90">
-                  If you have feedback on the website, wish to share your patient story, or need to contact PHA Australia for general inquiries:
-                </p>
-                <p className="mt-4 font-semibold text-primary">
-                  Email: hello@phnavigator.org.au
-                </p>
-              </div>
-            </div>
-            
+              </article>
+            ))}
           </div>
-        </div>
+          <p className="mt-8 max-w-2xl text-muted-foreground">
+            No partnership agreement or organisational endorsement is implied by
+            these plans. Partner roles and approved acknowledgements will be
+            added when confirmed.
+          </p>
+          <div className="mt-10">
+            <ProjectContact />
+          </div>
+        </ContentContainer>
       </section>
     </div>
   );

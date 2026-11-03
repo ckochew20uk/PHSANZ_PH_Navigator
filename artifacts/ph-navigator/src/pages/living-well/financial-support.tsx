@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -10,13 +11,11 @@ export default function FinancialSupport() {
     <div className="w-full">
       <section className="bg-muted py-10 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <Link href="/living-well">
-            <Button variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10">
+          <Button asChild variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10"><Link href="/living-well">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Living Well
-            </Button>
-          </Link>
+            </Link></Button>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Financial & Practical Support</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Financial & Practical Support</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
               Navigating life with a chronic illness often brings financial challenges and logistical hurdles. Learn about the systems available in Australia to support you.
             </p>
@@ -30,7 +29,7 @@ export default function FinancialSupport() {
             
             <Card className="shadow-sm border-t-4 border-t-primary">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif text-primary">The NDIS and PH</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">The NDIS and PH</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">
@@ -47,7 +46,7 @@ export default function FinancialSupport() {
 
             <Card className="shadow-sm border-t-4 border-t-secondary">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif text-primary">Medications and the PBS</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">Medications and the PBS</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">
@@ -64,7 +63,7 @@ export default function FinancialSupport() {
 
             <Card className="shadow-sm border-t-4 border-t-accent">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif text-primary">Travel Assistance Schemes (IPTAAS)</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">Travel Assistance Schemes (IPTAAS)</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">
@@ -81,7 +80,7 @@ export default function FinancialSupport() {
 
             <Card className="shadow-sm border-t-4 border-t-destructive">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif text-primary">Work and Centrelink</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">Work and Centrelink</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">

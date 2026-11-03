@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -10,13 +11,11 @@ export default function CarerSupport() {
     <div className="w-full">
       <section className="bg-muted py-10 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <Link href="/caring-for-someone">
-            <Button variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10">
+          <Button asChild variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10"><Link href="/caring-for-someone">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Carers Hub
-            </Button>
-          </Link>
+            </Link></Button>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Connecting with Carer Support Networks</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Connecting with Carer Support Networks</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
               There is formal, funded support available for carers in Australia. You do not have to manage this alone.
             </p>
@@ -30,7 +29,7 @@ export default function CarerSupport() {
             
             <Card className="shadow-sm border-t-4 border-t-primary">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif text-primary">Carer Gateway</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">Carer Gateway</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">
@@ -51,7 +50,7 @@ export default function CarerSupport() {
 
             <Card className="shadow-sm border-t-4 border-t-secondary">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif text-primary">State-Based Carer Organisations</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">State-Based Carer Organisations</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">
@@ -62,21 +61,21 @@ export default function CarerSupport() {
 
             <Card className="shadow-sm border-t-4 border-t-accent">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif text-primary">PH-Specific Peer Support</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">PH-Specific Peer Support</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">
                   While general carer support is helpful, sometimes you need to speak with someone who understands the specific anxieties of pulmonary hypertension (like managing an IV pump or dealing with extreme breathlessness).
                 </p>
                 <p className="text-lg text-foreground/80">
-                  PHA Australia can help connect carers with other families managing PH. Ask your hospital's PH nurse specialist if they facilitate a local support group.
+                  Ask your hospital's PH nurse specialist about local support groups and patient organisations such as PHA Australia. Confirm current services and eligibility directly with the organisation.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="shadow-sm border-t-4 border-t-destructive">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif text-primary">Financial Assistance for Carers</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">Financial Assistance for Carers</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">
