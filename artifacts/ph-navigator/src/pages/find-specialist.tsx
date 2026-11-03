@@ -337,7 +337,7 @@ export default function FindSpecialist() {
       {/* ── Footer note ── */}
       <section className="border-t border-border/50 bg-muted/30 py-8">
         <div className="container mx-auto px-4 max-w-7xl text-center text-sm text-muted-foreground">
-          <p>This directory is maintained jointly by PHA Australia and PHSANZ. Contact information is updated periodically — always confirm details directly with the hospital before attending.</p>
+          <p>This directory forms part of PH Navigator, an initiative of PHSANZ. Always confirm contact details and service availability directly with the hospital before attending.</p>
           <p className="mt-1">If your centre is missing or has incorrect details, please <Link href="/about" className="text-primary underline underline-offset-4">contact us</Link>.</p>
         </div>
       </section>

@@ -169,7 +169,7 @@ export default function Home() {
             People at the heart of the information.
           </h2>
           <p>
-            PH Navigator is designed to help people affected by pulmonary
+            PH Navigator is an initiative of PHSANZ, designed to help people affected by pulmonary
             hypertension in Australia and New Zealand find information and
             support. Use this information alongside advice from your healthcare
             team.

@@ -81,8 +81,8 @@ const drawerSections: NavSection[] = [
     path: "/about",
     icon: Info,
     sub: [
-      { title: "The Partnership", path: "/about/partnership" },
-      { title: "Advisory Panel", path: "/about/advisory-panel" },
+      { title: "Our Partners", path: "/about/partnership" },
+      { title: "Our Review Panels", path: "/about/advisory-panel" },
     ],
   },
 ];

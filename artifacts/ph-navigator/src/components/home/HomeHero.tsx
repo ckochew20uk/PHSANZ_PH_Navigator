@@ -7,7 +7,7 @@ export function HomeHero() {
     <section className="home-hero home-section" aria-labelledby="home-title">
       <div className="home-container home-hero-grid">
         <div>
-          <p className="home-eyebrow">PH Navigator · Australia & New Zealand</p>
+          <p className="home-eyebrow">PH Navigator · An initiative of PHSANZ</p>
           <h1 id="home-title">
             Navigating life with pulmonary hypertension <span>— together.</span>
           </h1>

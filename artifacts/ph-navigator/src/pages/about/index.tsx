@@ -1,93 +1,103 @@
+import { Link } from "wouter";
+import {
+  ArrowRight,
+  HeartHandshake,
+  Users,
+  ClipboardCheck,
+} from "lucide-react";
+import { ContentContainer } from "@/components/content/ContentContainer";
 import { SectionHeading } from "@/components/content/SectionHeading";
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'wouter';
-import { ArrowRight, Info, Users, ShieldCheck } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ProjectContact } from "@/components/governance/ProjectContact";
 
 export default function AboutHub() {
   return (
     <div className="w-full">
-      <section className="bg-muted py-12 md:py-20 border-b border-border/50">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">About Us & Governance</SectionHeading>
-            <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed mb-8 max-w-3xl">
-              PH Navigator is built on a unique collaboration between patients and medical professionals, ensuring information is both clinically accurate and empathetically delivered.
-            </p>
-          </motion.div>
-        </div>
+      <section className="design-section bg-accent">
+        <ContentContainer>
+          <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary">
+            An initiative of PHSANZ
+          </p>
+          <SectionHeading as="h1" className="mb-5">
+            About PH Navigator
+          </SectionHeading>
+          <p className="max-w-3xl text-lg">
+            PH Navigator is an initiative of the Pulmonary Hypertension Society
+            of Australia and New Zealand (PHSANZ), supporting people affected by
+            pulmonary hypertension through clear information, practical guidance
+            and lived-experience perspectives.
+          </p>
+        </ContentContainer>
       </section>
-
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-5xl">
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <Link href="/about/partnership" className="block">
-              <Card className="h-full hover:shadow-lg transition-shadow border-t-4 border-t-primary flex flex-col group">
-                <CardHeader>
-                  <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
-                    <HeartHandshakeIcon size={28} />
-                  </div>
-                  <CardTitle className="text-2xl font-heading text-primary">The Partnership</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-1 flex flex-col">
-                  <p className="text-lg text-foreground/80 mb-6 flex-1">
-                    Learn about the collaboration between PHA Australia (patient advocacy) and PHSANZ (medical professionals).
-                  </p>
-                  <div className="text-secondary font-bold flex items-center group-hover:text-primary transition-colors mt-auto">
-                    Read our story <ArrowRight className="ml-2 h-4 w-4" />
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="/about/advisory-panel" className="block">
-              <Card className="h-full hover:shadow-lg transition-shadow border-t-4 border-t-secondary flex flex-col group">
-                <CardHeader>
-                  <div className="bg-secondary/10 w-14 h-14 rounded-full flex items-center justify-center text-secondary mb-4 group-hover:scale-110 transition-transform">
-                    <ShieldCheck size={28} />
-                  </div>
-                  <CardTitle className="text-2xl font-heading text-primary">Advisory Panels</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-1 flex flex-col">
-                  <p className="text-lg text-foreground/80 mb-6 flex-1">
-                    Meet the Medical Advisory Panel and Patient Review Panel who review and vet all content on PH Navigator.
-                  </p>
-                  <div className="text-secondary font-bold flex items-center group-hover:text-primary transition-colors mt-auto">
-                    Meet the panels <ArrowRight className="ml-2 h-4 w-4" />
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-
+      <section className="design-section">
+        <ContentContainer>
+          <div className="mb-10 max-w-3xl">
+            <SectionHeading className="mb-4">
+              Our institutional home
+            </SectionHeading>
+            <p>
+              PH Navigator operates under the governance of the PHSANZ Patient
+              Advocacy Subcommittee. The initiative is developing its content,
+              review processes and opportunities for patient and carer
+              involvement.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              Patient surveys, focus groups and co-design activities are planned
+              as part of the approved programme. Hosting integration and formal
+              accreditation will be described when those milestones are
+              confirmed.
+            </p>
           </div>
-
-        </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "Our Partners",
+                description:
+                  "Explore proposed collaborations for lived-experience content and patient resources. Arrangements are not yet confirmed.",
+                href: "/about/partnership",
+                Icon: HeartHandshake,
+              },
+              {
+                title: "Our Review Panels",
+                description:
+                  "Meet the leads of the Clinician Advisory Panel and Lived Experience Panel, with further membership being developed.",
+                href: "/about/advisory-panel",
+                Icon: Users,
+              },
+              {
+                title: "Launch governance",
+                description:
+                  "See the work in progress on privacy, consent, review responsibilities and launch safeguards.",
+                href: "/governance-checklist",
+                Icon: ClipboardCheck,
+              },
+            ].map(({ title, description, href, Icon }) => (
+              <Link
+                key={href}
+                href={href}
+                className="flex flex-col rounded-2xl border border-border bg-white p-6 hover:border-secondary"
+              >
+                <Icon
+                  className="mb-5 h-8 w-8 text-secondary"
+                  aria-hidden="true"
+                />
+                <h2 className="font-heading text-2xl font-bold text-primary">
+                  {title}
+                </h2>
+                <p className="my-4 flex-1 text-muted-foreground">
+                  {description}
+                </p>
+                <span className="flex items-center gap-2 font-medium text-secondary">
+                  Find out more{" "}
+                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10">
+            <ProjectContact />
+          </div>
+        </ContentContainer>
       </section>
     </div>
-  );
-}
-
-// Temporary icon component since HeartHandshake is not imported directly above
-function HeartHandshakeIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-      <path d="M12 5 9.04 9.2a2.71 2.71 0 0 0-2.84 3.9l8.17 11.35" />
-      <path d="m18 10-3 3" />
-    </svg>
   );
 }

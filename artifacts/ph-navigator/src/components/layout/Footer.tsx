@@ -47,14 +47,10 @@ export function Footer() {
               </p>
               <div className="space-y-2 text-primary-foreground/80 text-sm">
                 <p className="font-semibold text-white">
-                  A partnership between:
-                </p>
-                <p>
-                  Pulmonary Hypertension Association Australia (PHA Australia)
+                  An initiative of PHSANZ
                 </p>
                 <p>
                   Pulmonary Hypertension Society of Australia and New Zealand
-                  (PHSANZ)
                 </p>
               </div>
             </div>
@@ -167,20 +163,26 @@ export function Footer() {
           </div>
 
           <div className="pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
-            <p>
-              &copy; {currentYear} PHA Australia and PHSANZ. All rights
-              reserved.
-            </p>
-            <div className="flex gap-4">
-              <span className="hover:text-white cursor-pointer">
+            <p>PH Navigator · An initiative of PHSANZ · {currentYear}</p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/privacy"
+                className="hover:text-white underline underline-offset-4"
+              >
                 Privacy Policy
-              </span>
-              <span className="hover:text-white cursor-pointer">
+              </Link>
+              <Link
+                href="/terms"
+                className="hover:text-white underline underline-offset-4"
+              >
                 Terms of Use
-              </span>
-              <span className="hover:text-white cursor-pointer">
+              </Link>
+              <Link
+                href="/accessibility"
+                className="hover:text-white underline underline-offset-4"
+              >
                 Accessibility
-              </span>
+              </Link>
               <Link
                 href="/governance-checklist"
                 className="hover:text-white transition-colors"

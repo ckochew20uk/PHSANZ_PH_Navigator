@@ -86,8 +86,8 @@ const moreNav: NavItem[] = [
     title: "About Us",
     path: "/about",
     sub: [
-      { title: "The Partnership", path: "/about/partnership" },
-      { title: "Advisory Panel", path: "/about/advisory-panel" },
+      { title: "Our Partners", path: "/about/partnership" },
+      { title: "Our Review Panels", path: "/about/advisory-panel" },
     ],
   },
 ];

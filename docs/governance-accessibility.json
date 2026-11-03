@@ -1,0 +1,34 @@
+[
+  {
+    "path": "/",
+    "violations": []
+  },
+  {
+    "path": "/about",
+    "violations": []
+  },
+  {
+    "path": "/about/partnership",
+    "violations": []
+  },
+  {
+    "path": "/about/advisory-panel",
+    "violations": []
+  },
+  {
+    "path": "/privacy",
+    "violations": []
+  },
+  {
+    "path": "/terms",
+    "violations": []
+  },
+  {
+    "path": "/accessibility",
+    "violations": []
+  },
+  {
+    "path": "/resource-library",
+    "violations": []
+  }
+]

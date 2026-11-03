@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, CheckCircle, Loader2 } from "lucide-react";
@@ -275,8 +276,12 @@ export function NewsletterSignup({ variant = "footer" }: Props) {
           isFooter ? "text-primary-foreground/80" : "text-muted-foreground",
         )}
       >
-        We respect your privacy. Unsubscribe at any time. PH Navigator does not
-        share your details with third parties. See our Privacy Policy.
+        Newsletter details are processed through Mailchimp when the service is
+        configured. Subscription is optional. Read our{" "}
+        <Link href="/privacy" className="underline underline-offset-4">
+          draft privacy information
+        </Link>{" "}
+        for details and the arrangements awaiting confirmation.
       </p>
     </form>
   );

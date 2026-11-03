@@ -68,7 +68,7 @@ export default function CarerSupport() {
                   While general carer support is helpful, sometimes you need to speak with someone who understands the specific anxieties of pulmonary hypertension (like managing an IV pump or dealing with extreme breathlessness).
                 </p>
                 <p className="text-lg text-foreground/80">
-                  PHA Australia can help connect carers with other families managing PH. Ask your hospital's PH nurse specialist if they facilitate a local support group.
+                  Ask your hospital's PH nurse specialist about local support groups and patient organisations such as PHA Australia. Confirm current services and eligibility directly with the organisation.
                 </p>
               </CardContent>
             </Card>

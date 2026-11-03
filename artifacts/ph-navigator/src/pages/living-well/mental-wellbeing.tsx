@@ -67,7 +67,7 @@ export default function MentalWellbeing() {
               Because PH is so rare, you might be the only person in your town who has it. Connecting with others who truly understand what you are going through can drastically reduce feelings of isolation.
             </p>
             <p>
-              PHA Australia coordinates support groups and online communities where patients and carers can share experiences, practical tips, and emotional support in a safe environment.
+              Ask your PH healthcare team about peer-support options and patient organisations such as PHA Australia. Check current groups, services and participation arrangements directly with the organisation.
             </p>
             
           </div>
