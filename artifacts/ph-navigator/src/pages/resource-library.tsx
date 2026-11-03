@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { InvolvementInvite } from "@/components/involvement/InvolvementInvite";
 import { SectionHeading } from "@/components/content/SectionHeading";
 import React, { useState, useMemo } from "react";
@@ -28,9 +29,8 @@ interface Resource {
   title: string;
   description: string;
   category: Exclude<Category, "All">;
-  pages: number;
+
   featured?: boolean;
-  updated: string;
 }
 
 const resources: Resource[] = [
@@ -40,9 +40,7 @@ const resources: Resource[] = [
     description:
       "A plain-language introduction to PH — what it is, how it affects your body, the different WHO groups, and what your diagnosis means for daily life.",
     category: "Newly Diagnosed",
-    pages: 8,
     featured: true,
-    updated: "March 2025",
   },
   {
     id: "just-diagnosed",
@@ -50,9 +48,7 @@ const resources: Resource[] = [
     description:
       "A calm, step-by-step guide for the days immediately after a PH diagnosis. Covers who to tell, what to expect at your next appointments, and how to find support.",
     category: "Newly Diagnosed",
-    pages: 6,
     featured: true,
-    updated: "February 2025",
   },
   {
     id: "questions-for-doctor",
@@ -60,8 +56,6 @@ const resources: Resource[] = [
     description:
       "A printable question list for your first and ongoing specialist appointments, organised by stage of care.",
     category: "Newly Diagnosed",
-    pages: 4,
-    updated: "January 2025",
   },
   {
     id: "understanding-rhc",
@@ -69,8 +63,6 @@ const resources: Resource[] = [
     description:
       "What to expect before, during, and after a right heart catheterisation — including how to read your results (mPAP, PCWP, PVR) and what they mean.",
     category: "Newly Diagnosed",
-    pages: 5,
-    updated: "April 2025",
   },
   {
     id: "ph-groups-explained",
@@ -78,18 +70,14 @@ const resources: Resource[] = [
     description:
       "Breaks down each WHO classification group with its causes, distinguishing features, and implications for treatment choice.",
     category: "Newly Diagnosed",
-    pages: 7,
-    updated: "December 2024",
   },
   {
     id: "medications-overview",
     title: "PH Medications: An Overview",
     description:
-      "A clear summary of the four main drug classes used in PH — ERAs, PDE5 inhibitors, prostacyclins, and sGC stimulators — how they work and how they're taken.",
+      "A clear summary of selected medicine classes used in PAH and other specific indications — ERAs, PDE5 inhibitors, prostacyclins, and sGC stimulators — how they work and how they're taken.",
     category: "Treatments",
-    pages: 10,
     featured: true,
-    updated: "March 2025",
   },
   {
     id: "oxygen-therapy-guide",
@@ -97,8 +85,6 @@ const resources: Resource[] = [
     description:
       "Everything you need to know about home oxygen: equipment types, safety, travelling with oxygen concentrators, and connecting with your oxygen supplier.",
     category: "Treatments",
-    pages: 9,
-    updated: "January 2025",
   },
   {
     id: "reading-test-results",
@@ -106,8 +92,6 @@ const resources: Resource[] = [
     description:
       "Helps patients interpret the most common PH tests — echocardiogram, 6-minute walk test, NT-proBNP, and lung function — with clear explanations of normal ranges and what changes may mean.",
     category: "Treatments",
-    pages: 6,
-    updated: "February 2025",
   },
   {
     id: "warfarin-diet",
@@ -115,8 +99,6 @@ const resources: Resource[] = [
     description:
       "Practical guidance on managing vitamin K in your diet when anticoagulated, including food lists and how to manage fluctuating INR results.",
     category: "Treatments",
-    pages: 4,
-    updated: "November 2024",
   },
   {
     id: "exercise-rehab",
@@ -124,9 +106,7 @@ const resources: Resource[] = [
     description:
       "Evidence-based guidance on safe physical activity for PH patients — why it helps, how to start, pacing techniques, what to avoid, and cardiac rehabilitation programs.",
     category: "Living Well",
-    pages: 8,
     featured: true,
-    updated: "April 2025",
   },
   {
     id: "travel-oxygen",
@@ -134,8 +114,6 @@ const resources: Resource[] = [
     description:
       "Step-by-step guidance for air travel with pulmonary hypertension — pre-flight assessments, HAST testing, airline documentation, portable concentrator approvals, and destination planning.",
     category: "Living Well",
-    pages: 11,
-    updated: "March 2025",
   },
   {
     id: "diet-nutrition",
@@ -143,8 +121,6 @@ const resources: Resource[] = [
     description:
       "Dietary recommendations for PH patients including sodium restriction, fluid management, heart-healthy eating, and managing nutrition on complex medication regimens.",
     category: "Living Well",
-    pages: 7,
-    updated: "January 2025",
   },
   {
     id: "mental-wellbeing",
@@ -152,8 +128,6 @@ const resources: Resource[] = [
     description:
       "Addresses the psychological impact of PH — anxiety, depression, grief — and offers practical coping strategies, support options, and guidance on when to seek professional help.",
     category: "Living Well",
-    pages: 9,
-    updated: "February 2025",
   },
   {
     id: "financial-support",
@@ -161,8 +135,6 @@ const resources: Resource[] = [
     description:
       "An Australian guide to financial assistance options including NDIS, Centrelink DSP, PBS costs, IPTAAS for rural patients, and employment considerations.",
     category: "Living Well",
-    pages: 10,
-    updated: "April 2025",
   },
   {
     id: "energy-conservation",
@@ -170,8 +142,6 @@ const resources: Resource[] = [
     description:
       "Practical strategies for managing limited energy through pacing, prioritising, positioning, and planning — helping you do more of what matters most.",
     category: "Living Well",
-    pages: 5,
-    updated: "December 2024",
   },
   {
     id: "carers-guide",
@@ -179,9 +149,7 @@ const resources: Resource[] = [
     description:
       "Everything a carer needs to know — the practical realities of supporting someone with PH, coordinating care, managing medications, and recognising signs of deterioration.",
     category: "For Carers",
-    pages: 12,
     featured: true,
-    updated: "March 2025",
   },
   {
     id: "carer-wellbeing",
@@ -189,8 +157,6 @@ const resources: Resource[] = [
     description:
       "A compassionate guide to preventing carer burnout — recognising the signs, finding respite, and maintaining your own physical and mental health alongside your caring role.",
     category: "For Carers",
-    pages: 6,
-    updated: "February 2025",
   },
   {
     id: "advance-care-planning",
@@ -198,8 +164,6 @@ const resources: Resource[] = [
     description:
       "An introduction to advance care directives, enduring powers of attorney, and other legal preparations relevant to PH patients and their families.",
     category: "For Carers",
-    pages: 8,
-    updated: "January 2025",
   },
   {
     id: "talking-to-children",
@@ -207,8 +171,6 @@ const resources: Resource[] = [
     description:
       "Age-appropriate guidance on how to explain pulmonary hypertension to children, answer their questions honestly, and maintain family connection through a difficult diagnosis.",
     category: "For Carers",
-    pages: 5,
-    updated: "November 2024",
   },
   {
     id: "gp-referral-guide",
@@ -216,8 +178,6 @@ const resources: Resource[] = [
     description:
       "A concise clinical summary of when to suspect PH, the appropriate referral pathway to a specialist centre, and what investigations to order before referral.",
     category: "For Healthcare Professionals",
-    pages: 4,
-    updated: "April 2025",
   },
   {
     id: "diagnostic-algorithm",
@@ -225,8 +185,6 @@ const resources: Resource[] = [
     description:
       "A step-by-step clinical algorithm for investigating suspected pulmonary hypertension in adults, consistent with ESC/ERS 2022 guidelines.",
     category: "For Healthcare Professionals",
-    pages: 3,
-    updated: "March 2025",
   },
   {
     id: "patient-handout-ph",
@@ -234,8 +192,6 @@ const resources: Resource[] = [
     description:
       "A printable one-page summary of PH suitable for giving to newly diagnosed patients at their first specialist appointment.",
     category: "For Healthcare Professionals",
-    pages: 2,
-    updated: "February 2025",
   },
 ];
 
@@ -323,6 +279,46 @@ export default function ResourceLibrary() {
       </section>
 
       {/* Featured Resources */}
+      <section className="border-b border-border bg-white py-8">
+        <div className="container mx-auto max-w-5xl px-4">
+          <h2 className="font-heading text-2xl font-bold text-primary">
+            Read and print a web guide
+          </h2>
+          <p className="mt-3 text-foreground/80">
+            These web guides are available to read and print. Clinical review is
+            pending; they are separate from the planned PDF publications below.
+          </p>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            {[
+              {
+                title: "Your first steps",
+                path: "/recently-diagnosed/first-steps",
+              },
+              {
+                title: "Personal symptom and contact plan",
+                path: "/treatments/when-to-seek-help",
+              },
+              {
+                title: "Medicine safety questions",
+                path: "/treatments/medicine-safety",
+              },
+              {
+                title: "Questions for appointments",
+                path: "/recently-diagnosed/questions-for-doctor",
+              },
+            ].map((item) => (
+              <li key={item.path}>
+                <Link
+                  href={item.path}
+                  className="inline-block py-2 text-secondary underline underline-offset-4"
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <section className="py-12 border-b border-border/50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-heading font-bold text-primary mb-6">
@@ -453,7 +449,14 @@ export default function ResourceLibrary() {
           </div>
         </div>
       </section>
-      <section className="design-section"><div className="content-container"><InvolvementInvite title="Help guide future resources" description="We want future resources to reflect what people affected by PH need. Explore the planned ways to help shape this collection." /></div></section>
+      <section className="design-section">
+        <div className="content-container">
+          <InvolvementInvite
+            title="Help guide future resources"
+            description="We want future resources to reflect what people affected by PH need. Explore the planned ways to help shape this collection."
+          />
+        </div>
+      </section>
     </div>
   );
 }

@@ -28,6 +28,18 @@ export default function LivingWellHub() {
           title: "Everyday life",
           links: [
             {
+              title: "Fatigue, pacing and sleep",
+              path: "/living-well/fatigue-sleep",
+            },
+            {
+              title: "Relationships and life stages",
+              path: "/living-well/relationships-life-stages",
+            },
+            {
+              title: "Work, study and driving",
+              path: "/living-well/work-driving",
+            },
+            {
               title: "Exercise and physical activity",
               path: "/living-well/exercise",
             },
@@ -41,6 +53,19 @@ export default function LivingWellHub() {
         {
           title: "Your care",
           links: [
+            {
+              title: "Pregnancy and family planning",
+              path: "/living-well/pregnancy-family-planning",
+            },
+            { title: "Oxygen at home", path: "/living-well/oxygen-at-home" },
+            {
+              title: "Staying well and illness planning",
+              path: "/living-well/staying-well",
+            },
+            {
+              title: "Supportive care and planning ahead",
+              path: "/living-well/planning-ahead",
+            },
             { title: "Treatments explained", path: "/treatments/explained" },
             {
               title: "Understanding test results",
@@ -55,6 +80,10 @@ export default function LivingWellHub() {
         {
           title: "Support",
           links: [
+            {
+              title: "Accessing care and practical support",
+              path: "/living-well/accessing-care",
+            },
             {
               title: "Mental wellbeing",
               path: "/living-well/mental-wellbeing",

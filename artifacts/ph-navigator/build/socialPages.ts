@@ -1,5 +1,5 @@
 import type { Plugin } from "vite";
-import { involvementPages } from "../src/data/getInvolved";
+import { searchIndex } from "../src/data/searchIndex";
 
 function escapeHtml(value: string) {
   return value.replace(
@@ -49,7 +49,7 @@ export function involvementSocialPages(
           typeof entry.source === "string"
             ? entry.source
             : new TextDecoder().decode(entry.source);
-        for (const page of Object.values(involvementPages)) {
+        for (const page of searchIndex) {
           const title = `${page.title} | PH Navigator`;
           let html = source
             .replace(
@@ -84,6 +84,10 @@ export function involvementSocialPages(
             );
           }
           html = html.replace("</head>", `${tags.join("\n    ")}\n  </head>`);
+          if (page.path === "/") {
+            entry.source = html;
+            continue;
+          }
           this.emitFile({
             type: "asset",
             fileName: page.path.slice(1) + "/index.html",

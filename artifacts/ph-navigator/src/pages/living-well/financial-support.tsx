@@ -1,23 +1,40 @@
 import { SectionHeading } from "@/components/content/SectionHeading";
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'wouter';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowLeft, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function FinancialSupport() {
   return (
     <div className="w-full">
       <section className="bg-muted py-10 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <Button asChild variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10"><Link href="/living-well">
+          <Button
+            asChild
+            variant="ghost"
+            className="mb-6 -ml-4 text-primary hover:bg-primary/10"
+          >
+            <Link href="/living-well">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Living Well
-            </Link></Button>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Financial & Practical Support</SectionHeading>
+            </Link>
+          </Button>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <SectionHeading
+              as="h1"
+              className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6"
+            >
+              Financial & Practical Support
+            </SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
-              Navigating life with a chronic illness often brings financial challenges and logistical hurdles. Learn about the systems available in Australia to support you.
+              Navigating life with a chronic illness often brings financial
+              challenges and logistical hurdles. Learn about the systems
+              available in Australia to support you.
             </p>
           </motion.div>
         </div>
@@ -26,73 +43,129 @@ export default function FinancialSupport() {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="space-y-8">
-            
             <Card className="shadow-sm border-t-4 border-t-primary">
               <CardHeader>
-                <CardTitle className="text-2xl font-heading text-primary">The NDIS and PH</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">
+                  The NDIS and PH
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">
-                  The National Disability Insurance Scheme (NDIS) provides funding to Australians with a permanent and significant disability. While having pulmonary hypertension does not automatically guarantee NDIS access, many patients are eligible based on the functional impact of the disease.
+                  Some people with PH may meet NDIS access requirements;
+                  diagnosis alone does not determine eligibility. Age, residence
+                  and disability or early-intervention requirements apply. Ask
+                  your treating professionals to document your functional impact
+                  accurately, including how it varies over time, treatments
+                  tried and support needed.
                 </p>
                 <p className="text-lg text-foreground/80 mb-4">
-                  To be eligible, you must prove that your condition significantly impacts your ability to perform everyday activities (like showering, cooking, or moving around your home) and that these impairments are likely to be permanent.
+                  To be eligible, you must prove that your condition
+                  significantly impacts your ability to perform everyday
+                  activities (like showering, cooking, or moving around your
+                  home) and that these impairments are likely to be permanent.
                 </p>
                 <p className="text-lg text-foreground/80">
-                  <strong>Tip:</strong> The NDIS assesses how your condition affects your daily life, not just the medical diagnosis. When applying, be honest about your "worst days," not your best days. Ask your specialist and a physiotherapist/occupational therapist to provide detailed evidence of your functional limitations.
+                  Ask your treating professionals to describe your function
+                  accurately: usual needs, how symptoms vary, the frequency of
+                  difficult days, assistance required and treatments tried. A
+                  diagnosis alone does not determine access.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="shadow-sm border-t-4 border-t-secondary">
               <CardHeader>
-                <CardTitle className="text-2xl font-heading text-primary">Medications and the PBS</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">
+                  Medications and the PBS
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">
-                  Targeted PH therapies are extremely expensive, but in Australia, they are heavily subsidised by the government through the Pharmaceutical Benefits Scheme (PBS) if you meet strict medical criteria.
+                  Targeted PH therapies are extremely expensive, but in
+                  Australia, they are heavily subsidised by the government
+                  through the Pharmaceutical Benefits Scheme (PBS) if you meet
+                  strict medical criteria.
                 </p>
                 <p className="text-lg text-foreground/80 mb-4">
-                  To access these subsidised medications, you must be treated at an approved PH specialist centre. Your specialist must submit detailed paperwork (including RHC results and 6MWT distances) to the government to prove you qualify.
+                  PBS access depends on the medicine, indication and current
+                  restriction. PAH authority applications are managed by a
+                  physician with expertise in PAH under the applicable hospital
+                  arrangements. Your treating team and pharmacist can explain
+                  eligibility, costs and supply; CTEPH has separate
+                  arrangements. The PBS Safety Net applies to eligible costs and
+                  may require a card; some extra charges can remain.
                 </p>
                 <p className="text-lg text-foreground/80">
-                  <strong>The PBS Safety Net:</strong> If you or your family require a lot of medication in a calendar year, the PBS Safety Net protects you from high out-of-pocket costs. Once you reach the threshold, your medicines will either be free or significantly cheaper for the rest of the year. Ask your pharmacist to keep a record of your PBS spending.
+                  <strong>The PBS Safety Net:</strong> Eligible medicine
+                  spending can count towards the annual threshold. Check current
+                  rules, keep appropriate records and ask about applying for a
+                  Safety Net card. Costs after reaching the threshold depend on
+                  your circumstances, and some charges, including brand
+                  premiums, may remain. Ask your pharmacist which costs count.
+                  Check current Services Australia guidance rather than assuming
+                  every medicine becomes free.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="shadow-sm border-t-4 border-t-accent">
               <CardHeader>
-                <CardTitle className="text-2xl font-heading text-primary">Travel Assistance Schemes (IPTAAS)</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">
+                  Travel Assistance Schemes (IPTAAS)
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">
-                  Because PH is a rare disease, you will likely need to travel to a major city hospital to see a specialist team. If you live in a regional or rural area, you can claim financial assistance to help cover the costs of travel and accommodation.
+                  You may be eligible for help with travel and accommodation for
+                  specialist care. Each state and territory has its own rules
+                  and claim process, and assistance may cover only part of the
+                  cost. Check eligibility and any approvals before travel with
+                  the scheme or hospital social worker.
                 </p>
                 <p className="text-lg text-foreground/80 mb-4">
-                  Each state and territory has its own scheme. For example, in NSW it is called the Isolated Patients Travel and Accommodation Assistance Scheme (IPTAAS); in Victoria, it's the VPTAS; in Queensland, the PTSS.
+                  Each state and territory has its own scheme. For example, in
+                  NSW it is called the Isolated Patients Travel and
+                  Accommodation Assistance Scheme (IPTAAS); in Victoria, it's
+                  the VPTAS; in Queensland, the PTSS.
                 </p>
                 <p className="text-lg text-foreground/80">
-                  Your hospital social worker can provide the forms and help you understand what you are entitled to claim. Make sure you get the paperwork signed by your doctor during your visit.
+                  Your hospital social worker can provide the forms and help you
+                  understand what you are entitled to claim. Make sure you get
+                  the paperwork signed by your doctor during your visit.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="shadow-sm border-t-4 border-t-destructive">
               <CardHeader>
-                <CardTitle className="text-2xl font-heading text-primary">Work and Centrelink</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">
+                  Work and Centrelink
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">
-                  Many people with PH find they need to reduce their working hours, change the type of work they do, or stop working altogether due to severe fatigue and breathlessness.
+                  Many people with PH find they need to reduce their working
+                  hours, change the type of work they do, or stop working
+                  altogether due to severe fatigue and breathlessness.
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-lg text-foreground/80">
-                  <li><strong>Disability Support Pension (DSP):</strong> You may be eligible for the DSP through Services Australia (Centrelink) if you are unable to work 15 hours or more a week due to your condition. The application process is complex and requires substantial medical evidence.</li>
-                  <li><strong>Superannuation / Income Protection:</strong> Check your superannuation policy. Many include Income Protection Insurance or Total and Permanent Disability (TPD) insurance, which you may be able to claim if you can no longer work.</li>
+                  <li>
+                    DSP has medical and non-medical eligibility rules. These
+                    include how long your impairment is expected to last,
+                    treatment and stabilisation, assessed functional impact and
+                    work capacity. Program of Support rules may apply. Check
+                    current Services Australia guidance and consider help from a
+                    hospital social worker or welfare-rights service.
+                  </li>
+                  <li>
+                    <strong>Superannuation / Income Protection:</strong> Check
+                    your superannuation policy. Many include Income Protection
+                    Insurance or Total and Permanent Disability (TPD) insurance,
+                    which you may be able to claim if you can no longer work.
+                  </li>
                 </ul>
               </CardContent>
             </Card>
-
           </div>
         </div>
       </section>

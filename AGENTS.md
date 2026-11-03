@@ -208,3 +208,36 @@ participation, partner endorsements, public contact and review metadata remain
 subject to the existing user-approved gates. Do not invent review dates,
 patient outcomes, feedback findings or appointments. No one was contacted or
 recruited during this audit.
+
+## Informational changes — implementation branch
+
+The user subsequently authorised enacting the audit. `feat/information-update`
+implements the copy corrections and 16 new review-pending guides; see
+[implementation record](docs/information-update.md) and the per-finding/topic
+status register. Check PR/merge state before assuming this is on main or live.
+This is draft source implementation, not actual clinician/lived-experience approval.
+
+Current implementation locations:
+
+- `src/data/informationGuides.ts` defines the 16 guides; `App.tsx` routes them
+  dynamically and search includes them. Route counts must include these data
+  entries, not only literal `<Route path>` matches. Total canonical routes: 51.
+- `src/components/information/ArticleReview.tsx` supplies source/scope/status
+  details for existing articles and new guides. `articleSources.ts` contains
+  public source links. Source check date is not a clinical review/approval date.
+- `build/socialPages.ts` now emits heads for all canonical search-index routes,
+  not only the four involvement pages. Preserve base-path/origin validation.
+- The directory has 29 records: 25 reference-listed and four awaiting service
+  confirmation. Eleven reference-only additions have no invented coordinates,
+  direct phone or age scope. Confirm provider details before upgrading status.
+- Four real read/print links are available in the resource library. The 22
+  planned PDF records are still not published PDFs. Personal contact-plan
+  blanks are for paper, not online health-data collection.
+
+Preserve the three patient journeys and professional switch. Actual clinical,
+policy, cultural, language, paediatric and lived-experience review remains
+required where recorded; so do provider checks and current medicine-access
+verification. Keep stories, participation, partner/contact and file-publication
+gates honest. Technical PR #18 is separate: reconcile overlapping metadata,
+print/layout changes before merging both, and do not assume its backend/security
+changes were incorporated by this content branch.

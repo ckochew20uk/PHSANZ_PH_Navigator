@@ -1,0 +1,1391 @@
+{
+  "date": "2026-11-03",
+  "timezone": "Australia/Sydney",
+  "structure": {
+    "routes": 51,
+    "newGuides": 16,
+    "referenceEntries": 25,
+    "additionalPending": 4,
+    "existingCoordinates": 18,
+    "validGuideSources": true,
+    "validRelatedLinks": true,
+    "validHubLinks": true
+  },
+  "builds": {
+    "frozen_install": "passed with pnpm 10.26.1",
+    "full_workspace_ci": "passed",
+    "frontend_build_types": "passed",
+    "root_build": "passed",
+    "subpath_build": "passed"
+  },
+  "browser": {
+    "views": [
+      {
+        "path": "/",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Navigating life with pulmonary hypertension — together."
+        ],
+        "title": "Home | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/start",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Find your starting point"
+        ],
+        "title": "Find your starting point | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/understanding-ph",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Understanding PH"
+        ],
+        "title": "Understanding PH | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/recently-diagnosed",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Newly diagnosed with PH"
+        ],
+        "title": "Newly diagnosed with PH | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/recently-diagnosed/what-is-ph",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "What is Pulmonary Hypertension?"
+        ],
+        "title": "What is PH? | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/recently-diagnosed/diagnostic-journey",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "The Diagnostic Journey"
+        ],
+        "title": "The Diagnostic Journey | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/recently-diagnosed/questions-for-doctor",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Questions to Ask Your Doctor"
+        ],
+        "title": "Questions for Your Doctor | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Treatments & Clinical Facts"
+        ],
+        "title": "Treatments | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/treatments/explained",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Treatments Explained"
+        ],
+        "title": "Treatments Explained | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments/test-results",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Understanding Test Results"
+        ],
+        "title": "Understanding Test Results | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Living with PH"
+        ],
+        "title": "Living with PH | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/living-well/diet-nutrition",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Diet & Nutrition"
+        ],
+        "title": "Diet & Nutrition | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/exercise",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Exercise & Physical Activity"
+        ],
+        "title": "Exercise & Physical Activity | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/travel-oxygen",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Travel & Oxygen Logistics"
+        ],
+        "title": "Travel & Oxygen | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/mental-wellbeing",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Mental Wellbeing & Coping"
+        ],
+        "title": "Mental Wellbeing | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/financial-support",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Financial & Practical Support"
+        ],
+        "title": "Financial Support | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/community-voices",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Community Voices"
+        ],
+        "title": "Community Voices | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/caring-for-someone",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Supporting someone with PH"
+        ],
+        "title": "Supporting someone with PH | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/caring-for-someone/carers-role",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Understanding the Carer's Role"
+        ],
+        "title": "Understanding the Carer's Role | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/caring-for-someone/carer-wellbeing",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Protecting Your Own Wellbeing"
+        ],
+        "title": "Protecting Your Wellbeing as a Carer | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/caring-for-someone/carer-support",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Connecting with Carer Support Networks"
+        ],
+        "title": "Carer Support Networks | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/resource-library",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Resource Library"
+        ],
+        "title": "Resource Library | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/find-specialist",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Finding specialist PH care"
+        ],
+        "title": "Find a Specialist | PH Navigator",
+        "overflow": false,
+        "violations": [
+          {
+            "id": "target-size",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  "div[title=\"St Vincent's Hospital\"]"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 1px by 1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 1px instead of at least 24px."
+              },
+              {
+                "target": [
+                  "div[title=\"Royal Prince Alfred Hospital\"]"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 28px by 1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px."
+              },
+              {
+                "target": [
+                  ".leaflet-marker-icon.leaflet-interactive.leaflet-zoom-animated:nth-child(4)"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 2px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px."
+              },
+              {
+                "target": [
+                  "div[title=\"Austin Hospital\"]"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 1px by 36px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px."
+              },
+              {
+                "target": [
+                  "div[title=\"Royal Children's Hospital\"]"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 1px by 36px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px."
+              },
+              {
+                "target": [
+                  "div[title=\"The Prince Charles Hospital\"]"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 28px by 2px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 2px instead of at least 24px."
+              }
+            ]
+          }
+        ],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/about",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "About PH Navigator"
+        ],
+        "title": "About PH Navigator | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/about/partnership",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Our Partners"
+        ],
+        "title": "Our Partners | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/about/advisory-panel",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Our Review Panels"
+        ],
+        "title": "Our Review Panels | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/for-healthcare-professionals",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "For Healthcare Professionals"
+        ],
+        "title": "For Healthcare Professionals | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/governance-checklist",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Launch governance checklist"
+        ],
+        "title": "Launch Governance Checklist | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/privacy",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Privacy information — draft"
+        ],
+        "title": "Privacy information — draft | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/terms",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Terms of use — draft"
+        ],
+        "title": "Terms of use — draft | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/accessibility",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Accessibility"
+        ],
+        "title": "Accessibility | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/get-involved",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Get Involved"
+        ],
+        "title": "Get Involved | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/get-involved/feedback",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Share your feedback"
+        ],
+        "title": "Share your feedback | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/get-involved/focus-groups",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Join future conversations"
+        ],
+        "title": "Join future conversations | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/get-involved/contribute",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Explore ways to contribute"
+        ],
+        "title": "Explore ways to contribute | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/recently-diagnosed/first-steps",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Your first steps after diagnosis"
+        ],
+        "title": "Your first steps after diagnosis | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments/when-to-seek-help",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Symptoms and seeking help"
+        ],
+        "title": "Symptoms and seeking help | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments/medicine-safety",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Your medicine safety plan"
+        ],
+        "title": "Your medicine safety plan | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments/cteph",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Understanding CTEPH"
+        ],
+        "title": "Understanding CTEPH | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/pregnancy-family-planning",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Pregnancy and family planning"
+        ],
+        "title": "Pregnancy and family planning | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/oxygen-at-home",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Oxygen at home"
+        ],
+        "title": "Oxygen at home | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/fatigue-sleep",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Fatigue, pacing and sleep"
+        ],
+        "title": "Fatigue, pacing and sleep | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/relationships-life-stages",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Relationships, intimacy and life stages"
+        ],
+        "title": "Relationships, intimacy and life stages | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/work-driving",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Work, study, driving and mobility"
+        ],
+        "title": "Work, study, driving and mobility | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/recently-diagnosed/children-families",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Children, young people and families"
+        ],
+        "title": "Children, young people and families | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/recently-diagnosed/genetics",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Genetics and family questions"
+        ],
+        "title": "Genetics and family questions | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/planning-ahead",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Supportive care and planning ahead"
+        ],
+        "title": "Supportive care and planning ahead | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/staying-well",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Staying well and preparing for illness"
+        ],
+        "title": "Staying well and preparing for illness | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/accessing-care",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Accessing care and practical support"
+        ],
+        "title": "Accessing care and practical support | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments/research",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "Research, registries and your choices"
+        ],
+        "title": "Research, registries and your choices | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments/tests-and-procedures",
+        "width": 390,
+        "status": 200,
+        "h1": [
+          "What to expect from tests"
+        ],
+        "title": "What to expect from tests | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Navigating life with pulmonary hypertension — together."
+        ],
+        "title": "Home | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/start",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Find your starting point"
+        ],
+        "title": "Find your starting point | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/understanding-ph",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Understanding PH"
+        ],
+        "title": "Understanding PH | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/recently-diagnosed",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Newly diagnosed with PH"
+        ],
+        "title": "Newly diagnosed with PH | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/recently-diagnosed/what-is-ph",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "What is Pulmonary Hypertension?"
+        ],
+        "title": "What is PH? | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/recently-diagnosed/diagnostic-journey",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "The Diagnostic Journey"
+        ],
+        "title": "The Diagnostic Journey | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/recently-diagnosed/questions-for-doctor",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Questions to Ask Your Doctor"
+        ],
+        "title": "Questions for Your Doctor | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Treatments & Clinical Facts"
+        ],
+        "title": "Treatments | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/treatments/explained",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Treatments Explained"
+        ],
+        "title": "Treatments Explained | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments/test-results",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Understanding Test Results"
+        ],
+        "title": "Understanding Test Results | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Living with PH"
+        ],
+        "title": "Living with PH | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/living-well/diet-nutrition",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Diet & Nutrition"
+        ],
+        "title": "Diet & Nutrition | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/exercise",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Exercise & Physical Activity"
+        ],
+        "title": "Exercise & Physical Activity | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/travel-oxygen",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Travel & Oxygen Logistics"
+        ],
+        "title": "Travel & Oxygen | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/mental-wellbeing",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Mental Wellbeing & Coping"
+        ],
+        "title": "Mental Wellbeing | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/financial-support",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Financial & Practical Support"
+        ],
+        "title": "Financial Support | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/community-voices",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Community Voices"
+        ],
+        "title": "Community Voices | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/caring-for-someone",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Supporting someone with PH"
+        ],
+        "title": "Supporting someone with PH | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/caring-for-someone/carers-role",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Understanding the Carer's Role"
+        ],
+        "title": "Understanding the Carer's Role | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/caring-for-someone/carer-wellbeing",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Protecting Your Own Wellbeing"
+        ],
+        "title": "Protecting Your Wellbeing as a Carer | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/caring-for-someone/carer-support",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Connecting with Carer Support Networks"
+        ],
+        "title": "Carer Support Networks | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/resource-library",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Resource Library"
+        ],
+        "title": "Resource Library | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/find-specialist",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Finding specialist PH care"
+        ],
+        "title": "Find a Specialist | PH Navigator",
+        "overflow": false,
+        "violations": [
+          {
+            "id": "target-size",
+            "impact": "serious",
+            "nodes": [
+              {
+                "target": [
+                  "div[title=\"St Vincent's Hospital\"]"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 1px by 1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 1px instead of at least 24px."
+              },
+              {
+                "target": [
+                  "div[title=\"Royal Prince Alfred Hospital\"]"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 28px by 1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px."
+              },
+              {
+                "target": [
+                  ".leaflet-marker-icon.leaflet-interactive.leaflet-zoom-animated:nth-child(4)"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 2px by 22px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px."
+              },
+              {
+                "target": [
+                  "div[title=\"Austin Hospital\"]"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 1px by 36px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px."
+              },
+              {
+                "target": [
+                  "div[title=\"Royal Children's Hospital\"]"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 1px by 36px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px."
+              },
+              {
+                "target": [
+                  "div[title=\"The Prince Charles Hospital\"]"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 28px by 2px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 2px instead of at least 24px."
+              },
+              {
+                "target": [
+                  "div[title=\"Perth Children's Hospital\"]"
+                ],
+                "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 28px by 2px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 2px instead of at least 24px."
+              }
+            ]
+          }
+        ],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/about",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "About PH Navigator"
+        ],
+        "title": "About PH Navigator | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/about/partnership",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Our Partners"
+        ],
+        "title": "Our Partners | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/about/advisory-panel",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Our Review Panels"
+        ],
+        "title": "Our Review Panels | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/for-healthcare-professionals",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "For Healthcare Professionals"
+        ],
+        "title": "For Healthcare Professionals | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/governance-checklist",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Launch governance checklist"
+        ],
+        "title": "Launch Governance Checklist | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/privacy",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Privacy information — draft"
+        ],
+        "title": "Privacy information — draft | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/terms",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Terms of use — draft"
+        ],
+        "title": "Terms of use — draft | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/accessibility",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Accessibility"
+        ],
+        "title": "Accessibility | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/get-involved",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Get Involved"
+        ],
+        "title": "Get Involved | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/get-involved/feedback",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Share your feedback"
+        ],
+        "title": "Share your feedback | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/get-involved/focus-groups",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Join future conversations"
+        ],
+        "title": "Join future conversations | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/get-involved/contribute",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Explore ways to contribute"
+        ],
+        "title": "Explore ways to contribute | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 0
+      },
+      {
+        "path": "/recently-diagnosed/first-steps",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Your first steps after diagnosis"
+        ],
+        "title": "Your first steps after diagnosis | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments/when-to-seek-help",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Symptoms and seeking help"
+        ],
+        "title": "Symptoms and seeking help | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments/medicine-safety",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Your medicine safety plan"
+        ],
+        "title": "Your medicine safety plan | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments/cteph",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Understanding CTEPH"
+        ],
+        "title": "Understanding CTEPH | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/pregnancy-family-planning",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Pregnancy and family planning"
+        ],
+        "title": "Pregnancy and family planning | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/oxygen-at-home",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Oxygen at home"
+        ],
+        "title": "Oxygen at home | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/fatigue-sleep",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Fatigue, pacing and sleep"
+        ],
+        "title": "Fatigue, pacing and sleep | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/relationships-life-stages",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Relationships, intimacy and life stages"
+        ],
+        "title": "Relationships, intimacy and life stages | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/work-driving",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Work, study, driving and mobility"
+        ],
+        "title": "Work, study, driving and mobility | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/recently-diagnosed/children-families",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Children, young people and families"
+        ],
+        "title": "Children, young people and families | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/recently-diagnosed/genetics",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Genetics and family questions"
+        ],
+        "title": "Genetics and family questions | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/planning-ahead",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Supportive care and planning ahead"
+        ],
+        "title": "Supportive care and planning ahead | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/staying-well",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Staying well and preparing for illness"
+        ],
+        "title": "Staying well and preparing for illness | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/living-well/accessing-care",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Accessing care and practical support"
+        ],
+        "title": "Accessing care and practical support | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments/research",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "Research, registries and your choices"
+        ],
+        "title": "Research, registries and your choices | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      },
+      {
+        "path": "/treatments/tests-and-procedures",
+        "width": 1440,
+        "status": 200,
+        "h1": [
+          "What to expect from tests"
+        ],
+        "title": "What to expect from tests | PH Navigator",
+        "overflow": false,
+        "violations": [],
+        "reviewStatus": 1
+      }
+    ],
+    "runtimeErrors": [],
+    "finalChangedPagesRechecked": 12,
+    "visualRefinementsRechecked": 4
+  },
+  "manual": [
+    {
+      "check": "raw static heads and base paths",
+      "routes": 51,
+      "builds": 2,
+      "passed": true
+    },
+    {
+      "check": "new guide sources/review labels/no health forms",
+      "guides": 16,
+      "passed": true
+    },
+    {
+      "check": "directory reconciliation and honest map coverage",
+      "reference": 25,
+      "pending": 4,
+      "passed": true
+    },
+    {
+      "check": "search discovers new guide",
+      "passed": true
+    },
+    {
+      "check": "320px reflow and professional switch",
+      "samples": 4,
+      "passed": true
+    },
+    {
+      "check": "real guide print action and blank personal plan",
+      "passed": true
+    },
+    {
+      "check": "subpath direct arrivals and assets",
+      "samples": 6,
+      "passed": true
+    },
+    {
+      "check": "no real newsletter requests",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Clinical/source status remains review pending; no medical approval inferred.",
+    "Map target overlap remains; no complete accessibility certification.",
+    "Local output and test origin only; no production deployment verification.",
+    "No real newsletter request or new health-information collection."
+  ]
+}
