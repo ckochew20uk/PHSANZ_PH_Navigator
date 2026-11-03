@@ -4,7 +4,7 @@ Prepared 3 November 2026 from the user-supplied `Logo.svg`. The unmodified sourc
 
 ## Included versions
 
-- Horizontal logo with “PH Navigator”: colour, white and navy; SVG and transparent 2160 × 520 PNG.
+- Horizontal logo with “PH Navigator”: colour, white and navy; SVG and transparent 1766 × 520 PNG.
 - Stacked logo with “PH Navigator”: colour, white and navy; SVG and transparent 1520 × 1440 PNG.
 - Symbol only: colour, white and navy; SVG and transparent 1024 × 1024 PNG.
 - Simplified browser icon: SVG, 16/32px PNG and multi-size ICO.
@@ -12,7 +12,7 @@ Prepared 3 November 2026 from the user-supplied `Logo.svg`. The unmodified sourc
 - Social card: 1200 × 630 PNG and editable SVG. Configure an absolute image URL in social metadata after selecting the public deployment URL; the kit does not assume a canonical host.
 - `colours.json`, this guide and `index.html` visual preview.
 
-SVG wordmark letters are outlined DejaVu Sans Bold. They do not require fonts on the viewing device. The original source remains editable; lettering is separately editable as paths in derived SVGs. Font attribution/license is included in FONT-LICENSE.txt. No fonts are embedded or downloaded by the logo assets.
+SVG wordmark letters are outlined DM Sans Medium (weight 500). They do not require fonts on the viewing device. The original source remains editable; lettering is separately editable as paths in derived SVGs. Font attribution/license is included in FONT-LICENSE.txt. No fonts are embedded or downloaded by the logo assets.
 
 ## Usage
 

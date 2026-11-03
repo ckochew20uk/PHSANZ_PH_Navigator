@@ -6,7 +6,7 @@ Prepared 3 November 2026 following the user's request for a standard digital kit
 
 The uploaded SVG is stored unmodified at `design/brand/logo-master.svg`. Derived digital exports, the palette, license attribution, usage guide, visual kit page and downloadable ZIP are in `artifacts/ph-navigator/public/brand/`.
 
-Open `/brand/` on the preview site to compare nine variants and download files. `brand/ph-navigator-digital-kit.zip` includes the original source, horizontal and stacked wordmarks, colour/white/navy marks, SVG and PNG exports, browser icons, home-screen icon, social image and usage notes. No external fonts are needed to display the outlined SVG wordmarks. The wordmark uses outlined DejaVu Sans Bold; license attribution is included.
+Open `/brand/` on the preview site to compare nine variants and download files. `brand/ph-navigator-digital-kit.zip` includes the original source, horizontal and stacked wordmarks, colour/white/navy marks, SVG and PNG exports, browser icons, home-screen icon, social image and usage notes. No external fonts are needed to display the outlined SVG wordmarks. The wordmark uses outlined DM Sans Medium (weight 500); license attribution is included.
 
 ## Website application
 
@@ -32,3 +32,11 @@ This is the requested brand application, not completion of the original Stage 2 
 Screenshots: [homepage desktop](stage-1-screenshots/homepage-desktop.png), [homepage mobile](stage-1-screenshots/homepage-mobile.png), [brand kit](stage-1-screenshots/brand-kit-desktop.png).
 
 A full WCAG audit and all-page design-system review remain outstanding. Shared dark-mode tokens are unchanged. No newsletter test submission was made.
+
+## Approved wordmark refinement — DM Sans Medium
+
+The user selected DM Sans from the three-font comparison. All six horizontal/stacked wordmarks now use actual DM Sans Medium (500) with outlined glyphs; the stacked text is centred and the horizontal canvas fitted to its width. Matching PNGs, website header/footer files, social artwork, preview page and ZIP are refreshed. The symbol and palette are retained. Body typography is unchanged.
+
+The font source and SIL Open Font License are stored in `design/brand/fonts/` and included in the ZIP. `design/brand/build_logos.py` regenerates the SVGs from the unmodified master and font using Python fontTools. Historical three-font comparison files remain available for reference but are excluded from the final ZIP.
+
+Production build and frontend TypeScript pass. Browser checks again pass at six widths, all 12 homepage destinations, nine logo variants and six primary downloads. SVG and PNG dimensions, PNG transparency and website logo copies match. Review screenshots above show the DM Sans wordmarks.
