@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -10,13 +11,11 @@ export default function TestResults() {
     <div className="w-full">
       <section className="bg-muted py-10 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <Link href="/treatments">
-            <Button variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10">
+          <Button asChild variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10"><Link href="/treatments">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Treatments
-            </Button>
-          </Link>
+            </Link></Button>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Understanding Test Results</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Understanding Test Results</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
               Medical reports are full of acronyms and numbers. This guide helps you understand what your test results actually mean.
             </p>
@@ -32,7 +31,7 @@ export default function TestResults() {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Activity className="h-6 w-6 text-primary" />
-                  <CardTitle className="text-2xl font-serif text-primary">Right Heart Catheterisation (RHC)</CardTitle>
+                  <CardTitle className="text-2xl font-heading text-primary">Right Heart Catheterisation (RHC)</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
@@ -60,7 +59,7 @@ export default function TestResults() {
 
             <Card className="shadow-sm border-t-4 border-t-secondary">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif text-primary">Echocardiogram (Echo)</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">Echocardiogram (Echo)</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-foreground/80 mb-4">
@@ -76,7 +75,7 @@ export default function TestResults() {
 
             <Card className="shadow-sm border-t-4 border-t-accent">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif text-primary">Functional & Blood Tests</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">Functional & Blood Tests</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">

@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence, easeOut } from 'framer-motion';
 import { FileText, Download, Search, BookOpen, Filter } from 'lucide-react';
@@ -240,11 +241,11 @@ const categories: Category[] = [
 ];
 
 const categoryColours: Record<Exclude<Category, 'All'>, string> = {
-  'Newly Diagnosed': 'bg-[#E8735A]/15 text-[#C45A43] border-[#E8735A]/30',
-  'Treatments': 'bg-[#1B5FAF]/10 text-[#1B5FAF] border-[#1B5FAF]/20',
-  'Living Well': 'bg-[#3AADA8]/15 text-[#2D8A86] border-[#3AADA8]/30',
-  'For Carers': 'bg-[#7EB8D4]/20 text-[#4A8FAD] border-[#7EB8D4]/40',
-  'For Healthcare Professionals': 'bg-[#1C3347]/10 text-[#1C3347] border-[#1C3347]/20',
+  'Newly Diagnosed': 'bg-[var(--brand-peach)] text-primary border-primary/20',
+  'Treatments': 'bg-accent text-primary border-primary/20',
+  'Living Well': 'bg-[var(--brand-sea-mist)] text-primary border-primary/20',
+  'For Carers': 'bg-[var(--brand-lavender)] text-primary border-primary/20',
+  'For Healthcare Professionals': 'bg-muted text-primary border-primary/20',
 };
 
 const filterButtonBase =
@@ -296,9 +297,9 @@ export default function ResourceLibrary() {
               <BookOpen className="h-4 w-4" />
               Patient Resources
             </div>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary leading-tight mb-4">
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary leading-tight mb-4">
               Resource Library
-            </h1>
+            </SectionHeading>
             <p className="text-xl text-foreground/75 leading-relaxed">
               Downloadable fact sheets, guides, and clinical summaries — all reviewed by the PH Navigator Medical Advisory Panel and written in plain language for patients, carers, and clinicians.
             </p>
@@ -309,7 +310,7 @@ export default function ResourceLibrary() {
       {/* Featured Resources */}
       <section className="py-12 border-b border-border/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-serif font-bold text-primary mb-6">Most Downloaded</h2>
+          <h2 className="text-2xl font-heading font-bold text-primary mb-6">Most Downloaded</h2>
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -329,9 +330,9 @@ export default function ResourceLibrary() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-            <h2 className="text-2xl font-serif font-bold text-primary">All Resources</h2>
+            <h2 className="text-2xl font-heading font-bold text-primary">All Resources</h2>
             <div className="relative w-full md:w-80">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-foreground/40" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 type="search"
                 placeholder="Search resources..."
@@ -344,7 +345,7 @@ export default function ResourceLibrary() {
 
           {/* Category Filter */}
           <div className="flex items-center gap-2 flex-wrap mb-8">
-            <Filter className="h-4 w-4 text-foreground/50 shrink-0" />
+            <Filter className="h-4 w-4 text-muted-foreground shrink-0" />
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -368,7 +369,7 @@ export default function ResourceLibrary() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="text-center py-16 text-foreground/50"
+                className="text-center py-16 text-muted-foreground"
               >
                 <FileText className="h-12 w-12 mx-auto mb-4 text-foreground/20" />
                 <p className="text-lg font-medium">No resources match your search.</p>
@@ -431,7 +432,7 @@ function FeaturedCard({ resource }: { resource: Resource }) {
         <p className="text-sm text-foreground/70 leading-relaxed line-clamp-3">{resource.description}</p>
       </CardContent>
       <CardFooter className="pt-0 flex items-center justify-between">
-        <span className="text-xs text-foreground/50">{resource.pages} pages · Updated {resource.updated}</span>
+        <span className="text-xs text-muted-foreground">{resource.pages} pages · Updated {resource.updated}</span>
         <DownloadButton />
       </CardFooter>
     </Card>
@@ -458,7 +459,7 @@ function ResourceCard({ resource }: { resource: Resource }) {
         </CardDescription>
       </CardContent>
       <CardFooter className="pt-0 flex items-center justify-between border-t border-border/40 mt-auto pt-3">
-        <span className="text-xs text-foreground/45">{resource.pages} pages · {resource.updated}</span>
+        <span className="text-xs text-muted-foreground">{resource.pages} pages · {resource.updated}</span>
         <DownloadButton />
       </CardFooter>
     </Card>

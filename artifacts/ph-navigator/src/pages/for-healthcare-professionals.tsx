@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Stethoscope, Link as LinkIcon, Download } from 'lucide-react';
@@ -13,7 +14,7 @@ export default function ForProfessionals() {
             <div className="inline-flex items-center gap-2 bg-white/20 px-3 py-1 rounded-full text-sm font-semibold mb-6">
               <Stethoscope className="h-4 w-4" /> Clinical Resources
             </div>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">For Healthcare Professionals</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold mb-6">For Healthcare Professionals</SectionHeading>
             <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed max-w-3xl">
               Clinical resources, referral guidelines, and patient education materials provided by PHSANZ.
             </p>
@@ -28,7 +29,7 @@ export default function ForProfessionals() {
             
             <Card className="shadow-md border-border">
               <CardHeader className="bg-muted/30 border-b">
-                <CardTitle className="text-2xl font-serif text-primary">Referral Criteria</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">Referral Criteria</CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-foreground/80 mb-4">
@@ -48,7 +49,7 @@ export default function ForProfessionals() {
 
             <Card className="shadow-md border-border">
               <CardHeader className="bg-muted/30 border-b">
-                <CardTitle className="text-2xl font-serif text-primary">Clinical Guidelines</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">Clinical Guidelines</CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-foreground/80 mb-4">
@@ -58,14 +59,14 @@ export default function ForProfessionals() {
                   <div className="border border-border p-3 rounded hover:bg-muted transition-colors cursor-pointer flex justify-between items-center">
                     <div>
                       <p className="font-semibold text-primary">ESC/ERS Guidelines (2022)</p>
-                      <p className="text-sm text-foreground/60">Diagnosis and treatment of pulmonary hypertension</p>
+                      <p className="text-sm text-muted-foreground">Diagnosis and treatment of pulmonary hypertension</p>
                     </div>
                     <ExternalLinkIcon className="h-5 w-5 text-muted-foreground" />
                   </div>
                   <div className="border border-border p-3 rounded hover:bg-muted transition-colors cursor-pointer flex justify-between items-center">
                     <div>
                       <p className="font-semibold text-primary">TSANZ Guidelines</p>
-                      <p className="text-sm text-foreground/60">Australian specific context and PBS prescribing</p>
+                      <p className="text-sm text-muted-foreground">Australian specific context and PBS prescribing</p>
                     </div>
                     <ExternalLinkIcon className="h-5 w-5 text-muted-foreground" />
                   </div>
@@ -75,7 +76,7 @@ export default function ForProfessionals() {
 
           </div>
 
-          <h2 className="text-3xl font-serif font-bold text-primary mb-8 border-b pb-4">Patient Education Handouts</h2>
+          <h2 className="text-3xl font-heading font-bold text-primary mb-8 border-b pb-4">Patient Education Handouts</h2>
           <p className="text-lg text-foreground/80 mb-8">
             Download and print these one-page resources to give to patients during consultations. They are designed to supplement the information on this website.
           </p>

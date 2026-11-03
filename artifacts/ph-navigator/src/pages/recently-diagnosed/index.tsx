@@ -1,3 +1,5 @@
+import { ContentContainer } from "@/components/content/ContentContainer";
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
@@ -10,14 +12,14 @@ export default function RecentlyDiagnosed() {
     <div className="w-full">
       {/* Header */}
       <section className="bg-muted py-12 md:py-20 border-b border-border/50">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <ContentContainer reading>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Recently Diagnosed</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Recently Diagnosed</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed mb-8">
               Receiving a diagnosis of pulmonary hypertension can be overwhelming and frightening. Take a deep breath. You don't need to understand everything today. Start here to learn the basics and prepare for what comes next.
             </p>
           </motion.div>
-        </div>
+        </ContentContainer>
       </section>
 
       {/* Content */}
@@ -27,12 +29,12 @@ export default function RecentlyDiagnosed() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             <Link href="/recently-diagnosed/what-is-ph" className="block">
-              <Card className="h-full hover:shadow-lg transition-shadow border-t-4 border-t-destructive flex flex-col group">
+              <Card className="h-full hover:shadow-lg transition-shadow border-t-4 border-t-secondary flex flex-col group">
                 <CardHeader>
-                  <div className="bg-destructive/10 w-14 h-14 rounded-full flex items-center justify-center text-destructive mb-4 group-hover:scale-110 transition-transform">
+                  <div className="bg-[var(--brand-peach)] w-14 h-14 rounded-full flex items-center justify-center text-secondary mb-4 group-hover:scale-110 transition-transform">
                     <BookOpen size={28} />
                   </div>
-                  <CardTitle className="text-2xl font-serif text-primary">What is PH?</CardTitle>
+                  <CardTitle className="text-2xl font-heading text-primary">What is PH?</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
                   <p className="text-lg text-foreground/80 mb-6 flex-1">
@@ -51,7 +53,7 @@ export default function RecentlyDiagnosed() {
                   <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
                     <Stethoscope size={28} />
                   </div>
-                  <CardTitle className="text-2xl font-serif text-primary">Diagnostic Journey</CardTitle>
+                  <CardTitle className="text-2xl font-heading text-primary">Diagnostic Journey</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
                   <p className="text-lg text-foreground/80 mb-6 flex-1">
@@ -70,7 +72,7 @@ export default function RecentlyDiagnosed() {
                   <div className="bg-secondary/10 w-14 h-14 rounded-full flex items-center justify-center text-secondary mb-4 group-hover:scale-110 transition-transform">
                     <FileQuestion size={28} />
                   </div>
-                  <CardTitle className="text-2xl font-serif text-primary">Questions for Your Doctor</CardTitle>
+                  <CardTitle className="text-2xl font-heading text-primary">Questions for Your Doctor</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
                   <p className="text-lg text-foreground/80 mb-6 flex-1">
@@ -86,15 +88,13 @@ export default function RecentlyDiagnosed() {
           </div>
 
           <div className="mt-20 bg-accent/20 rounded-2xl p-8 md:p-12 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-serif font-bold text-primary mb-4">A Note on Googling</h2>
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-4">A Note on Googling</h2>
             <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
               When newly diagnosed, it is natural to search the internet for answers. Please be aware that much of the information online regarding pulmonary hypertension is outdated or clinically inaccurate. Survival rates and treatment options have improved dramatically in recent years. Always rely on information from your specialist team and trusted sources like PH Navigator.
             </p>
-            <Link href="/find-specialist">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full"><Link href="/find-specialist">
                 Find a Specialist Centre
-              </Button>
-            </Link>
+              </Link></Button>
           </div>
 
         </div>

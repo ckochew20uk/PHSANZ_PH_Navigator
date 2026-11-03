@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -10,13 +11,11 @@ export default function WhatIsPH() {
     <div className="w-full">
       <section className="bg-muted py-10 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <Link href="/recently-diagnosed">
-            <Button variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10">
+          <Button asChild variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10"><Link href="/recently-diagnosed">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Recently Diagnosed
-            </Button>
-          </Link>
+            </Link></Button>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">What is Pulmonary Hypertension?</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">What is Pulmonary Hypertension?</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
               An overview of pulmonary hypertension (PH), how it affects your body, and the different types of the condition.
             </p>
@@ -132,11 +131,9 @@ export default function WhatIsPH() {
               <h4 className="font-bold text-primary text-xl mb-1">Next Step</h4>
               <p className="text-foreground/80">Learn what to expect during the diagnosis process.</p>
             </div>
-            <Link href="/recently-diagnosed/diagnostic-journey">
-              <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-full px-6"><Link href="/recently-diagnosed/diagnostic-journey">
                 The Diagnostic Journey <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
+              </Link></Button>
           </div>
         </div>
       </section>

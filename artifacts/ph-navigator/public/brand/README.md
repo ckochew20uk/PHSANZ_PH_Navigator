@@ -31,3 +31,7 @@ Allow clear space of at least one tenth of the symbol height on each side. Sugge
 Shared website semantic HSL tokens closely approximate the source HEX colours. Logo SVGs and kit swatches retain the exact HEX values. Colour never replaces text labels or focus indication.
 
 The uploaded mark contains no text. All wordmark layouts, monochrome versions, simplified icons and colour applications in this kit are proposals derived for this review; no organisational endorsement is implied.
+
+## Stage 2 website typography
+
+Nunito Bold is used for heroes and headings. DM Sans Regular/Medium is used for reading text and UI. Wordmarks remain outlined DM Sans Medium. The website self-hosts subset variable WOFF2 fonts with swap fallbacks; OFL licenses are included in its fonts directory. The design-system.html preview illustrates the type scale, semantic colours and shared controls.

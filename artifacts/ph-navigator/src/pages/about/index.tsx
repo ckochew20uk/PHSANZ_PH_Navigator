@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -10,7 +11,7 @@ export default function AboutHub() {
       <section className="bg-muted py-12 md:py-20 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-5xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">About Us & Governance</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">About Us & Governance</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed mb-8 max-w-3xl">
               PH Navigator is built on a unique collaboration between patients and medical professionals, ensuring information is both clinically accurate and empathetically delivered.
             </p>
@@ -29,7 +30,7 @@ export default function AboutHub() {
                   <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
                     <HeartHandshakeIcon size={28} />
                   </div>
-                  <CardTitle className="text-2xl font-serif text-primary">The Partnership</CardTitle>
+                  <CardTitle className="text-2xl font-heading text-primary">The Partnership</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
                   <p className="text-lg text-foreground/80 mb-6 flex-1">
@@ -48,7 +49,7 @@ export default function AboutHub() {
                   <div className="bg-secondary/10 w-14 h-14 rounded-full flex items-center justify-center text-secondary mb-4 group-hover:scale-110 transition-transform">
                     <ShieldCheck size={28} />
                   </div>
-                  <CardTitle className="text-2xl font-serif text-primary">Advisory Panels</CardTitle>
+                  <CardTitle className="text-2xl font-heading text-primary">Advisory Panels</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
                   <p className="text-lg text-foreground/80 mb-6 flex-1">

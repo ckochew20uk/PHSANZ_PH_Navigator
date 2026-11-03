@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -50,7 +51,7 @@ export default function CommunityVoices() {
       <section className="bg-muted py-12 md:py-20 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-5xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Community Voices</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Community Voices</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed max-w-3xl">
               Hear from Australians navigating life with pulmonary hypertension. Every journey is unique, but you are not alone on this path.
             </p>
@@ -87,13 +88,13 @@ export default function CommunityVoices() {
               <Card key={story.id} className="h-full hover:shadow-lg transition-shadow flex flex-col group border-t-4 border-t-transparent hover:border-t-primary">
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-4">
-                    <div className={`${story.color} w-16 h-16 rounded-full flex items-center justify-center text-white font-serif text-2xl font-bold shrink-0`}>
+                    <div className={`${story.color} w-16 h-16 rounded-full flex items-center justify-center text-white font-heading text-2xl font-bold shrink-0`}>
                       {story.name.charAt(0)}
                     </div>
                     <div>
-                      <h2 className="text-2xl font-serif font-bold text-primary">{story.name}, {story.age}</h2>
+                      <h2 className="text-2xl font-heading font-bold text-primary">{story.name}, {story.age}</h2>
                       <p className="text-sm text-foreground/70 font-semibold">{story.diagnosis}</p>
-                      <p className="text-sm text-foreground/60">{story.timeSince}</p>
+                      <p className="text-sm text-muted-foreground">{story.timeSince}</p>
                     </div>
                   </div>
                 </CardHeader>
@@ -115,15 +116,13 @@ export default function CommunityVoices() {
           </div>
 
           <div className="mt-20 bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">Share Your Story</h2>
+            <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">Share Your Story</h2>
             <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">
               Your experience could be the exact words someone else needs to hear today. If you're interested in sharing your PH journey with our community, we would love to hear from you.
             </p>
-            <Link href="/about/partnership">
-              <Button size="lg" className="bg-destructive hover:bg-destructive/90 text-white rounded-full">
+            <Button asChild size="lg" className="bg-destructive hover:bg-destructive/90 text-white rounded-full"><Link href="/about/partnership">
                 Get in Touch
-              </Button>
-            </Link>
+              </Link></Button>
           </div>
 
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
 import {
   Home,
@@ -57,9 +57,18 @@ const drawerSections: NavSection[] = [
     path: "/caring-for-someone",
     icon: HeartHandshake,
     sub: [
-      { title: "Understanding the Carer's Role", path: "/caring-for-someone/carers-role" },
-      { title: "Protecting Your Wellbeing", path: "/caring-for-someone/carer-wellbeing" },
-      { title: "Carer Support Networks", path: "/caring-for-someone/carer-support" },
+      {
+        title: "Understanding the Carer's Role",
+        path: "/caring-for-someone/carers-role",
+      },
+      {
+        title: "Protecting Your Wellbeing",
+        path: "/caring-for-someone/carer-wellbeing",
+      },
+      {
+        title: "Carer Support Networks",
+        path: "/caring-for-someone/carer-support",
+      },
     ],
   },
   {
@@ -80,12 +89,54 @@ const drawerSections: NavSection[] = [
 
 export function MobileBottomNav() {
   const [location] = useLocation();
+  const panelRef = useRef<HTMLDivElement>(null);
+  const moreButtonRef = useRef<HTMLButtonElement>(null);
+
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const { openSearch } = useSearch();
 
+  useEffect(() => {
+    if (!isDrawerOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const focusables = () =>
+      Array.from(
+        panelRef.current?.querySelectorAll<HTMLElement>(
+          "a[href], button:not([disabled]), input",
+        ) ?? [],
+      ).filter((el) => el.offsetParent !== null);
+    focusables()[0]?.focus();
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsDrawerOpen(false);
+        setExpandedSection(null);
+      }
+      if (event.key === "Tab") {
+        const elements = focusables();
+        const first = elements[0];
+        const last = elements[elements.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }
+    };
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKey);
+      moreButtonRef.current?.focus();
+    };
+  }, [isDrawerOpen]);
+
   const isActive = (path: string, exact = false) =>
-    exact ? location === path : location === path || location.startsWith(path + "/");
+    exact
+      ? location === path
+      : location === path || location.startsWith(path + "/");
 
   const closeDrawer = () => {
     setIsDrawerOpen(false);
@@ -112,14 +163,23 @@ export function MobileBottomNav() {
           />
 
           {/* Drawer panel */}
-          <div className="xl:hidden fixed bottom-16 left-0 right-0 z-50 rounded-t-2xl bg-white shadow-2xl border-t border-border/30 max-h-[75dvh] flex flex-col">
+          <div
+            ref={panelRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="More sections"
+            id="more-sections"
+            className="xl:hidden fixed bottom-16 left-0 right-0 z-50 rounded-t-2xl bg-white shadow-2xl border-t border-border/30 max-h-[75dvh] flex flex-col"
+          >
             {/* Handle + header */}
             <div className="relative flex items-center justify-between px-5 pt-4 pb-3 border-b border-border/30">
               <div className="w-10 h-1 rounded-full bg-muted absolute left-1/2 -translate-x-1/2 top-2" />
-              <p className="text-sm font-bold text-foreground/60 uppercase tracking-wider">More sections</p>
+              <p className="text-sm font-bold text-muted-foreground uppercase tracking-wider">
+                More sections
+              </p>
               <button
                 onClick={closeDrawer}
-                className="p-1.5 rounded-full hover:bg-muted text-foreground/50 hover:text-foreground transition-colors"
+                className="p-1.5 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Close menu"
               >
                 <X className="h-5 w-5" />
@@ -129,7 +189,7 @@ export function MobileBottomNav() {
             {/* Search shortcut inside drawer */}
             <button
               onClick={handleSearchClick}
-              className="mx-3 mt-3 flex items-center gap-3 px-4 py-3 rounded-xl bg-muted/60 hover:bg-muted text-foreground/60 hover:text-foreground transition-colors"
+              className="mx-3 mt-3 flex items-center gap-3 px-4 py-3 rounded-xl bg-muted/60 hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
             >
               <Search className="h-4 w-4" />
               <span className="text-sm font-medium">Search all topics…</span>
@@ -150,27 +210,40 @@ export function MobileBottomNav() {
                         onClick={section.sub ? undefined : closeDrawer}
                         className={cn(
                           "flex-1 flex items-center gap-3 px-3 py-3.5 rounded-xl transition-colors",
-                          active ? "bg-primary/8 text-primary" : "text-foreground hover:bg-muted"
+                          active
+                            ? "bg-primary/8 text-primary"
+                            : "text-foreground hover:bg-muted",
                         )}
                       >
-                        <span className={cn(
-                          "flex items-center justify-center w-9 h-9 rounded-lg shrink-0",
-                          active ? "bg-primary/15" : "bg-muted"
-                        )}>
-                          <Icon className={cn("h-5 w-5", active ? "text-primary" : "text-foreground/60")} />
+                        <span
+                          className={cn(
+                            "flex items-center justify-center w-9 h-9 rounded-lg shrink-0",
+                            active ? "bg-primary/15" : "bg-muted",
+                          )}
+                        >
+                          <Icon
+                            className={cn(
+                              "h-5 w-5",
+                              active ? "text-primary" : "text-muted-foreground",
+                            )}
+                          />
                         </span>
-                        <span className="font-semibold text-base">{section.title}</span>
+                        <span className="font-semibold text-base">
+                          {section.title}
+                        </span>
                       </Link>
 
                       {section.sub && (
                         <button
                           onClick={() => toggleSection(section.title)}
-                          className="p-3 rounded-xl text-foreground/40 hover:text-foreground hover:bg-muted transition-colors ml-1"
+                          className="p-3 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted transition-colors ml-1"
                           aria-label={isExpanded ? "Collapse" : "Expand"}
                         >
-                          {isExpanded
-                            ? <ChevronDown className="h-4 w-4" />
-                            : <ChevronRight className="h-4 w-4" />}
+                          {isExpanded ? (
+                            <ChevronDown className="h-4 w-4" />
+                          ) : (
+                            <ChevronRight className="h-4 w-4" />
+                          )}
                         </button>
                       )}
                     </div>
@@ -186,7 +259,7 @@ export function MobileBottomNav() {
                               "block px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
                               isActive(sub.path)
                                 ? "text-primary bg-primary/8"
-                                : "text-foreground/70 hover:text-primary hover:bg-muted"
+                                : "text-foreground/70 hover:text-primary hover:bg-muted",
                             )}
                           >
                             {sub.title}
@@ -225,11 +298,15 @@ export function MobileBottomNav() {
                 href={tab.path}
                 className={cn(
                   "flex-1 flex flex-col items-center justify-center gap-0.5 transition-colors pt-1",
-                  active ? "text-primary" : "text-foreground/45 hover:text-foreground/70"
+                  active
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground",
                 )}
               >
                 <Icon className={cn("h-6 w-6", active && "stroke-[2.5]")} />
-                <span className="text-[10px] font-semibold tracking-wide">{tab.label}</span>
+                <span className="text-xs font-semibold tracking-wide">
+                  {tab.label}
+                </span>
               </Link>
             );
           })}
@@ -237,23 +314,30 @@ export function MobileBottomNav() {
           {/* Search tab */}
           <button
             onClick={handleSearchClick}
-            className="flex-1 flex flex-col items-center justify-center gap-0.5 transition-colors pt-1 text-foreground/45 hover:text-foreground/70"
+            className="flex-1 flex flex-col items-center justify-center gap-0.5 transition-colors pt-1 text-muted-foreground hover:text-foreground"
             aria-label="Search"
           >
             <Search className="h-6 w-6" />
-            <span className="text-[10px] font-semibold tracking-wide">Search</span>
+            <span className="text-xs font-semibold tracking-wide">Search</span>
           </button>
 
           {/* More tab */}
           <button
+            ref={moreButtonRef}
+            aria-expanded={isDrawerOpen}
+            aria-controls="more-sections"
             onClick={() => setIsDrawerOpen((v) => !v)}
             className={cn(
               "flex-1 flex flex-col items-center justify-center gap-0.5 transition-colors pt-1",
-              isDrawerOpen ? "text-primary" : "text-foreground/45 hover:text-foreground/70"
+              isDrawerOpen
+                ? "text-primary"
+                : "text-muted-foreground hover:text-foreground",
             )}
           >
-            <LayoutGrid className={cn("h-6 w-6", isDrawerOpen && "stroke-[2.5]")} />
-            <span className="text-[10px] font-semibold tracking-wide">More</span>
+            <LayoutGrid
+              className={cn("h-6 w-6", isDrawerOpen && "stroke-[2.5]")}
+            />
+            <span className="text-xs font-semibold tracking-wide">More</span>
           </button>
         </div>
 

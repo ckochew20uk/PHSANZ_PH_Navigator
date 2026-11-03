@@ -30,20 +30,23 @@ function getRecent(): SearchItem[] {
 
 function addRecent(item: SearchItem) {
   const prev = getRecent().filter((r) => r.path !== item.path);
-  localStorage.setItem(RECENT_KEY, JSON.stringify([item, ...prev].slice(0, MAX_RECENT)));
+  localStorage.setItem(
+    RECENT_KEY,
+    JSON.stringify([item, ...prev].slice(0, MAX_RECENT)),
+  );
 }
 
 const categoryColours: Record<string, string> = {
   "Recently Diagnosed": "bg-sky-100 text-sky-700",
-  "Treatments": "bg-teal-100 text-teal-700",
+  Treatments: "bg-teal-100 text-teal-700",
   "Living Well": "bg-emerald-100 text-emerald-700",
-  "Carers": "bg-violet-100 text-violet-700",
-  "Community": "bg-orange-100 text-orange-700",
-  "Resources": "bg-amber-100 text-amber-700",
+  Carers: "bg-violet-100 text-violet-700",
+  Community: "bg-orange-100 text-orange-700",
+  Resources: "bg-amber-100 text-amber-700",
   "Find a Specialist": "bg-blue-100 text-blue-700",
   "Healthcare Professionals": "bg-indigo-100 text-indigo-700",
-  "About": "bg-slate-100 text-slate-600",
-  "General": "bg-slate-100 text-slate-600",
+  About: "bg-slate-100 text-slate-600",
+  General: "bg-slate-100 text-slate-600",
 };
 
 interface SearchModalProps {
@@ -57,8 +60,41 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
   const [recent, setRecent] = useState<SearchItem[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
   const [, navigate] = useLocation();
+
+  useEffect(() => {
+    if (!open) return;
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const handleDialogKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+      if (event.key === "Tab") {
+        const items = Array.from(
+          panelRef.current?.querySelectorAll<HTMLElement>(
+            "a[href], button:not([disabled]), input",
+          ) ?? [],
+        ).filter((el) => el.offsetParent !== null);
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }
+    };
+    document.addEventListener("keydown", handleDialogKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleDialogKey);
+      previouslyFocused?.focus();
+    };
+  }, [open, onClose]);
 
   useEffect(() => {
     if (open) {
@@ -90,11 +126,13 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
       navigate(item.path);
       onClose();
     },
-    [navigate, onClose]
+    [navigate, onClose],
   );
 
   useEffect(() => {
-    const el = listRef.current?.children[activeIndex] as HTMLElement | undefined;
+    const el = listRef.current?.children[activeIndex] as
+      | HTMLElement
+      | undefined;
     el?.scrollIntoView({ block: "nearest" });
   }, [activeIndex]);
 
@@ -123,7 +161,20 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
       />
 
       {/* Panel */}
-      <div className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[75dvh]">
+      <div
+        ref={panelRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Search PH Navigator"
+        className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[75dvh]"
+      >
+        <button
+          onClick={onClose}
+          className="self-end m-2 p-2 rounded-lg hover:bg-muted"
+          aria-label="Close search"
+        >
+          <X className="h-5 w-5" />
+        </button>
         {/* Search input row */}
         <div className="flex items-center gap-3 px-4 py-3.5 border-b border-border/40">
           <Search className="h-5 w-5 text-primary shrink-0" />
@@ -133,7 +184,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKey}
             placeholder="Search topics, symptoms, treatments…"
-            className="flex-1 bg-transparent text-base text-foreground placeholder:text-foreground/40 outline-none"
+            className="flex-1 bg-transparent text-base text-foreground placeholder:text-muted-foreground outline-none"
             aria-label="Search PH Navigator"
             autoComplete="off"
             spellCheck={false}
@@ -141,13 +192,13 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
           {query && (
             <button
               onClick={() => setQuery("")}
-              className="p-1 rounded-full hover:bg-muted text-foreground/40 hover:text-foreground transition-colors"
+              className="p-1 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Clear search"
             >
               <X className="h-4 w-4" />
             </button>
           )}
-          <kbd className="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded border border-border text-xs text-foreground/40 font-mono">
+          <kbd className="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded border border-border text-xs text-muted-foreground font-mono">
             Esc
           </kbd>
         </div>
@@ -157,19 +208,21 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
           {displayItems.length > 0 ? (
             <>
               {showingRecent && (
-                <p className="px-4 pt-3 pb-1 text-xs font-bold text-foreground/40 uppercase tracking-wider flex items-center gap-1.5">
+                <p className="px-4 pt-3 pb-1 text-xs font-bold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
                   <Clock className="h-3.5 w-3.5" /> Recent
                 </p>
               )}
               {query && results.length > 0 && (
-                <p className="px-4 pt-3 pb-1 text-xs font-bold text-foreground/40 uppercase tracking-wider">
+                <p className="px-4 pt-3 pb-1 text-xs font-bold text-muted-foreground uppercase tracking-wider">
                   {results.length} result{results.length !== 1 ? "s" : ""}
                 </p>
               )}
               <ul ref={listRef} className="px-2 pb-3">
                 {displayItems.map((item, i) => {
                   const isActive = i === activeIndex;
-                  const badge = categoryColours[item.category] ?? "bg-slate-100 text-slate-600";
+                  const badge =
+                    categoryColours[item.category] ??
+                    "bg-slate-100 text-slate-600";
                   return (
                     <li key={item.path}>
                       <button
@@ -177,7 +230,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                         onMouseEnter={() => setActiveIndex(i)}
                         className={cn(
                           "w-full flex items-start gap-3 px-3 py-3 rounded-xl text-left transition-colors",
-                          isActive ? "bg-primary/8" : "hover:bg-muted/60"
+                          isActive ? "bg-primary/8" : "hover:bg-muted/60",
                         )}
                       >
                         <div className="flex-1 min-w-0">
@@ -185,7 +238,12 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                             <span className="font-semibold text-sm text-foreground">
                               {item.title}
                             </span>
-                            <span className={cn("text-[10px] font-bold px-1.5 py-0.5 rounded-full", badge)}>
+                            <span
+                              className={cn(
+                                "text-[10px] font-bold px-1.5 py-0.5 rounded-full",
+                                badge,
+                              )}
+                            >
                               {item.category}
                             </span>
                           </div>
@@ -193,10 +251,12 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                             {item.description}
                           </p>
                         </div>
-                        <ArrowRight className={cn(
-                          "h-4 w-4 shrink-0 mt-0.5 transition-colors",
-                          isActive ? "text-primary" : "text-foreground/25"
-                        )} />
+                        <ArrowRight
+                          className={cn(
+                            "h-4 w-4 shrink-0 mt-0.5 transition-colors",
+                            isActive ? "text-primary" : "text-foreground/25",
+                          )}
+                        />
                       </button>
                     </li>
                   );
@@ -204,25 +264,38 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
               </ul>
             </>
           ) : query.trim() ? (
-            <div className="flex flex-col items-center justify-center py-12 text-foreground/40">
+            <div className="flex flex-col items-center justify-center py-12 text-muted-foreground">
               <Search className="h-10 w-10 mb-3 opacity-30" />
-              <p className="text-sm font-medium">No results for &ldquo;{query}&rdquo;</p>
-              <p className="text-xs mt-1">Try a different term or browse the menu</p>
+              <p className="text-sm font-medium">
+                No results for &ldquo;{query}&rdquo;
+              </p>
+              <p className="text-xs mt-1">
+                Try a different term or browse the menu
+              </p>
             </div>
           ) : (
-            <div className="flex flex-col items-center justify-center py-12 text-foreground/35">
+            <div className="flex flex-col items-center justify-center py-12 text-muted-foreground">
               <Search className="h-10 w-10 mb-3 opacity-25" />
               <p className="text-sm font-medium">Search PH Navigator</p>
-              <p className="text-xs mt-1">Try &ldquo;oxygen&rdquo;, &ldquo;travel&rdquo;, or &ldquo;medication&rdquo;</p>
+              <p className="text-xs mt-1">
+                Try &ldquo;oxygen&rdquo;, &ldquo;travel&rdquo;, or
+                &ldquo;medication&rdquo;
+              </p>
             </div>
           )}
         </div>
 
         {/* Footer hint */}
-        <div className="border-t border-border/30 px-4 py-2.5 flex items-center gap-4 text-[11px] text-foreground/35">
-          <span className="flex items-center gap-1"><kbd className="font-mono">↑↓</kbd> navigate</span>
-          <span className="flex items-center gap-1"><kbd className="font-mono">↵</kbd> open</span>
-          <span className="flex items-center gap-1"><kbd className="font-mono">Esc</kbd> close</span>
+        <div className="border-t border-border/30 px-4 py-2.5 flex items-center gap-4 text-[11px] text-muted-foreground">
+          <span className="flex items-center gap-1">
+            <kbd className="font-mono">↑↓</kbd> navigate
+          </span>
+          <span className="flex items-center gap-1">
+            <kbd className="font-mono">↵</kbd> open
+          </span>
+          <span className="flex items-center gap-1">
+            <kbd className="font-mono">Esc</kbd> close
+          </span>
         </div>
       </div>
     </div>

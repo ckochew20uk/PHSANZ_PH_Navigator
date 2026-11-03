@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -14,15 +15,13 @@ export default function QuestionsForDoctor() {
     <div className="w-full">
       <section className="bg-muted py-10 border-b border-border/50 print:hidden">
         <div className="container mx-auto px-4 max-w-4xl">
-          <Link href="/recently-diagnosed">
-            <Button variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10">
+          <Button asChild variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10"><Link href="/recently-diagnosed">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Recently Diagnosed
-            </Button>
-          </Link>
+            </Link></Button>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6">
               <div>
-                <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Questions to Ask Your Doctor</h1>
+                <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Questions to Ask Your Doctor</SectionHeading>
                 <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed max-w-2xl">
                   Specialist appointments can be overwhelming. Taking a list of questions ensures you get the answers you need without forgetting anything important.
                 </p>
@@ -42,14 +41,14 @@ export default function QuestionsForDoctor() {
         <div className="container mx-auto px-4 max-w-4xl">
           
           <div className="hidden print:block mb-8">
-            <h1 className="text-3xl font-serif font-bold text-primary mb-2">PH Navigator: Questions for Your Specialist</h1>
+            <SectionHeading as="h1" className="text-3xl font-heading font-bold text-primary mb-2">PH Navigator: Questions for Your Specialist</SectionHeading>
             <p className="text-sm text-foreground/70 border-b pb-4">Take this list to your next appointment. Add your own questions at the bottom.</p>
           </div>
 
           <div className="space-y-8">
             <Card className="shadow-sm print:shadow-none print:border-none print:mb-6">
               <CardHeader className="bg-muted/50 print:bg-transparent print:px-0">
-                <CardTitle className="text-2xl font-serif text-primary">At Your First Appointment or Diagnosis</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">At Your First Appointment or Diagnosis</CardTitle>
               </CardHeader>
               <CardContent className="pt-6 print:px-0">
                 <ul className="space-y-4 text-lg text-foreground/90">
@@ -64,7 +63,7 @@ export default function QuestionsForDoctor() {
 
             <Card className="shadow-sm print:shadow-none print:border-none print:mb-6">
               <CardHeader className="bg-muted/50 print:bg-transparent print:px-0">
-                <CardTitle className="text-2xl font-serif text-primary">Discussing Treatment Options</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">Discussing Treatment Options</CardTitle>
               </CardHeader>
               <CardContent className="pt-6 print:px-0">
                 <ul className="space-y-4 text-lg text-foreground/90">
@@ -79,7 +78,7 @@ export default function QuestionsForDoctor() {
 
             <Card className="shadow-sm print:shadow-none print:border-none print:mb-6">
               <CardHeader className="bg-muted/50 print:bg-transparent print:px-0">
-                <CardTitle className="text-2xl font-serif text-primary">Lifestyle & Daily Management</CardTitle>
+                <CardTitle className="text-2xl font-heading text-primary">Lifestyle & Daily Management</CardTitle>
               </CardHeader>
               <CardContent className="pt-6 print:px-0">
                 <ul className="space-y-4 text-lg text-foreground/90">
@@ -92,7 +91,7 @@ export default function QuestionsForDoctor() {
             </Card>
             
             <div className="mt-12 print:block">
-              <h3 className="text-xl font-serif font-bold text-primary mb-4 print:text-black">Your own questions / Notes:</h3>
+              <h3 className="text-xl font-heading font-bold text-primary mb-4 print:text-black">Your own questions / Notes:</h3>
               <div className="space-y-8">
                 <div className="border-b border-border/60 w-full"></div>
                 <div className="border-b border-border/60 w-full"></div>

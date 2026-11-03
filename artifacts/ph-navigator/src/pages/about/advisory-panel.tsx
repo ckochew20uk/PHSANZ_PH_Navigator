@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -25,13 +26,11 @@ export default function AdvisoryPanel() {
     <div className="w-full">
       <section className="bg-muted py-10 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <Link href="/about">
-            <Button variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10">
+          <Button asChild variant="ghost" className="mb-6 -ml-4 text-primary hover:bg-primary/10"><Link href="/about">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to About Us
-            </Button>
-          </Link>
+            </Link></Button>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Our Review Panels</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Our Review Panels</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
               Every resource on PH Navigator is scrutinised by two separate panels to ensure it is both medically precise and deeply empathetic.
             </p>
@@ -47,7 +46,7 @@ export default function AdvisoryPanel() {
               <div className="bg-primary/10 p-3 rounded-lg text-primary">
                 <Stethoscope size={28} />
               </div>
-              <h2 className="text-3xl font-serif font-bold text-primary">Medical Advisory Panel</h2>
+              <h2 className="text-3xl font-heading font-bold text-primary">Medical Advisory Panel</h2>
             </div>
             <p className="text-lg text-foreground/80 mb-8 max-w-3xl">
               Drawn from leading PH specialist centres across Australia, this panel reviews all clinical content. They ensure our explanations of treatments, tests, and pathophysiology reflect the latest clinical guidelines approved by PHSANZ.
@@ -61,7 +60,7 @@ export default function AdvisoryPanel() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-foreground/90 font-medium mb-1">{member.role}</p>
-                    <p className="text-sm text-foreground/60">{member.hospital}</p>
+                    <p className="text-sm text-muted-foreground">{member.hospital}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -73,7 +72,7 @@ export default function AdvisoryPanel() {
               <div className="bg-secondary/10 p-3 rounded-lg text-secondary">
                 <UserCheck size={28} />
               </div>
-              <h2 className="text-3xl font-serif font-bold text-primary">Patient Review Panel</h2>
+              <h2 className="text-3xl font-heading font-bold text-primary">Patient Review Panel</h2>
             </div>
             <p className="text-lg text-foreground/80 mb-8 max-w-3xl">
               Medical accuracy means nothing if the patient cannot understand it. Appointed by PHA Australia, this panel of lived-experience experts reads every article. They hold the veto power to rewrite jargon into plain language.

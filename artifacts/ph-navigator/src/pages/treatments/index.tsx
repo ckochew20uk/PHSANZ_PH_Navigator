@@ -1,3 +1,5 @@
+import { ContentContainer } from "@/components/content/ContentContainer";
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
@@ -8,14 +10,14 @@ export default function TreatmentsHub() {
   return (
     <div className="w-full">
       <section className="bg-muted py-12 md:py-20 border-b border-border/50">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <ContentContainer reading>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Treatments & Clinical Facts</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Treatments & Clinical Facts</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed mb-8">
               While there is no cure for PH, treatments have advanced significantly. Understand the medications available and what your clinical test results mean for your management.
             </p>
           </motion.div>
-        </div>
+        </ContentContainer>
       </section>
 
       <section className="py-16 md:py-24">
@@ -29,7 +31,7 @@ export default function TreatmentsHub() {
                   <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
                     <Pill size={28} />
                   </div>
-                  <CardTitle className="text-2xl font-serif text-primary">Treatments Explained</CardTitle>
+                  <CardTitle className="text-2xl font-heading text-primary">Treatments Explained</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
                   <p className="text-lg text-foreground/80 mb-6 flex-1">
@@ -48,7 +50,7 @@ export default function TreatmentsHub() {
                   <div className="bg-secondary/10 w-14 h-14 rounded-full flex items-center justify-center text-secondary mb-4 group-hover:scale-110 transition-transform">
                     <ClipboardList size={28} />
                   </div>
-                  <CardTitle className="text-2xl font-serif text-primary">Understanding Test Results</CardTitle>
+                  <CardTitle className="text-2xl font-heading text-primary">Understanding Test Results</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
                   <p className="text-lg text-foreground/80 mb-6 flex-1">

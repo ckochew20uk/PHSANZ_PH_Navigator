@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Info, ExternalLink, Search } from "lucide-react";
@@ -52,8 +54,8 @@ const centres: Centre[] = [
 // ── Custom map marker icons ────────────────────────────────────────────────────
 
 function makeIcon(active: boolean) {
-  const bg = active ? "#E8735A" : "#1B5FAF";
-  const ring = active ? "#c45a43" : "#14407a";
+  const bg = active ? "#17748c" : "#172e5b";
+  const ring = active ? "#11566a" : "#101f3e";
   return L.divIcon({
     className: "",
     html: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0 0 28 36">
@@ -76,7 +78,7 @@ function MapController({ target }: MapControllerProps) {
   const map = useMap();
   useEffect(() => {
     if (target) {
-      map.flyTo([target.lat, target.lng], 13, { duration: 0.8 });
+      map.flyTo([target.lat, target.lng], 13, { duration: 0.8, animate: !window.matchMedia("(prefers-reduced-motion: reduce)").matches });
     }
   }, [target, map]);
   return null;
@@ -139,7 +141,7 @@ export default function FindSpecialist() {
       <section className="bg-muted py-12 md:py-20 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-7xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Find a Specialist Centre</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Find a Specialist Centre</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed max-w-3xl">
               Designated PH centres across Australia and New Zealand with experienced multidisciplinary teams who specialise in pulmonary hypertension.
             </p>
@@ -169,13 +171,14 @@ export default function FindSpecialist() {
 
               {/* Filters */}
               <div className="bg-muted/40 border border-border/50 rounded-2xl p-5 mb-5 space-y-3">
-                <h2 className="text-sm font-bold text-foreground/60 uppercase tracking-wider mb-1">Filter Centres</h2>
+                <h2 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-1">Filter Centres</h2>
 
                 {/* Search */}
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-foreground/40" />
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <input
                     type="text"
+                    aria-label="Search specialist centres"
                     placeholder="Search by name or city…"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
@@ -185,7 +188,7 @@ export default function FindSpecialist() {
 
                 {/* Country */}
                 <Select value={country} onValueChange={(v) => { setCountry(v as "All" | "AU" | "NZ"); setStateFilter("All"); }}>
-                  <SelectTrigger className="text-sm"><SelectValue placeholder="Country" /></SelectTrigger>
+                  <SelectTrigger aria-label="Country" className="text-sm"><SelectValue placeholder="Country" /></SelectTrigger>
                   <SelectContent>
                     <SelectItem value="All">Australia &amp; New Zealand</SelectItem>
                     <SelectItem value="AU">Australia only</SelectItem>
@@ -195,7 +198,7 @@ export default function FindSpecialist() {
 
                 {/* State / Region */}
                 <Select value={stateFilter} onValueChange={setStateFilter}>
-                  <SelectTrigger className="text-sm"><SelectValue placeholder="State / Region" /></SelectTrigger>
+                  <SelectTrigger aria-label="State or region" className="text-sm"><SelectValue placeholder="State / Region" /></SelectTrigger>
                   <SelectContent>
                     <SelectItem value="All">All states &amp; regions</SelectItem>
                     {stateOptions.map((s) => (
@@ -206,7 +209,7 @@ export default function FindSpecialist() {
 
                 {/* Type */}
                 <Select value={typeFilter} onValueChange={setTypeFilter}>
-                  <SelectTrigger className="text-sm"><SelectValue placeholder="Centre type" /></SelectTrigger>
+                  <SelectTrigger aria-label="Centre type" className="text-sm"><SelectValue placeholder="Centre type" /></SelectTrigger>
                   <SelectContent>
                     <SelectItem value="All">Adult &amp; Paediatric</SelectItem>
                     <SelectItem value="Adult">Adult only</SelectItem>
@@ -215,7 +218,7 @@ export default function FindSpecialist() {
                 </Select>
 
                 <div className="flex items-center justify-between pt-1">
-                  <span className="text-xs text-foreground/50">{filtered.length} centre{filtered.length !== 1 ? "s" : ""} shown</span>
+                  <span className="text-xs text-muted-foreground">{filtered.length} centre{filtered.length !== 1 ? "s" : ""} shown</span>
                   <button onClick={resetFilters} className="text-xs text-primary hover:underline font-medium">Reset filters</button>
                 </div>
               </div>
@@ -223,7 +226,7 @@ export default function FindSpecialist() {
               {/* Card list */}
               <div className="space-y-3 max-h-[calc(100vh-280px)] overflow-y-auto pr-1 scroll-smooth">
                 {filtered.length === 0 && (
-                  <div className="text-center py-12 text-foreground/50 text-sm">
+                  <div className="text-center py-12 text-muted-foreground text-sm">
                     No centres match your filters. Try widening your search.
                   </div>
                 )}
@@ -236,22 +239,22 @@ export default function FindSpecialist() {
                       onClick={() => handleCardClick(centre)}
                       className={`rounded-xl border p-4 cursor-pointer transition-all duration-200 ${
                         isActive
-                          ? "border-coral bg-coral/5 shadow-md ring-2 ring-coral/30"
+                          ? "border-secondary bg-accent shadow-md ring-2 ring-secondary/30"
                           : "border-border/50 bg-white hover:border-primary/30 hover:shadow-sm"
                       }`}
-                      style={{ borderTopColor: isActive ? "#E8735A" : undefined, borderTopWidth: isActive ? 3 : undefined }}
+                      style={{ borderTopColor: isActive ? "#17748c" : undefined, borderTopWidth: isActive ? 3 : undefined }}
                     >
                       <div className="flex justify-between items-start gap-2 mb-2">
-                        <h3 className="font-bold text-primary text-sm leading-snug">{centre.name}</h3>
+                        <h3 className="font-bold text-primary text-sm leading-snug"><button type="button" className="text-left underline-offset-4 hover:underline" onClick={() => handleCardClick(centre)} aria-label={`Show ${centre.name} on map`}>{centre.name}</button></h3>
                         <span className={`shrink-0 text-xs font-bold px-2 py-0.5 rounded-full ${
                           centre.country === "NZ"
-                            ? "bg-secondary/15 text-secondary"
+                            ? "bg-accent text-primary"
                             : "bg-primary/10 text-primary"
                         }`}>
                           {centre.state}
                         </span>
                       </div>
-                      <p className="text-xs text-foreground/50 mb-3">
+                      <p className="text-xs text-muted-foreground mb-3">
                         {centre.type} PH Centre &nbsp;·&nbsp; {centre.city}
                       </p>
                       <div className="flex flex-col gap-1.5 text-xs text-foreground/70">
@@ -299,6 +302,8 @@ export default function FindSpecialist() {
                   {filtered.map((centre) => (
                     <Marker
                       key={centre.id}
+                      title={centre.name}
+                      alt={centre.name}
                       position={[centre.lat, centre.lng]}
                       icon={makeIcon(activeId === centre.id)}
                       eventHandlers={{ click: () => handleMarkerClick(centre) }}
@@ -306,7 +311,7 @@ export default function FindSpecialist() {
                       <Popup>
                         <div className="text-sm space-y-1 min-w-[180px]">
                           <p className="font-bold text-primary leading-tight">{centre.name}</p>
-                          <p className="text-foreground/60 text-xs">{centre.type} PH Centre</p>
+                          <p className="text-muted-foreground text-xs">{centre.type} PH Centre</p>
                           <p className="text-foreground/70 text-xs">{centre.address}, {centre.city}</p>
                           <p className="text-foreground/70 text-xs">{centre.phone}</p>
                           {centre.website && (
@@ -320,7 +325,7 @@ export default function FindSpecialist() {
                   ))}
                 </MapContainer>
               </div>
-              <p className="text-xs text-foreground/40 text-center mt-2">
+              <p className="text-xs text-muted-foreground text-center mt-2">
                 Click a pin or card to focus · Map data © OpenStreetMap contributors
               </p>
             </div>
@@ -331,9 +336,9 @@ export default function FindSpecialist() {
 
       {/* ── Footer note ── */}
       <section className="border-t border-border/50 bg-muted/30 py-8">
-        <div className="container mx-auto px-4 max-w-7xl text-center text-sm text-foreground/50">
+        <div className="container mx-auto px-4 max-w-7xl text-center text-sm text-muted-foreground">
           <p>This directory is maintained jointly by PHA Australia and PHSANZ. Contact information is updated periodically — always confirm details directly with the hospital before attending.</p>
-          <p className="mt-1">If your centre is missing or has incorrect details, please <a href="/about" className="text-primary hover:underline">contact us</a>.</p>
+          <p className="mt-1">If your centre is missing or has incorrect details, please <Link href="/about" className="text-primary underline underline-offset-4">contact us</Link>.</p>
         </div>
       </section>
     </div>

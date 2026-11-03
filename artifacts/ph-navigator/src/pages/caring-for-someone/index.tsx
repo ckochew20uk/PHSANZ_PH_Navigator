@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
@@ -20,9 +21,9 @@ export default function CaringForSomeoneHub() {
       desc: "Recognising burnout, finding respite, and maintaining your own health.",
       path: "/caring-for-someone/carer-wellbeing",
       icon: <Shield size={28} />,
-      color: "border-t-destructive",
-      iconColor: "text-destructive",
-      iconBg: "bg-destructive/10"
+      color: "border-t-secondary",
+      iconColor: "text-secondary",
+      iconBg: "bg-[var(--brand-peach)]"
     },
     {
       title: "Carer Support Networks",
@@ -40,7 +41,7 @@ export default function CaringForSomeoneHub() {
       <section className="bg-muted py-12 md:py-20 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-5xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Caring for Someone with PH</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Caring for Someone with PH</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed mb-8 max-w-3xl">
               When a loved one is diagnosed with pulmonary hypertension, the whole family is affected. As a carer, your role is vital, but it is also demanding. You need support too.
             </p>
@@ -59,7 +60,7 @@ export default function CaringForSomeoneHub() {
                     <div className={`${item.iconBg} w-14 h-14 rounded-full flex items-center justify-center ${item.iconColor} mb-4 group-hover:scale-110 transition-transform`}>
                       {item.icon}
                     </div>
-                    <CardTitle className="text-2xl font-serif text-primary">{item.title}</CardTitle>
+                    <CardTitle className="text-2xl font-heading text-primary">{item.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col">
                     <p className="text-lg text-foreground/80 mb-6 flex-1">

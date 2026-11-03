@@ -164,17 +164,17 @@ export function Navbar() {
             item.sub ? (
               <NavDropdown key={item.path} item={item} isActive={isActive} />
             ) : (
-              <Link key={item.path} href={item.path}>
-                <Button
-                  variant="ghost"
-                  className={cn(
-                    "text-sm font-semibold px-2.5 py-2 h-auto text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-md",
-                    isActive(item.path) && "text-primary bg-muted/50",
-                  )}
-                >
-                  {item.title}
-                </Button>
-              </Link>
+              <Button
+                key={item.path}
+                asChild
+                variant="ghost"
+                className={cn(
+                  "text-sm font-semibold px-2.5 py-2 h-auto text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-md",
+                  isActive(item.path) && "text-primary bg-muted/50",
+                )}
+              >
+                <Link href={item.path}>{item.title}</Link>
+              </Button>
             ),
           )}
 
@@ -216,7 +216,7 @@ export function Navbar() {
                     <DropdownMenuItem asChild key={sub.path} className="p-0">
                       <Link
                         href={sub.path}
-                        className="block w-full px-6 py-1.5 text-sm text-foreground/60 hover:bg-muted hover:text-primary rounded-sm"
+                        className="block w-full px-6 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-primary rounded-sm"
                       >
                         {sub.title}
                       </Link>
@@ -232,12 +232,12 @@ export function Navbar() {
         <Button
           variant="ghost"
           onClick={openSearch}
-          className="shrink-0 flex items-center gap-2 text-foreground/60 hover:text-primary hover:bg-muted/60 rounded-lg px-3 py-2 h-auto"
+          className="shrink-0 flex items-center gap-2 text-muted-foreground hover:text-primary hover:bg-muted/60 rounded-lg px-3 py-2 h-auto"
           aria-label="Search"
         >
           <Search className="h-4 w-4" />
           <span className="hidden xl:inline text-sm font-medium">Search</span>
-          <kbd className="hidden xl:inline-flex items-center px-1.5 py-0.5 rounded border border-border text-[10px] text-foreground/35 font-mono ml-1">
+          <kbd className="hidden xl:inline-flex items-center px-1.5 py-0.5 rounded border border-border text-[10px] text-muted-foreground font-mono ml-1">
             ⌘K
           </kbd>
         </Button>

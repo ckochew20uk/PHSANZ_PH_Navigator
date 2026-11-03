@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
@@ -11,9 +12,9 @@ export default function LivingWellHub() {
       desc: "Guidance on sodium restriction, fluid management, and eating well.",
       path: "/living-well/diet-nutrition",
       icon: <Utensils size={28} />,
-      color: "border-t-destructive",
-      iconColor: "text-destructive",
-      iconBg: "bg-destructive/10"
+      color: "border-t-secondary",
+      iconColor: "text-secondary",
+      iconBg: "bg-[var(--brand-peach)]"
     },
     {
       title: "Exercise & Physical Activity",
@@ -58,7 +59,7 @@ export default function LivingWellHub() {
       <section className="bg-muted py-12 md:py-20 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-5xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Living Well with PH</h1>
+            <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Living Well with PH</SectionHeading>
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed mb-8 max-w-3xl">
               Managing pulmonary hypertension involves more than just medication. Small lifestyle adjustments can significantly improve your symptoms and quality of life.
             </p>
@@ -77,7 +78,7 @@ export default function LivingWellHub() {
                     <div className={`${item.iconBg} w-14 h-14 rounded-full flex items-center justify-center ${item.iconColor} mb-4 group-hover:scale-110 transition-transform`}>
                       {item.icon}
                     </div>
-                    <CardTitle className="text-2xl font-serif text-primary">{item.title}</CardTitle>
+                    <CardTitle className="text-2xl font-heading text-primary">{item.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col">
                     <p className="text-lg text-foreground/80 mb-6 flex-1">

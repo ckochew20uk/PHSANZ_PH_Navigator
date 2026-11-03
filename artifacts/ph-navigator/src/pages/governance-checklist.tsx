@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/content/SectionHeading";
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -47,7 +48,7 @@ export default function GovernanceChecklist() {
       <section className="bg-muted py-12 md:py-20 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-5xl">
           <p className="text-secondary font-semibold text-sm uppercase tracking-wide mb-3">Phase 1 governance</p>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Launch governance checklist</h1>
+          <SectionHeading as="h1" className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Launch governance checklist</SectionHeading>
           <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed max-w-3xl">
             A working checklist for privacy, consent, newsletter handling, and Community Voices safeguards before Phase 1 launch.
           </p>
@@ -66,7 +67,7 @@ export default function GovernanceChecklist() {
                 <CardHeader className="pb-3">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-6 w-6 text-secondary mt-1 shrink-0" />
-                    <h2 className="text-xl font-serif font-bold text-primary">{item.title}</h2>
+                    <h2 className="text-xl font-heading font-bold text-primary">{item.title}</h2>
                   </div>
                 </CardHeader>
                 <CardContent>

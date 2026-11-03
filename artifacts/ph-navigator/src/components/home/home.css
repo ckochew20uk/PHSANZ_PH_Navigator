@@ -1,9 +1,9 @@
 .home-modern {
-  --home-teal: #17748c;
-  --home-ink: #172e5b;
-  --home-mint: #e3f2f2;
-  --home-lavender: #eceaf6;
-  --home-peach: #f8e2d5;
+  --home-teal: var(--brand-deep-teal);
+  --home-ink: var(--brand-navy);
+  --home-mint: var(--brand-sea-mist);
+  --home-lavender: var(--brand-lavender);
+  --home-peach: var(--brand-peach);
   color: var(--home-ink);
   background: #f7f9fb;
   font-family: var(--app-font-sans);
@@ -14,7 +14,7 @@
 .home-modern h1,
 .home-modern h2,
 .home-modern h3 {
-  font-family: var(--app-font-sans);
+  font-family: var(--app-font-heading);
   font-weight: 700;
   text-wrap: balance;
 }
@@ -201,7 +201,7 @@
   border-radius: 999px;
 }
 .home-modern .home-card-title {
-  font-family: inherit;
+  font-family: var(--app-font-heading);
   font-size: 1.45rem;
   line-height: 1.3;
 }

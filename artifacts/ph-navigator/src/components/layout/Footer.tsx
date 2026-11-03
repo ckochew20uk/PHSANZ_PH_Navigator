@@ -16,7 +16,7 @@ export function Footer() {
               <p className="text-white font-semibold text-sm uppercase tracking-wide mb-2">
                 Stay connected
               </p>
-              <h2 className="text-3xl font-serif font-bold text-white mb-3 leading-snug">
+              <h2 className="text-3xl font-heading font-bold text-white mb-3 leading-snug">
                 Updates from the PH community
               </h2>
               <p className="text-primary-foreground/75 text-lg leading-relaxed">
@@ -60,7 +60,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="font-serif text-xl font-bold mb-4 text-white border-b border-primary-foreground/20 pb-2">
+              <h3 className="font-heading text-xl font-bold mb-4 text-white border-b border-primary-foreground/20 pb-2">
                 Support
               </h3>
               <ul className="space-y-3">
@@ -108,7 +108,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="font-serif text-xl font-bold mb-4 text-white border-b border-primary-foreground/20 pb-2">
+              <h3 className="font-heading text-xl font-bold mb-4 text-white border-b border-primary-foreground/20 pb-2">
                 Community
               </h3>
               <ul className="space-y-3">
@@ -148,7 +148,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="font-serif text-xl font-bold mb-4 text-white border-b border-primary-foreground/20 pb-2">
+              <h3 className="font-heading text-xl font-bold mb-4 text-white border-b border-primary-foreground/20 pb-2">
                 Emergency
               </h3>
               <ul className="space-y-3 text-primary-foreground/80">
@@ -190,7 +190,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-8 text-xs text-primary-foreground/50 text-center max-w-4xl mx-auto">
+          <div className="mt-8 text-xs text-primary-foreground/80 text-center max-w-4xl mx-auto">
             <p>
               Disclaimer: The information provided on PH Navigator is for
               educational purposes only and does not substitute for professional
